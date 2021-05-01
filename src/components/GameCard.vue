@@ -73,18 +73,6 @@ export default Vue.extend({
       type: Object as PropType<Game>,
       required: true,
     },
-    gameDetails: {
-      type: Array as PropType<{ name: string; icon: string; text: string }[]>,
-      required: true,
-    },
-    filteredKeys: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-    sortBy: {
-      type: String as PropType<string>,
-      required: true,
-    },
   },
 
   computed: {
@@ -92,11 +80,6 @@ export default Vue.extend({
       return (
         "https://mathiasmille.fr/boardgames/img/" + this.game.slug + ".jpg"
       );
-    },
-    getPlayers() {
-      return this.game.players.max
-        ? this.game.players.min + " à " + this.game.players.max + " joueurs"
-        : this.game.players.min + " joueurs";
     },
   },
 });

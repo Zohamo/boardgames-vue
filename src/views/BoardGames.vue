@@ -3,39 +3,44 @@
     <v-data-iterator
       :items="games"
       :items-per-page="itemsPerPage"
+      :loading="loading"
       :search="search"
-      :sort-by="sortBy.toLowerCase()"
+      :sort-by="sortBy"
       :sort-desc="sortDesc"
       hide-default-footer
     >
       <template v-slot:header>
-        <v-toolbar dark color="blue darken-3" class="mb-1">
+        <v-toolbar elevation="0" class="mb-1">
           <v-text-field
             v-model="search"
             clearable
             flat
-            solo-inverted
+            solo
+            filled
             hide-details
             prepend-inner-icon="mdi-magnify"
-            label="Search"
+            label="Rechercher"
           ></v-text-field>
           <template v-if="$vuetify.breakpoint.mdAndUp">
             <v-spacer></v-spacer>
             <v-select
               v-model="sortBy"
               flat
-              solo-inverted
+              solo
+              filled
               hide-details
-              :items="keys"
-              prepend-inner-icon="mdi-magnify"
-              label="Sort by"
+              :items="attributes"
+              item-text="label"
+              item-value="key"
+              prepend-inner-icon="mdi-sort"
+              label="Trier par"
             ></v-select>
             <v-spacer></v-spacer>
             <v-btn-toggle v-model="sortDesc" mandatory>
-              <v-btn large depressed color="blue" :value="false">
+              <v-btn large depressed :value="false">
                 <v-icon>mdi-arrow-up</v-icon>
               </v-btn>
-              <v-btn large depressed color="blue" :value="true">
+              <v-btn large depressed :value="true">
                 <v-icon>mdi-arrow-down</v-icon>
               </v-btn>
             </v-btn-toggle>
@@ -46,12 +51,7 @@
       <template v-slot:default="{ items }">
         <v-row>
           <v-col v-for="game in items" :key="game.id">
-            <GameCard
-              :game="game"
-              :game-details="gameDetails"
-              :filtered-keys="filteredKeys"
-              :sort-by="sortBy"
-            />
+            <GameCard :game="game" />
           </v-col>
         </v-row>
       </template>
@@ -73,32 +73,46 @@ export default Vue.extend({
   },
 
   data: () => ({
+    loading: true,
     games: [] as Game[],
     itemsPerPage: -1,
     search: "" as string,
     filter: {},
     sortDesc: false as boolean,
     sortBy: "bggWeight" as string,
-    keys: ["Title", "BggWeight", "Duration"] as string[],
-    gameDetails: [
+    attributes: [
       {
-        name: "Joueurs",
-        icon: "mdi-account-switch",
-        text: "getPlayers",
+        label: "Difficulté",
+        key: "bggWeight",
       },
-    ],
+      {
+        label: "Durée min.",
+        key: "duration.min",
+      },
+      {
+        label: "Nb. joueurs min.",
+        key: "players.min",
+      },
+      {
+        label: "Nb. joueurs max.",
+        key: "players.max",
+      },
+      {
+        label: "Nom",
+        key: "title",
+      },
+      {
+        label: "Thème",
+        key: "theme",
+      },
+    ] as { label: string; key: string }[],
   }),
 
   created() {
     GameService.getGames().then((games) => {
       this.games = games;
+      this.loading = false;
     });
-  },
-
-  computed: {
-    filteredKeys() {
-      return this.keys.filter((key: string) => key !== "Name");
-    },
   },
 });
 </script>
