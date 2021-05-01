@@ -1,0 +1,224 @@
+[
+  {
+    "id": 170216,
+    "slug": "blood-rage",
+    "title": "Blood Rage",
+    "designers": ["Eric M. Lang"],
+    "year": 2015,
+    "players": {
+      "min": 2,
+      "max": 4
+    },
+    "weight": 2.88,
+    "ratings": 8,
+    "duration": {
+      "min": 60,
+      "max": 90
+    },
+    "type": "Strategy",
+    "theme": "Vikings",
+    "categories": ["Fantasy", "Fighting", "Miniatures", "Mythology"],
+    "mechanisms": [
+      "Action Points",
+      "Area Majority / Influence",
+      "Area Movement",
+      "Drafting",
+      "Hand Management",
+      "Memory",
+      "Simultaneous Action Selection"
+    ]
+  },
+  {
+    "id": 312484,
+    "slug": "lost-ruins-of-arnak",
+    "preTitle": "Les ruines perdues de",
+    "title": "Narak",
+    "designers": ["Elwen", "Mín"],
+    "year": 2020,
+    "players": {
+      "min": 1,
+      "max": 4
+    },
+    "weight": 2.76,
+    "ratings": 8.2,
+    "duration": {
+      "min": 30,
+      "max": 120
+    },
+    "type": "Strategy",
+    "theme": "Exploration / Archéologie",
+    "categories": ["Adventure", "Ancient", "Exploration", "Travel"],
+    "mechanisms": [
+      "Chaining",
+      "Deck, Bag, and Pool Building",
+      "Drafting",
+      "Move Through Deck",
+      "Once-Per-Game Abilities",
+      "Resource to Move",
+      "Tile Placement",
+      "Turn Order: Progressive",
+      "Worker Placement"
+    ]
+  },
+  {
+    "id": 286096,
+    "slug": "tapestry",
+    "title": "Tapestry",
+    "designers": ["Jamey Stegmaier"],
+    "year": 2019,
+    "players": {
+      "min": 1,
+      "max": 5
+    },
+    "weight": 2.87,
+    "ratings": 7.5,
+    "duration": {
+      "min": 90,
+      "max": 120
+    },
+    "type": "Strategy",
+    "theme": "Civilisation",
+    "categories": ["Civilization", "Miniatures"],
+    "mechanisms": [
+      "Card Drafting",
+      "Dice Rolling",
+      "Grid Coverage",
+      "Hand Management",
+      "Hexagon Grid",
+      "Income",
+      "Map Addition",
+      "Solo / Solitaire Game",
+      "Square Grid",
+      "Tech Trees / Tech Tracks",
+      "Tile Placement",
+      "Variable Player Powers"
+    ]
+  },
+  {
+    "id": 169786,
+    "slug": "scythe",
+    "title": "Scythe",
+    "designers": ["Jamey Stegmaier"],
+    "year": 2016,
+    "players": {
+      "min": 1,
+      "max": 7
+    },
+    "weight": 3.41,
+    "ratings": 8.2,
+    "duration": {
+      "min": 90,
+      "max": 115
+    },
+    "type": "Strategy",
+    "theme": "Années 1920 alternatives",
+    "categories": [
+      "Economic",
+      "Fighting",
+      "Miniatures",
+      "Science Fiction",
+      "Territory Building"
+    ],
+    "mechanisms": [
+      "Area Majority / Influence",
+      "Card Play Conflict Resolution",
+      "Force Commitment",
+      "Grid Movement",
+      "Hexagon Grid",
+      "King of the Hill",
+      "Movement Points",
+      "Moving Multiple Units",
+      "Narrative Choice / Paragraph",
+      "Solo / Solitaire Game",
+      "Tech Trees / Tech Tracks",
+      "Variable Player Powers"
+    ]
+  },
+  {
+    "id": 133848,
+    "slug": "euphoria",
+    "title": "Euphoria",
+    "postTitle": "Construisez une meilleure dystopie",
+    "designers": ["Jamey Stegmaier", "Alan Stone"],
+    "year": 2013,
+    "players": {
+      "min": 1,
+      "max": 6
+    },
+    "weight": 3.11,
+    "ratings": 7.3,
+    "duration": {
+      "min": 60,
+      "max": 60
+    },
+    "type": "Strategy",
+    "theme": "Dystopia",
+    "categories": ["Science Fiction"],
+    "mechanisms": [
+      "Dice Rolling",
+      "Hand Management",
+      "Race",
+      "Set Collection",
+      "Variable Player Powers",
+      "Worker Placement",
+      "Worker Placement with Dice Workers"
+    ]
+  },
+  {
+    "id": 233398,
+    "slug": "endeavor-age-of-sail",
+    "title": "Endeavor",
+    "postTitle": "L'âge de la voile",
+    "designers": ["Jamey Stegmaier", "Alan Stone"],
+    "year": 2018,
+    "players": {
+      "min": 2,
+      "max": 5
+    },
+    "weight": 2.8,
+    "ratings": 8,
+    "duration": {
+      "min": 60,
+      "max": 90
+    },
+    "type": "Strategy",
+    "theme": "Exploration à l'âge de la renaissance",
+    "categories": ["Exploration", "Nautical", "Renaissance"],
+    "mechanisms": [
+      "Area Majority / Influence",
+      "Card Drafting",
+      "Point to Point Movement",
+      "Set Collection",
+      "Tech Trees / Tech Tracks"
+    ]
+  },
+  {
+    "id": 18745,
+    "slug": "sun-tzu",
+    "title": "Sun Tzu",
+    "designers": ["Al Newman"],
+    "year": 2005,
+    "players": {
+      "min": 2,
+      "max": 2
+    },
+    "weight": 2.09,
+    "ratings": 7.1,
+    "duration": {
+      "min": 30,
+      "max": 30
+    },
+    "type": "Strategy",
+    "theme": "Chine médiévale",
+    "categories": ["Ancient"],
+    "mechanisms": [
+      "Area Majority / Influence",
+      "Area Movement",
+      "Card Play Conflict Resolution",
+      "Force Commitment",
+      "Simultaneous Action Selection",
+      "Tug of War",
+      "Grid Coverage"
+    ]
+  }
+]
