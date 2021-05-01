@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-data-iterator
-      :items="games"
+      :items="filteredGames"
       :items-per-page="itemsPerPage"
       :loading="loading"
       :search="search"
@@ -10,41 +10,68 @@
       hide-default-footer
     >
       <template v-slot:header>
-        <v-toolbar elevation="0" class="mb-1">
-          <v-text-field
-            v-model="search"
-            clearable
-            flat
-            solo
-            filled
-            hide-details
-            prepend-inner-icon="mdi-magnify"
-            label="Rechercher"
-          ></v-text-field>
-          <template v-if="$vuetify.breakpoint.mdAndUp">
-            <v-spacer></v-spacer>
-            <v-select
-              v-model="sortBy"
-              flat
-              solo
-              filled
-              hide-details
-              :items="attributes"
-              item-text="label"
-              item-value="key"
-              prepend-inner-icon="mdi-sort"
-              label="Trier par"
-            ></v-select>
-            <v-spacer></v-spacer>
-            <v-btn-toggle v-model="sortDesc" mandatory>
-              <v-btn large depressed :value="false">
-                <v-icon>mdi-arrow-up</v-icon>
-              </v-btn>
-              <v-btn large depressed :value="true">
-                <v-icon>mdi-arrow-down</v-icon>
-              </v-btn>
-            </v-btn-toggle>
-          </template>
+        <v-toolbar class="my-2">
+          <v-row>
+            <v-col cols="12" sm="3">
+              <v-text-field
+                v-model="search"
+                clearable
+                fixed
+                flat
+                solo
+                filled
+                hide-details
+                prepend-inner-icon="mdi-magnify"
+                label="Rechercher"
+              />
+            </v-col>
+
+            <v-col
+              v-show="$vuetify.breakpoint.mdAndUp"
+              cols="12"
+              sm="4"
+              class="d-flex align-center"
+            >
+              <v-select
+                v-model="sortBy"
+                flat
+                solo
+                filled
+                hide-details
+                :items="attributes"
+                item-text="label"
+                item-value="key"
+                prepend-inner-icon="mdi-sort"
+                label="Trier par"
+                class="mx-4"
+              ></v-select>
+              <v-btn-toggle v-model="sortDesc" mandatory>
+                <v-btn depressed :value="false">
+                  <v-icon>mdi-arrow-up</v-icon>
+                </v-btn>
+                <v-btn depressed :value="true">
+                  <v-icon>mdi-arrow-down</v-icon>
+                </v-btn>
+              </v-btn-toggle>
+            </v-col>
+
+            <v-col cols="12" sm="5" class="d-flex align-center">
+              <span class="primary--text">{{ filter.players[0] }}</span>
+              <v-range-slider
+                v-model="filter.players"
+                :max="rangePlayers.max"
+                :min="rangePlayers.min"
+                hide-details
+                class="align-center"
+              />
+              <span class="primary--text">{{ filter.players[1] }}</span>
+              <v-btn-toggle v-model="filterOn" class="ml-2">
+                <v-btn depressed :value="true">
+                  <v-icon>mdi-filter</v-icon>
+                </v-btn>
+              </v-btn-toggle>
+            </v-col>
+          </v-row>
         </v-toolbar>
       </template>
 
@@ -75,9 +102,13 @@ export default Vue.extend({
   data: () => ({
     loading: true,
     games: [] as Game[],
+    filteredGames: [] as Game[],
     itemsPerPage: -1,
     search: "" as string,
-    filter: {},
+    filterOn: false,
+    filter: {
+      players: [2, 6],
+    },
     sortDesc: false as boolean,
     sortBy: "bggWeight" as string,
     attributes: [
@@ -106,13 +137,58 @@ export default Vue.extend({
         key: "theme",
       },
     ] as { label: string; key: string }[],
+    rangePlayers: {
+      min: 1,
+      max: 10,
+    },
   }),
 
   created() {
     GameService.getGames().then((games) => {
       this.games = games;
+      this.filteredGames = [...games];
+      this.setRangePlayers();
       this.loading = false;
     });
+  },
+
+  watch: {
+    filterOn: function (val) {
+      this.filteredGames = val ? this.filterPlayers() : [...this.games];
+    },
+    filter: {
+      handler: function (val, oldVal) {
+        this.filteredGames = this.filterOn
+          ? this.filterPlayers()
+          : [...this.games];
+      },
+      deep: true,
+    },
+  },
+
+  methods: {
+    setRangePlayers: function () {
+      this.games.forEach((game) => {
+        if (!game.players.max) {
+          game.players.max = game.players.min;
+        }
+        if (game.players.max > this.rangePlayers.max) {
+          this.rangePlayers.max = game.players.max;
+        }
+      });
+    },
+
+    filterPlayers: function () {
+      return this.games.filter((game) => {
+        if (!game.players.max) {
+          game.players.max = game.players.min;
+        }
+        return (
+          game.players.min <= this.filter.players[0] &&
+          game.players.max >= this.filter.players[1]
+        );
+      });
+    },
   },
 });
 </script>
