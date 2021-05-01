@@ -1,31 +1,63 @@
 <template>
-  <div class="game">
-    <h3>
-      <template v-if="game.preTitle"
-        ><small>{{ game.preTitle }}</small
-        ><br /></template
-      >{{ game.title
-      }}<template v-if="game.postTitle"
-        ><br /><small>{{ game.postTitle }}</small></template
-      >
-    </h3>
-    <figure>
-      <img
-        :src="'https://mathiasmille.fr/boardgames/img/' + game.slug + '.jpg'"
-      />
-    </figure>
+  <v-card class="game" elevation="0">
+    <img :src="imgUrl" alt="box" class="my-auto" />
 
-    <div class="game-details">
-      <p>Thème&nbsp;: {{ game.theme }}</p>
-      <p v-if="!game.players.max">{{ game.players.min }} joueurs</p>
-      <p v-else>{{ game.players.min }} à {{ game.players.max }} joueurs</p>
+    <v-card-title class="flex-column text-center text-no-wrap">
+      <small v-show="game.preTitle">{{ game.preTitle }}</small>
+      {{ game.title }}
+      <small v-show="game.postTitle">{{ game.postTitle }}</small>
+    </v-card-title>
 
-      <p>Difficulté&nbsp;: {{ game.bggWeight }} / 5</p>
+    <v-list dense class="text-no-wrap">
+      <v-list-item>
+        <v-list-item-icon class="my-0 mr-2">
+          <v-icon small>mdi-shape</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>
+          {{ game.theme }}
+        </v-list-item-title>
+      </v-list-item>
 
-      <p v-if="!game.duration.max">{{ game.duration.min }} min.</p>
-      <p v-else>{{ game.duration.min }} à {{ game.duration.max }} min.</p>
-    </div>
-  </div>
+      <v-list-item>
+        <v-list-item-icon class="my-0 mr-2">
+          <v-icon small>mdi-account-switch</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-no-wrap">
+          <template v-if="!game.players.max">
+            {{ game.players.min }} joueurs
+          </template>
+          <template v-else>
+            {{ game.players.min }} à {{ game.players.max }} joueurs
+          </template>
+        </v-list-item-title>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon class="my-0 mr-2">
+          <v-icon small>mdi-weight</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-no-wrap">
+          {{ game.bggWeight }} / 5
+        </v-list-item-title>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon class="my-0 mr-2">
+          <v-icon small>mdi-clock</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>
+            <template v-if="!game.duration.max">
+              {{ game.duration.min }} min.
+            </template>
+            <template v-else>
+              {{ game.duration.min }} à {{ game.duration.max }} min.
+            </template>
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+  </v-card>
 </template>
 
 <script lang="ts">
@@ -41,6 +73,31 @@ export default Vue.extend({
       type: Object as PropType<Game>,
       required: true,
     },
+    gameDetails: {
+      type: Array as PropType<{ name: string; icon: string; text: string }[]>,
+      required: true,
+    },
+    filteredKeys: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
+    sortBy: {
+      type: String as PropType<string>,
+      required: true,
+    },
+  },
+
+  computed: {
+    imgUrl() {
+      return (
+        "https://mathiasmille.fr/boardgames/img/" + this.game.slug + ".jpg"
+      );
+    },
+    getPlayers() {
+      return this.game.players.max
+        ? this.game.players.min + " à " + this.game.players.max + " joueurs"
+        : this.game.players.min + " joueurs";
+    },
   },
 });
 </script>
@@ -48,14 +105,15 @@ export default Vue.extend({
 <style scoped>
 .game {
   margin: 0 1rem 1rem;
-  text-align: center;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.game-details p {
-  margin-bottom: 0.25rem;
+.v-list-item--dense,
+.v-list--dense .v-list-item {
+  min-height: 24px;
 }
 </style>
