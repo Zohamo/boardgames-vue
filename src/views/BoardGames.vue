@@ -22,7 +22,9 @@ export default Vue.extend({
   }),
 
   created() {
-    this.games = GameService.getGames();
+    GameService.getGames().then((games) => {
+      this.games = games;
+    });
   },
 });
 </script>
