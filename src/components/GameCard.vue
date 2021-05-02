@@ -23,7 +23,9 @@
           <v-icon small>mdi-account-switch</v-icon>
         </v-list-item-icon>
         <v-list-item-title class="text-no-wrap">
-          <template v-if="!game.players.max">
+          <template
+            v-if="!game.players.max || game.players.min === game.players.max"
+          >
             {{ game.players.min }} joueurs
           </template>
           <template v-else>
@@ -47,7 +49,11 @@
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>
-            <template v-if="!game.duration.max">
+            <template
+              v-if="
+                !game.duration.max || game.duration.min === game.duration.max
+              "
+            >
               {{ game.duration.min }} min.
             </template>
             <template v-else>
