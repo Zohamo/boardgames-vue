@@ -165,6 +165,31 @@
                 />
               </v-list-item-content>
             </v-list-item>
+
+            <v-list-item class="justify-space-between">
+              <v-btn-toggle v-model="filtersActive.theme">
+                <v-btn
+                  small
+                  depressed
+                  outlined
+                  v-text="'Thème'"
+                  color="primary"
+                  :value="true"
+                />
+              </v-btn-toggle>
+            </v-list-item>
+
+            <v-list-item dense class="pl-1">
+              <v-select
+                dense
+                v-model="filtersValue.theme"
+                flat
+                solo
+                filled
+                hide-details
+                :items="themes"
+              />
+            </v-list-item>
           </v-list>
         </v-navigation-drawer>
       </v-col>
@@ -223,20 +248,23 @@ export default Vue.extend({
       min: 30,
       max: 120,
     },
+    themes: [] as string[],
     filtersActive: {
       players: false,
       playersRange: false,
       duration: false,
       durationRange: false,
+      theme: false,
     },
     filtersValue: {
       players: 4,
       playersRange: [2, 6],
       duration: 30,
       durationRange: [30, 60],
+      theme: "",
     },
 
-    sortDesc: true,
+    sortDesc: false,
     sortBy: "bggWeight",
     attributes: [
       {
@@ -312,13 +340,20 @@ export default Vue.extend({
         if (game.duration.max > this.durationRange.max) {
           this.durationRange.max = game.duration.max;
         }
+        if (!this.themes.includes(game.theme)) {
+          this.themes.push(game.theme);
+        }
       });
+      this.themes.sort();
+      this.filtersValue.theme = this.themes[0];
     },
 
     applyFilters: function () {
       this.filteredGames = this.games.filter(
         (game) =>
-          this.filterGameByPlayers(game) && this.filterGameByDuration(game)
+          this.filterGameByPlayers(game) &&
+          this.filterGameByDuration(game) &&
+          this.filterGameByTheme(game)
       );
     },
 
@@ -346,6 +381,13 @@ export default Vue.extend({
         ? this.filtersValue.durationRange
         : Array(2).fill(this.filtersValue.duration);
       return game.duration.min <= min && game.duration.max <= max;
+    },
+
+    filterGameByTheme: function (game: Game) {
+      if (!this.filtersActive.theme) {
+        return true;
+      }
+      return game.theme === this.filtersValue.theme;
     },
   },
 });
