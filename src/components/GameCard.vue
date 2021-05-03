@@ -83,9 +83,8 @@ export default Vue.extend({
 
   computed: {
     imgUrl() {
-      return (
-        "https://mathiasmille.fr/boardgames/img/" + this.game.slug + ".jpg"
-      );
+      const slug = this.game.slug || "";
+      return "https://mathiasmille.fr/boardgames/img/" + slug + ".jpg";
     },
   },
 });

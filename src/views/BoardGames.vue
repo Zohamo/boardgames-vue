@@ -309,13 +309,13 @@ export default Vue.extend({
 
   watch: {
     filtersActive: {
-      handler: function (val, oldVal) {
+      handler: function () {
         this.applyFilters();
       },
       deep: true,
     },
     filtersValue: {
-      handler: function (val, oldVal) {
+      handler: function () {
         this.applyFilters();
       },
       deep: true,
