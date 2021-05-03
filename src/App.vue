@@ -1,17 +1,19 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <v-app-bar hide-on-scroll dark dense app>
       <div class="d-flex align-center">
         <v-img
           alt="Meeple"
           class="shrink mr-2"
           contain
-          src="https://binjoug.prootrecords.com/boardgames/favicon.png"
+          src="favicon.svg"
           width="25"
           transition="scroll-x-transition"
         />
-        <h1 class="display-1">Board Games</h1>
+        <v-toolbar-title>Jeux de société</v-toolbar-title>
       </div>
+      <v-spacer></v-spacer>
+      <v-btn icon link href="https://mathiasmille.fr"> }:§ </v-btn>
     </v-app-bar>
 
     <v-main>
