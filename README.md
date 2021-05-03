@@ -27,3 +27,9 @@ npm run lint
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Changelog
+
+### [1.0.0] - 2021-05-03
+
+Boardgames's list first version.
