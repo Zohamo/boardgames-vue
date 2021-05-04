@@ -10,7 +10,9 @@
           width="25"
           transition="scroll-x-transition"
         />
-        <v-toolbar-title>Jeux de société</v-toolbar-title>
+        <v-btn plain :to="{ name: 'Home' }">
+          <v-toolbar-title>Jeux de société</v-toolbar-title>
+        </v-btn>
       </div>
       <v-spacer></v-spacer>
       <v-btn icon link href="https://mathiasmille.fr"> }:§ </v-btn>

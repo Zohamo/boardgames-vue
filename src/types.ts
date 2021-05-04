@@ -18,6 +18,12 @@ export interface Game {
   mechanisms?: string[];
 }
 
+export interface Picture {
+  caption?: string;
+  src: string;
+  alt?: string;
+}
+
 export interface Range {
   min: number;
   max?: number;

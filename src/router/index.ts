@@ -1,4 +1,5 @@
-import BoardGames from "@/views/BoardGames.vue";
+import GameDetails from "@/views/GameDetails.vue";
+import GamesList from "@/views/GamesList.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -7,17 +8,22 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "BoardGames",
-    component: BoardGames,
+    name: "Home",
+    component: GamesList,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/games",
+    name: "GamesList",
+    component: GamesList,
+  },
+  {
+    path: "/games/:slug",
+    name: "GameDetails",
+    component: GameDetails,
+    props: {
+      type: String,
+      required: true,
+    },
   },
 ];
 
