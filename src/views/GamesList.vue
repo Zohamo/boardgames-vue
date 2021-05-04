@@ -224,7 +224,7 @@ import GameService from "@/services/GameService";
 import { Game } from "@/types";
 
 export default Vue.extend({
-  name: "BoardGames",
+  name: "GamesList",
 
   components: {
     GameCard,
