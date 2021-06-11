@@ -30,6 +30,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Changelog
 
+### [Unreleased]
+
+#### Added
+
+- Boardgame's Details Page
+- Scythe's scores Page
+
+#### Changed
+
+- Remove hash # from URL
+
 ### [1.0.0] - 2021-05-03
 
 Boardgames's list first version.
