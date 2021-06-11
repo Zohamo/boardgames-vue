@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Industrial"
+  },
+  {
+    "id": "2",
+    "name": "Engineering"
+  },
+  {
+    "id": "2A",
+    "name": "Militant"
+  },
+  {
+    "id": "3",
+    "name": "Patriotic"
+  },
+  {
+    "id": "3A",
+    "name": "Mechanical"
+  },
+  {
+    "id": "4",
+    "name": "Innovative"
+  },
+  {
+    "id": "5",
+    "name": "Agricultural"
+  }
+]

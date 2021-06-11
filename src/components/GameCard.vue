@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: 'GameDetails', params: { id: game.id } }"
+    :to="{ name: 'GameDetails', params: { slug: game.slug } }"
     style="text-decoration: none"
   >
     <v-card class="game" elevation="0">

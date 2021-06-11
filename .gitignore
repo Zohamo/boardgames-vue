@@ -23,4 +23,4 @@ pnpm-debug.log*
 *.sw?
 
 # Assets
-src/assets/img
+public/img
