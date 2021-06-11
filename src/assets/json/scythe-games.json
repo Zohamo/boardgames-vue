@@ -1,0 +1,559 @@
+[
+  {
+    "id": 1,
+    "date": "2018-12-19",
+    "human": {
+      "name": "Mathias",
+      "faction": "CRI",
+      "winner": true,
+      "score": 74
+    },
+    "automa": {
+      "automaLevel": 0,
+      "faction": "NOR",
+      "score": 61,
+      "stars": 6
+    }
+  },
+  {
+    "id": 2,
+    "date": "2018-12-27",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "score": 82
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "RUS",
+      "winner": true,
+      "score": 83,
+      "stars": 6
+    }
+  },
+  {
+    "id": 3,
+    "date": "2018-12-27",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "score": 25
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "RUS",
+      "winner": true,
+      "score": 63,
+      "stars": 6
+    }
+  },
+  {
+    "id": 4,
+    "date": "2018-12-27",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "score": 63
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "RUS",
+      "winner": true,
+      "score": 78,
+      "stars": 6
+    }
+  },
+  {
+    "id": 5,
+    "date": "2019-01-23",
+    "human": {
+      "name": "Mathias",
+      "faction": "NOR",
+      "score": 54
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 73,
+      "stars": 6
+    }
+  },
+  {
+    "id": 6,
+    "date": "2019-01-23",
+    "human": {
+      "name": "Mathias",
+      "faction": "NOR",
+      "winner": true,
+      "score": 57,
+      "stars": 6
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "score": 51
+    }
+  },
+  {
+    "id": 7,
+    "date": "2019-01-24",
+    "human": {
+      "name": "Mathias",
+      "faction": "NOR",
+      "score": 32
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 68,
+      "stars": 6
+    }
+  },
+  {
+    "id": 8,
+    "date": "2019-01-24",
+    "human": {
+      "name": "Mathias",
+      "faction": "NOR",
+      "score": 54
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 62,
+      "stars": 6
+    }
+  },
+  {
+    "id": 9,
+    "date": "2019-01-24",
+    "human": {
+      "name": "Mathias",
+      "faction": "NOR",
+      "score": 68
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 78,
+      "stars": 6
+    }
+  },
+  {
+    "id": 10,
+    "date": "2019-01-25",
+    "human": {
+      "name": "Mathias",
+      "faction": "RUS",
+      "playerMat": "5",
+      "score": 48
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "winner": true,
+      "score": 77,
+      "stars": 6
+    }
+  },
+  {
+    "id": 11,
+    "date": "2019-01-25",
+    "human": {
+      "name": "Mathias",
+      "faction": "RUS",
+      "winner": true,
+      "score": 84
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "score": 83,
+      "stars": 6
+    }
+  },
+  {
+    "id": 12,
+    "date": "2019-01-25",
+    "human": {
+      "name": "Mathias",
+      "faction": "RUS",
+      "score": 62
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "winner": true,
+      "score": 77,
+      "stars": 6
+    }
+  },
+  {
+    "id": 13,
+    "date": "2019-01-25",
+    "human": {
+      "name": "Mathias",
+      "faction": "RUS",
+      "winner": true,
+      "score": 89
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "score": 74,
+      "stars": 6
+    }
+  },
+  {
+    "id": 14,
+    "date": "2020-11-27",
+    "human": {
+      "name": "Mathias",
+      "faction": "ALB",
+      "winner": true,
+      "playerMat": "2A",
+      "score": 113,
+      "stars": 6
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "TOG",
+      "score": 75
+    }
+  },
+  {
+    "id": 15,
+    "date": "2020-11-27",
+    "human": {
+      "name": "Mathias",
+      "faction": "TOG",
+      "winner": true,
+      "playerMat": "4",
+      "score": 117,
+      "stars": 6
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "ALB",
+      "score": 83
+    }
+  },
+  {
+    "id": 16,
+    "date": "2020-11-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "winner": true,
+      "playerMat": "5",
+      "score": 91,
+      "stars": 6
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "RUS",
+      "score": 79
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "8",
+        "passive": "9"
+      },
+      "resolution": "2"
+    }
+  },
+  {
+    "id": 17,
+    "date": "2020-11-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "CRI",
+      "playerMat": "1",
+      "score": 25
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "winner": true,
+      "score": 62,
+      "stars": 6
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "4",
+        "passive": "12"
+      },
+      "resolution": "7"
+    }
+  },
+  {
+    "id": 18,
+    "date": "2020-11-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "CRI",
+      "playerMat": "1",
+      "score": 42
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "POL",
+      "winner": true,
+      "score": 98,
+      "stars": 6
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "4",
+        "passive": "12"
+      },
+      "resolution": "7"
+    }
+  },
+  {
+    "id": 19,
+    "date": "2020-11-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "CRI",
+      "winner": true,
+      "playerMat": "1",
+      "score": 93
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "NOR",
+      "score": 70
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "5",
+        "passive": "10"
+      },
+      "resolution": "4"
+    }
+  },
+  {
+    "id": 20,
+    "date": "2020-11-30",
+    "human": {
+      "name": "Mathias",
+      "faction": "CRI",
+      "winner": true,
+      "playerMat": "1",
+      "score": 111
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "NOR",
+      "score": 96
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "5",
+        "passive": "10"
+      },
+      "resolution": "3"
+    }
+  },
+  {
+    "id": 21,
+    "date": "2020-12-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "playerMat": "2",
+      "score": 55
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 72
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "1",
+        "passive": "11"
+      },
+      "resolution": "1"
+    }
+  },
+  {
+    "id": 22,
+    "date": "2020-12-28",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "playerMat": "2",
+      "score": 72
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 74
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "2",
+        "passive": "15"
+      },
+      "resolution": "6"
+    }
+  },
+  {
+    "id": 22,
+    "date": "2020-12-29",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "playerMat": "2",
+      "score": 46
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "winner": true,
+      "score": 86
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "3",
+        "passive": "16"
+      },
+      "resolution": "8"
+    }
+  },
+  {
+    "id": 23,
+    "date": "2021-04-14",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "playerMat": "3A",
+      "score": 58
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "NOR",
+      "winner": true,
+      "score": 72
+    }
+  },
+  {
+    "id": 24,
+    "date": "2021-04-14",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "winner": true,
+      "playerMat": "3A",
+      "score": 89
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "NOR",
+      "score": 53
+    }
+  },
+  {
+    "id": 25,
+    "date": "2021-04-15",
+    "human": {
+      "name": "Mathias",
+      "faction": "SAX",
+      "playerMat": "3A",
+      "score": 76
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "NOR",
+      "winner": true,
+      "score": 97
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "5",
+        "passive": "15"
+      },
+      "resolution": "3"
+    }
+  },
+  {
+    "id": 26,
+    "date": "2021-04-29",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "winner": true,
+      "playerMat": "2A",
+      "score": 86
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "TOG",
+      "stars": 6,
+      "score": 80
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "4",
+        "passive": "9"
+      },
+      "resolution": "2"
+    }
+  },
+  {
+    "id": 27,
+    "date": "2021-05-05",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "stars": 6,
+      "winner": true,
+      "playerMat": "3A",
+      "score": 77
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "stars": 5,
+      "score": 68
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "3",
+        "passive": "14"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "date": "2021-05-05",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "stars": 5,
+      "winner": true,
+      "playerMat": "1",
+      "score": 78
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "CRI",
+      "stars": 6,
+      "score": 76
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "3",
+        "passive": "14"
+      }
+    }
+  }
+]
