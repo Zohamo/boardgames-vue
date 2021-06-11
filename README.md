@@ -30,7 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Changelog
 
-### [Unreleased]
+### [1.0.1] - 2021-06-11
 
 #### Added
 
