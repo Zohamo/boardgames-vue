@@ -6,7 +6,7 @@
           alt="Meeple"
           class="shrink mr-2"
           contain
-          src="favicon.svg"
+          :src="`${publicPath}favicon.svg`"
           width="25"
           transition="scroll-x-transition"
         />
@@ -49,7 +49,7 @@ export default Vue.extend({
   name: "App",
 
   data: () => ({
-    //
+    publicPath: process.env.BASE_URL,
   }),
 });
 </script>
