@@ -33,7 +33,7 @@
                 <v-icon small>mdi-account-switch</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-subtitle>Mécanismes</v-list-item-subtitle>
+                <v-list-item-subtitle>Nombre de joueurs</v-list-item-subtitle>
                 <v-list-item-title class="text-no-wrap">
                   <template
                     v-if="
