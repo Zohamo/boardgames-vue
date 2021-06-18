@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="min-height: 100vh">
     <app-header />
     <v-main>
       <router-view />
@@ -22,3 +22,13 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style>
+.v-main__wrap {
+  display: flex;
+  flex-direction: column;
+}
+.v-main__wrap > .container {
+  flex-grow: 1;
+}
+</style>
