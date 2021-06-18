@@ -86,10 +86,14 @@ export default Vue.extend({
     },
   },
 
+  data: () => ({
+    publicPath: process.env.BASE_URL,
+  }),
+
   computed: {
     imgUrl() {
       const slug = this.game.slug || "";
-      return "https://mathiasmille.fr/boardgames/img/" + slug + ".jpg";
+      return `${this.publicPath}img/${slug}.jpg`;
     },
   },
 });
