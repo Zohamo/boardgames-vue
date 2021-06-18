@@ -1,9 +1,14 @@
 <template>
-  <v-footer padless>
-    <v-card class="pa-5 flex" flat tile>
-      <v-card-text class="text-center">
-        {{ new Date().getFullYear() }} — <strong>Boardgames</strong> by
-        <a href="https://mathiasmille.fr">Mathias Mille</a> }:§
+  <v-footer dark padless elevation="4">
+    <v-card class="pa-2 text--white flex text-center" flat tile>
+      <v-card-text>
+        {{ new Date().getFullYear() }} — <a :href="appUrl">Boardgames</a> v{{
+          appVersion
+        }}
+        by <a :href="author.url" target="_blank">{{ author.name }}</a>
+      </v-card-text>
+      <v-card-text>
+        made with <a :href="vueUrl" target="_blank">Vue.js</a> v{{ vueVersion }}
       </v-card-text>
     </v-card>
   </v-footer>
@@ -11,12 +16,25 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapState } from "vuex";
 
 export default Vue.extend({
   name: "AppFooter",
 
-  data: () => ({
-    publicPath: process.env.BASE_URL,
-  }),
+  computed: {
+    ...mapState(["appUrl", "author", "appVersion", "vueUrl", "vueVersion"]),
+  },
 });
 </script>
+
+<style scoped>
+a {
+  color: inherit !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+</style>

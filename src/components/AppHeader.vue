@@ -5,7 +5,7 @@
         alt="Meeple"
         class="shrink mr-2"
         contain
-        :src="`${publicPath}favicon.svg`"
+        :src="`${appUrl}favicon.svg`"
         width="25"
         transition="scroll-x-transition"
       />
@@ -32,18 +32,19 @@
       </v-menu>
     </div>
     <v-spacer></v-spacer>
-    <v-btn icon link href="https://mathiasmille.fr"> }:§ </v-btn>
+    <v-btn icon link :href="author.url"> }:§ </v-btn>
   </v-app-bar>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { mapState } from "vuex";
 
 export default Vue.extend({
   name: "AppHeader",
 
-  data: () => ({
-    publicPath: process.env.BASE_URL,
-  }),
+  computed: {
+    ...mapState(["appUrl", "author"]),
+  },
 });
 </script>

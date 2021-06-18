@@ -2,6 +2,13 @@
   "name": "boardgames-vue",
   "version": "1.0.1",
   "private": true,
+  "authors": [
+    {
+      "name": "Mathias Mille }:§",
+      "email": "mathias.mille@gmail.com",
+      "url": "https://mathiasmille.fr"
+    }
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

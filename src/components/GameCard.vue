@@ -74,6 +74,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { PropType } from "vue";
+import { mapState } from "vuex";
 import { Game } from "@/types";
 
 export default Vue.extend({
@@ -86,14 +87,11 @@ export default Vue.extend({
     },
   },
 
-  data: () => ({
-    publicPath: process.env.BASE_URL,
-  }),
-
   computed: {
-    imgUrl() {
-      const slug = this.game.slug || "";
-      return `${this.publicPath}img/${slug}.jpg`;
+    ...mapState(["appUrl"]),
+
+    imgUrl(): string {
+      return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
 });

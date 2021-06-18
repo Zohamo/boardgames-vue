@@ -119,6 +119,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapState } from "vuex";
 import GameService from "@/services/GameService";
 import { Game, Picture } from "@/types";
 
@@ -127,16 +128,15 @@ export default Vue.extend({
 
   data: () => ({
     loading: true,
-    publicPath: process.env.BASE_URL,
     game: {} as Game,
     pictures: [] as Picture[],
   }),
 
   computed: {
-    imgUrl() {
-      return this.game?.slug
-        ? `${this.publicPath}img/${this.game.slug}.jpg`
-        : "";
+    ...mapState(["appUrl"]),
+
+    imgUrl(): string {
+      return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
 
@@ -146,7 +146,7 @@ export default Vue.extend({
       this.loading = false;
       this.pictures = [
         {
-          src: `${this.publicPath}img/${game.slug}_preview.jpg`,
+          src: `${this.appUrl}img/${game.slug}_preview.jpg`,
           alt: "game preview",
         },
       ];
