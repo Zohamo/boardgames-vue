@@ -17,7 +17,7 @@ import Vue from "vue";
 import factions from "@/assets/json/scythe-factions.json";
 import ScytheResultsTable from "@/components/ScytheResultsTable.vue";
 import ScoreService from "@/services/ScoreService";
-import { ScytheFaction, ScytheGame } from "@/types";
+import { ScytheFaction, ScythePlay } from "@/types";
 
 export default Vue.extend({
   name: "scythe-scores",
@@ -29,7 +29,7 @@ export default Vue.extend({
   data() {
     return {
       factions: [] as ScytheFaction[],
-      games: [] as ScytheGame[],
+      plays: [] as ScythePlay[],
       results: [] as { [key: string]: any },
       typeResults: "best",
       bestResults: [] as { [key: string]: any },
@@ -61,9 +61,9 @@ export default Vue.extend({
   },
 
   created() {
-    this.games = ScoreService.getGames("scythe");
-    /* ScoreService.getGames("scythe").then((games) => {
-      this.games = games;
+    this.plays = ScoreService.getPlays("scythe");
+    /* ScoreService.getPlays("scythe").then((plays) => {
+      this.plays = plays;
     }); */
 
     this.factions = factions;
@@ -72,52 +72,52 @@ export default Vue.extend({
   },
 
   methods: {
-    getBestResults() {
+    getBestResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.plays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
         if (
-          !results[game.automa.faction][game.human.faction] ||
-          game.human.score >
-            results[game.automa.faction][game.human.faction].human.score
+          !results[play.automa.faction][play.human.faction] ||
+          play.human.score >
+            results[play.automa.faction][play.human.faction].human.score
         ) {
-          results[game.automa.faction][game.human.faction] = game;
+          results[play.automa.faction][play.human.faction] = play;
         }
       });
       return results;
     },
 
-    getWorstResults() {
+    getWorstResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.plays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
         if (
-          !results[game.automa.faction][game.human.faction] ||
-          game.human.score <
-            results[game.automa.faction][game.human.faction].human.score
+          !results[play.automa.faction][play.human.faction] ||
+          play.human.score <
+            results[play.automa.faction][play.human.faction].human.score
         ) {
-          results[game.automa.faction][game.human.faction] = game;
+          results[play.automa.faction][play.human.faction] = play;
         }
       });
       return results;
     },
 
-    getAverageResults() {
+    getAverageResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.plays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
-        if (!results[game.automa.faction][game.human.faction]) {
-          results[game.automa.faction][game.human.faction] = [];
+        if (!results[play.automa.faction][play.human.faction]) {
+          results[play.automa.faction][play.human.faction] = [];
         }
-        results[game.automa.faction][game.human.faction].push({
-          human: game.human.score,
-          automa: game.automa.score,
+        results[play.automa.faction][play.human.faction].push({
+          human: play.human.score,
+          automa: play.automa.score,
         });
       });
       for (const automaFaction in results) {

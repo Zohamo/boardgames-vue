@@ -1,13 +1,13 @@
-import { ScytheGame } from "@/types";
-import games from "@/assets/json/scythe-games.json";
+import { ScythePlay } from "@/types";
+import plays from "@/assets/json/scythe-plays.json";
 
 export default {
-  /* async  */ getGames(gameSlug: string) /* : Promise<ScytheGame[]> */ {
-    return games;
+  /* async  */ getPlays(gameSlug: string) /* : Promise<ScythePlay[]> */ {
+    return plays;
     return fetch(`${process.env.VUE_APP_API_URL}/scores/${gameSlug}`)
       .then((res) => res.json())
       .catch((error) => {
-        console.log("score.getGames", error);
+        console.log("score.getPlays", error);
       });
   },
 };
