@@ -1,7 +1,9 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import { version, authors, dependencies } from "../../package.json";
-import { Game } from "@/types";
+import scytheFactions from "@/assets/json/scythe-factions.json";
+import scythePlays from "@/assets/json/scythe-plays.json";
+import { Game, ScytheFaction, ScythePlay } from "@/types";
 
 Vue.use(Vuex);
 
@@ -16,6 +18,9 @@ export default new Vuex.Store({
     promise: null,
 
     games: [] as Game[],
+
+    scythePlays: scythePlays as ScythePlay[],
+    scytheFactions: scytheFactions as ScytheFaction[],
   },
 
   mutations: {

@@ -8,16 +8,15 @@
       <v-radio label="Moyenne" value="average" />
     </v-radio-group>
 
-    <ScytheResultsTable :factions="factions" :results="results" />
+    <ScytheResultsTable :factions="scytheFactions" :results="results" />
   </v-container>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import factions from "@/assets/json/scythe-factions.json";
+import { mapState } from "vuex";
 import ScytheResultsTable from "@/components/ScytheResultsTable.vue";
-import ScoreService from "@/services/ScoreService";
-import { ScytheFaction, ScythePlay } from "@/types";
+import { ScythePlay } from "@/types";
 
 export default Vue.extend({
   name: "scythe-scores",
@@ -28,8 +27,6 @@ export default Vue.extend({
 
   data() {
     return {
-      factions: [] as ScytheFaction[],
-      plays: [] as ScythePlay[],
       results: [] as { [key: string]: any },
       typeResults: "best",
       bestResults: [] as { [key: string]: any },
@@ -38,8 +35,17 @@ export default Vue.extend({
     };
   },
 
+  computed: {
+    ...mapState(["scythePlays", "scytheFactions"]),
+  },
+
+  beforeMount() {
+    this.bestResults = this.getBestResults();
+    this.results = this.bestResults;
+  },
+
   watch: {
-    typeResults(val) {
+    typeResults(val): void {
       switch (val) {
         case "worst":
           if (!this.worstResults.length) {
@@ -60,21 +66,10 @@ export default Vue.extend({
     },
   },
 
-  created() {
-    this.plays = ScoreService.getPlays("scythe");
-    /* ScoreService.getPlays("scythe").then((plays) => {
-      this.plays = plays;
-    }); */
-
-    this.factions = factions;
-    this.bestResults = this.getBestResults();
-    this.results = this.bestResults;
-  },
-
   methods: {
     getBestResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.plays.forEach((play: ScythePlay) => {
+      this.scythePlays.forEach((play: ScythePlay) => {
         if (!results[play.automa.faction]) {
           results[play.automa.faction] = [];
         }
@@ -91,7 +86,7 @@ export default Vue.extend({
 
     getWorstResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.plays.forEach((play: ScythePlay) => {
+      this.scythePlays.forEach((play: ScythePlay) => {
         if (!results[play.automa.faction]) {
           results[play.automa.faction] = [];
         }
@@ -108,7 +103,7 @@ export default Vue.extend({
 
     getAverageResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.plays.forEach((play: ScythePlay) => {
+      this.scythePlays.forEach((play: ScythePlay) => {
         if (!results[play.automa.faction]) {
           results[play.automa.faction] = [];
         }
