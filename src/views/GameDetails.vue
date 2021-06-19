@@ -120,7 +120,6 @@
 <script lang="ts">
 import Vue from "vue";
 import { mapState } from "vuex";
-import GameService from "@/services/GameService";
 import { Game, Picture } from "@/types";
 
 export default Vue.extend({
@@ -133,24 +132,34 @@ export default Vue.extend({
   }),
 
   computed: {
-    ...mapState(["appUrl"]),
+    ...mapState(["appUrl", "games"]),
 
     imgUrl(): string {
       return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
 
-  created() {
-    GameService.getGame(this.$route.params.slug).then((game) => {
-      this.game = game;
+  async beforeMount() {
+    if (this.games.length) {
+      this.init();
+    } else {
+      this.$store.dispatch("getGames").then(() => this.init());
+    }
+  },
+
+  methods: {
+    init(): void {
+      this.game = this.games.find(
+        (game) => game.slug === this.$route.params.slug
+      );
       this.loading = false;
       this.pictures = [
         {
-          src: `${this.appUrl}img/${game.slug}_preview.jpg`,
+          src: `${this.appUrl}img/${this.game.slug}_preview.jpg`,
           alt: "game preview",
         },
       ];
-    });
+    },
   },
 });
 </script>
