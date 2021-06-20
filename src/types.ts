@@ -56,7 +56,7 @@ export interface ScytheFaction {
   color: string;
 }
 
-export interface ScytheGame {
+export interface ScythePlay {
   id: number;
   date: string;
   human: ScythePlayer;

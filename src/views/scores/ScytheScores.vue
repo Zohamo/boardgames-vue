@@ -8,16 +8,15 @@
       <v-radio label="Moyenne" value="average" />
     </v-radio-group>
 
-    <ScytheResultsTable :factions="factions" :results="results" />
+    <ScytheResultsTable :factions="scytheFactions" :results="results" />
   </v-container>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import factions from "@/assets/json/scythe-factions.json";
+import { mapState } from "vuex";
 import ScytheResultsTable from "@/components/ScytheResultsTable.vue";
-import ScoreService from "@/services/ScoreService";
-import { ScytheFaction, ScytheGame } from "@/types";
+import { ScythePlay } from "@/types";
 
 export default Vue.extend({
   name: "scythe-scores",
@@ -28,8 +27,6 @@ export default Vue.extend({
 
   data() {
     return {
-      factions: [] as ScytheFaction[],
-      games: [] as ScytheGame[],
       results: [] as { [key: string]: any },
       typeResults: "best",
       bestResults: [] as { [key: string]: any },
@@ -38,8 +35,17 @@ export default Vue.extend({
     };
   },
 
+  computed: {
+    ...mapState(["scythePlays", "scytheFactions"]),
+  },
+
+  beforeMount() {
+    this.bestResults = this.getBestResults();
+    this.results = this.bestResults;
+  },
+
   watch: {
-    typeResults(val) {
+    typeResults(val): void {
       switch (val) {
         case "worst":
           if (!this.worstResults.length) {
@@ -60,64 +66,53 @@ export default Vue.extend({
     },
   },
 
-  created() {
-    this.games = ScoreService.getGames("scythe");
-    /* ScoreService.getGames("scythe").then((games) => {
-      this.games = games;
-    }); */
-
-    this.factions = factions;
-    this.bestResults = this.getBestResults();
-    this.results = this.bestResults;
-  },
-
   methods: {
-    getBestResults() {
+    getBestResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.scythePlays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
         if (
-          !results[game.automa.faction][game.human.faction] ||
-          game.human.score >
-            results[game.automa.faction][game.human.faction].human.score
+          !results[play.automa.faction][play.human.faction] ||
+          play.human.score >
+            results[play.automa.faction][play.human.faction].human.score
         ) {
-          results[game.automa.faction][game.human.faction] = game;
+          results[play.automa.faction][play.human.faction] = play;
         }
       });
       return results;
     },
 
-    getWorstResults() {
+    getWorstResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.scythePlays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
         if (
-          !results[game.automa.faction][game.human.faction] ||
-          game.human.score <
-            results[game.automa.faction][game.human.faction].human.score
+          !results[play.automa.faction][play.human.faction] ||
+          play.human.score <
+            results[play.automa.faction][play.human.faction].human.score
         ) {
-          results[game.automa.faction][game.human.faction] = game;
+          results[play.automa.faction][play.human.faction] = play;
         }
       });
       return results;
     },
 
-    getAverageResults() {
+    getAverageResults(): { [key: string]: any } {
       const results: { [key: string]: any } = [];
-      this.games.forEach((game) => {
-        if (!results[game.automa.faction]) {
-          results[game.automa.faction] = [];
+      this.scythePlays.forEach((play: ScythePlay) => {
+        if (!results[play.automa.faction]) {
+          results[play.automa.faction] = [];
         }
-        if (!results[game.automa.faction][game.human.faction]) {
-          results[game.automa.faction][game.human.faction] = [];
+        if (!results[play.automa.faction][play.human.faction]) {
+          results[play.automa.faction][play.human.faction] = [];
         }
-        results[game.automa.faction][game.human.faction].push({
-          human: game.human.score,
-          automa: game.automa.score,
+        results[play.automa.faction][play.human.faction].push({
+          human: play.human.score,
+          automa: play.automa.score,
         });
       });
       for (const automaFaction in results) {

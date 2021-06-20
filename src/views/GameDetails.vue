@@ -33,7 +33,7 @@
                 <v-icon small>mdi-account-switch</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-subtitle>Mécanismes</v-list-item-subtitle>
+                <v-list-item-subtitle>Nombre de joueurs</v-list-item-subtitle>
                 <v-list-item-title class="text-no-wrap">
                   <template
                     v-if="
@@ -119,7 +119,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import GameService from "@/services/GameService";
+import { mapState } from "vuex";
 import { Game, Picture } from "@/types";
 
 export default Vue.extend({
@@ -127,30 +127,39 @@ export default Vue.extend({
 
   data: () => ({
     loading: true,
-    publicPath: process.env.BASE_URL,
     game: {} as Game,
     pictures: [] as Picture[],
   }),
 
   computed: {
-    imgUrl() {
-      return this.game?.slug
-        ? `${this.publicPath}img/${this.game.slug}.jpg`
-        : "";
+    ...mapState(["appUrl", "games"]),
+
+    imgUrl(): string {
+      return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
 
-  created() {
-    GameService.getGame(this.$route.params.slug).then((game) => {
-      this.game = game;
+  async beforeMount() {
+    if (this.games.length) {
+      this.init();
+    } else {
+      this.$store.dispatch("getGames").then(() => this.init());
+    }
+  },
+
+  methods: {
+    init(): void {
+      this.game = this.games.find(
+        (game) => game.slug === this.$route.params.slug
+      );
       this.loading = false;
       this.pictures = [
         {
-          src: `${this.publicPath}img/${game.slug}_preview.jpg`,
+          src: `${this.appUrl}img/${this.game.slug}_preview.jpg`,
           alt: "game preview",
         },
       ];
-    });
+    },
   },
 });
 </script>

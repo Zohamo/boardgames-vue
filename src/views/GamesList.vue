@@ -219,8 +219,8 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapActions, mapState } from "vuex";
 import GameCard from "@/components/GameCard.vue";
-import GameService from "@/services/GameService";
 import { Game } from "@/types";
 
 export default Vue.extend({
@@ -232,7 +232,6 @@ export default Vue.extend({
 
   data: () => ({
     loading: true,
-    games: [] as Game[],
     filteredGames: [] as Game[],
     itemsPerPage: -1,
 
@@ -264,7 +263,7 @@ export default Vue.extend({
       theme: "",
     },
 
-    sortDesc: false,
+    sortDesc: true,
     sortBy: "bggWeight",
     attributes: [
       {
@@ -298,13 +297,16 @@ export default Vue.extend({
     ] as { label: string; key: string }[],
   }),
 
-  created() {
-    GameService.getGames().then((games) => {
-      this.games = games;
-      this.filteredGames = [...games];
-      this.setDefaultValues();
-      this.loading = false;
-    });
+  async beforeMount() {
+    if (this.games.length) {
+      this.init();
+    } else {
+      this.$store.dispatch("getGames").then(() => this.init());
+    }
+  },
+
+  computed: {
+    ...mapState(["games"]),
   },
 
   watch: {
@@ -323,7 +325,15 @@ export default Vue.extend({
   },
 
   methods: {
-    setDefaultValues: function () {
+    ...mapActions(["getGames"]),
+
+    init(): void {
+      this.filteredGames = [...this.games];
+      this.setDefaultValues();
+      this.loading = false;
+    },
+
+    setDefaultValues(): void {
       this.filteredGames.forEach((game) => {
         if (!game.players.max) {
           game.players.max = game.players.min;
@@ -348,7 +358,7 @@ export default Vue.extend({
       this.filtersValue.theme = this.themes[0];
     },
 
-    applyFilters: function () {
+    applyFilters(): void {
       this.filteredGames = this.games.filter(
         (game) =>
           this.filterGameByPlayers(game) &&
@@ -357,12 +367,9 @@ export default Vue.extend({
       );
     },
 
-    filterGameByPlayers: function (game: Game) {
+    filterGameByPlayers(game: Game): boolean {
       if (!this.filtersActive.players) {
         return true;
-      }
-      if (!game.players.max) {
-        game.players.max = game.players.min;
       }
       const [min, max] = this.filtersActive.playersRange
         ? this.filtersValue.playersRange
@@ -370,12 +377,9 @@ export default Vue.extend({
       return game.players.min <= min && game.players.max >= max;
     },
 
-    filterGameByDuration: function (game: Game) {
+    filterGameByDuration(game: Game): boolean {
       if (!this.filtersActive.duration) {
         return true;
-      }
-      if (!game.duration.max) {
-        game.duration.max = game.duration.min;
       }
       const [min, max] = this.filtersActive.durationRange
         ? this.filtersValue.durationRange
@@ -383,7 +387,7 @@ export default Vue.extend({
       return game.duration.min <= min && game.duration.max <= max;
     },
 
-    filterGameByTheme: function (game: Game) {
+    filterGameByTheme(game: Game): boolean {
       if (!this.filtersActive.theme) {
         return true;
       }
