@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>7 Wonders | Symboles</title>
+    <meta name="keywords" content="7 Wonders, symboles, documentation, description">
+    <meta name="description" content="Description des symboles de 7 Wonders" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/picnic.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+      td:first-child {
+        text-align: center;
+      }
+      img {
+        max-width: 150px;
+        max-height: 90px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#" class="brand">
+        <img class="logo" src="./img/logo-7-wonders_sm.png" alt="7 Wonders" />
+      </a>
+
+      <input id="bmenub" type="checkbox" class="show" />
+      <label for="bmenub" class="burger pseudo button">menu</label>
+
+      <div class="menu">
+        <a class="pseudo button" href="./quick-rules.html">Règles rapides</a>
+        <a class="pseudo button" href="./wonders.html">Merveilles</a>
+        <a class="button" disabled href="./symbols.html">Symboles</a>
+        <a class="pseudo button" href="./faq.html">FAQ</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="flex five">
+        <aside class="full fifth-1000">
+          <div class="links flex two three-500 five-800 one-1000">
+            <div><a class="pseudo button" href="#economy">Économie</a></div>
+            <div><a class="pseudo button" href="#wonders">Merveilles</a></div>
+            <div><a class="pseudo button" href="#military">Militaire</a></div>
+            <div><a class="pseudo button" href="#science">Science</a></div>
+            <div><a class="pseudo button" href="#cards">Cartes</a></div>
+            <div><a class="pseudo button" href="#leaders">Leaders</a></div>
+          </div>
+          <a href="#main" tabindex="-1" class="top pseudo button">▲</a>
+        </aside>
+
+        <section class="full four-fifth-1000">
+          <section id="economy">
+            <h2>Économie</h2>
+
+            <table>
+              <tr>
+                <td>
+                  <img
+                    alt=""
+                    src="./img/ressource-primary-one-coin-right.png"
+                  />
+                </td>
+                <td>
+                  à partir du tour suivant celui de la construction de ce
+                  bâtiment, le joueur paie ses matières premières achetées à la
+                  cité voisine de droite 1 pièce au lieu de 2.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img alt="" src="./img/ressource-secondary-one-coin.png" />
+                </td>
+                <td>
+                  à partir du tour suivant celui de la construction de ce
+                  bâtiment, le joueur paie ses produits manufacturés achetés à
+                  ses deux cités voisines 1 pièce au lieu de 2.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/5980e8180c5c0c61.png" /></td>
+                <td>
+                  permet <strong>une fois par tour</strong> d’acheter n’importe
+                  quelle ressource en la payant 1 pièce à la banque.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/665fbdd79c9c4703.png" /></td>
+                <td>
+                  chaque achat d’une ou plusieurs ressources à un voisin
+                  rapporte 1 pièce.
+                  <strong
+                    >Attention, ce gain est limité à une 1 pièce par voisin et
+                    par tour&nbsp;!</strong
+                  >
+                  <small
+                    >Précision: le joueur prend ce gain à la banque
+                    immédiatement APRES avoir payé ses ressources.</small
+                  >
+                </td>
+              </tr>
+              <tr class="leaders cities">
+                <td><img alt="" src="./img/e75270aa6c60951a.png" /></td>
+                <td>
+                  chaque prise d’argent à la banque est augmentée de 1. Cette
+                  augmentation est limitée à une pièce par tour.
+                  <small
+                    >Précision: l’argent reçu des voisins par l’achat de
+                    ressources n’est pas considéré comme venant de la
+                    banque.</small
+                  >
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/a98640f795821e8.png" /></td>
+                <td>
+                  rapporte 1 point de victoire par lot complet de 3 pièces dans
+                  le trésor du joueur à la fin de la partie
+                  <small
+                    >Précision: ces points viennent s’ajouter à ceux octroyés
+                    normalement pour les pièces.</small
+                  >
+                </td>
+              </tr>
+              <tr class="wonder-pack">
+                <td><img alt="" src="./img/a837dbb24bef1f4a.png" /></td>
+                <td>
+                  rapporte 1 pièce pour chaque symbole ressource Pierre présent
+                  sur ses cartes marron au moment où elle est construite.<br />À
+                  la fin de la partie, cette étape rapporte 1 point de victoire
+                  pour chaque symbole ressource Pierre présent sur ses
+                  <span class="color-brown">cartes marron</span>.
+                </td>
+              </tr>
+              <tr class="wonder-pack">
+                <td><img alt="" src="./img/1ea58002f163436.png" /></td>
+                <td>
+                  à la fin de la partie, le joueur marque 2 points de victoire
+                  pour chaque symbole ressource Pierre présent sur ses
+                  <span class="color-brown">cartes marron</span>.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/d5d7408fe5613403.png" /></td>
+                <td>
+                  réduction commerciale d’une pièce sur la première ressource
+                  <small>(marron ou grise)</small> qu’il achète à la cité
+                  voisine de droite.
+                  <small
+                    >Cette réduction est cumulable avec celle d’un Marché ou
+                    d’un Comptoir: la première ressource achetée peut donc être
+                    gratuite.</small
+                  >
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/8288b200bbef75cc.png" /></td>
+                <td>
+                  Le joueur prend 6 pièces à la banque. Ses deux voisins
+                  prennent chacun 1 pièce à la banque.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/8b3187c64668c867.png" /></td>
+                <td>
+                  tous les autres joueurs doivent payer 2 pièces à la banque à
+                  la fin du tour où la carte est jouée.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/4d880afad94a2211.png" /></td>
+                <td>
+                  produit une ressource, au choix du joueur, parmi celles que sa
+                  cité produit déjà grâce à ses cartes marron, grises et à
+                  l’éventuelle ressource initiale de son plateau.
+                  <small
+                    >Précision: L’entrepôt secret ne permet pas de doubler les
+                    productions des cartes jaunes, blanches et noires (Forum,
+                    Caravansérail, Bilkis et Marché noir)</small
+                  >
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/5b85ff435269c141.png" /></td>
+                <td>
+                  produit une ressource, au choix du joueur, parmi celles que sa
+                  cité ne produit pas par l’intermédiaire de ses cartes marron,
+                  grises et à l’éventuelle ressource initiale de son plateau.
+                  <small
+                    >Précision: les ressources produites par les cartes jaunes,
+                    blanches et noires n’entrent pas en compte.</small
+                  >
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section id="wonders" class="section-secondary">
+            <h2>Merveilles</h2>
+
+            <table>
+              <tr>
+                <td><img alt="" src="./img/5b5b6f5d3d0c86c9.png" /></td>
+                <td>
+                  rapporte 3 pièces par étape de Merveille construite par le
+                  joueur au moment où elle est mise en jeu
+                  <small>(3, 6, 9 ou 12 pièces)</small>.<br />À la fin de la
+                  partie, la carte rapporte 1PV par étape de Merveille
+                  construite <small>(1, 2, 3 ou 4 points)</small>.
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/55dfa1975e86557.png" /></td>
+                <td>
+                  1 point de victoire pour chaque étape de Merveille construite
+                  dans les deux cités voisines ET dans sa propre cité.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/1d0291cfaac7d62a.png" /></td>
+                <td>
+                  rapporte 2 points de victoires (PV) par étape de Merveille
+                  construite par le joueur.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/9d9851b9cf8831cb.png" /></td>
+                <td>
+                  permet de payer les étapes de Merveille une ressource de moins
+                  que leur coût.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/392e20477b4ed185.png" /></td>
+                <td>
+                  le joueur peut construire ses étapes de Merveille sans payer
+                  leur coût en ressources.
+                  <small>(les pièces doivent toujours être payées)</small>
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/eafa2f70b2c1ed62.png" /></td>
+                <td>
+                  Chaque joueur, hormis celui qui a mis en jeu la carte, doit
+                  défausser 1 pièce pour chaque étape de sa Merveille déjà
+                  construite.
+                </td>
+              </tr>
+              <tr class="wonder-pack">
+                <td><img alt="" src="./img/ca5389cc48174bac.png" /></td>
+                <td>
+                  Le joueur applique l’effet de la dernière étape du plateau
+                  Merveille situé à sa gauche.
+                  <small
+                    >Précisions:<br />- les coûts de construction des étapes du
+                    Manneken Pis sont identiques à ceux des étapes copiées.<br />-
+                    il n’est pas nécessaire que les étapes copiées par le
+                    Manneken Pis aient été construites par leur propriétaire.<br />-
+                    si la Merveille Grande Muraille est voisine du Manneken Pis,
+                    le propriétaire du Manneken Pis peut choisir l’étape qu’il
+                    veut copier</small
+                  >
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section id="military" class="section-tertiary">
+            <h2>Militaire</h2>
+
+            <table>
+              <tr class="cities">
+                <td><img alt="" src="./img/3c577cc216bc7433.png" /></td>
+                <td>
+                  Le joueur prend un jeton Diplomatie.<br />À la fin de l’âge
+                  courant, il défausse ce jeton et ne participe pas à la
+                  résolution du conflit. La cité située à sa gauche s’oppose
+                  donc à celle située à sa droite.<br /><strong
+                    >Attention: l’effet des jetons Diplomatie diffère dans le
+                    mode de jeu en équipes.</strong
+                  >
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/c32e2cec49d69bea.png" /></td>
+                <td>
+                  1PV par jeton Victoire à la fin de la partie
+                  <small
+                    >(la valeur des jetons Conflit passe donc de 1, 3 ou 5 PV à
+                    2, 4 et 6PV)</small
+                  >.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/3f54704182735f9f.png" /></td>
+                <td>
+                  à partir du moment où il est mis en jeu, rapporte 2 pièces
+                  pour chaque jeton Victoire que remporte le joueur. Les pièces
+                  sont prises à la banque, au moment où les jetons Victoire sont
+                  gagnés.
+                  <small
+                    >Précision: sans effet sur les jetons Victoire remportés
+                    avant sa mise en jeu.</small
+                  >
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/fe89dd3c8cadfc4d.png" /></td>
+                <td>
+                  chaque joueur, hormis celui qui a mis en jeu la carte, doit
+                  payer à la banque 1 pièce par jeton Victoire en sa possession.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/6bbe7ac127190429.png" /></td>
+                <td>
+                  1 pièce par jeton Victoire présent dans la cité du joueur, au
+                  moment où elle est mise en jeu. À la fin de la partie, la
+                  carte rapporte 1 point de victoire par jeton Victoire dans la
+                  cité du joueur.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/f6c1e23fd1b2e23d.png" /></td>
+                <td>
+                  1 point de victoire pour chaque jeton Conflit Victoire présent
+                  dans les deux cités voisines.
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/b5f41e47d3e4ef76.png" /></td>
+                <td>
+                  1 point de victoire par jeton Défaite sur les cités voisines.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/f7e7d9ca58bd1676.png" /></td>
+                <td>
+                  À partir du moment où elle est mise jeu, lors de la résolution
+                  des Conflits, les jetons Défaite du joueur sont donnés à la
+                  cité voisine victorieuse.
+                  <small
+                    >Remarque: sans effet si la cité du joueur est victorieuse
+                    lors des Conflits ainsi que pour les Conflits précédant sa
+                    mise en jeu.</small
+                  >
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/5710785b8966bef2.png" /></td>
+                <td>
+                  À partir du moment où elle est mise jeu, chaque jeton Conflit
+                  Défaite compte comme un symbole Bouclier pour les prochaines
+                  phases de conflit.
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section id="science" class="section-secondary">
+            <h2>Science</h2>
+
+            <table>
+              <tr class="leaders">
+                <td><img alt="" src="./img/515e06325de9dcde.png" /></td>
+                <td>
+                  rapporte 3PV par famille scientifique de 3 symboles différents
+                  à la fin de la partie
+                  <small
+                    >(le bonus passe donc de 7PV à 10PV par famille).</small
+                  >
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/36d6981de38cbc89.png" /></td>
+                <td>
+                  à la fin de la partie, le masque copie le symbole scientifique
+                  d’une carte verte présente dans l’une des deux cités voisines.
+                  <small
+                    >(chaque masque doit copier une carte différente)</small
+                  >
+                </td>
+              </tr>
+            </table>
+
+            <h3 class="text-center"><a href="https://neilsutcliffe.com/7wonders/">7 Wonders Science Score Calculator</a></h3>
+          </section>
+
+          <section id="cards" class="section-tertiary">
+            <h2>Cartes</h2>
+
+            <table>
+              <tr>
+                <td><img alt="" src="./img/f60b0d4a0f92187c.png" /></td>
+                <td>
+                  rapporte 1 pièce par carte marron construite dans la cité du
+                  joueur ET dans les deux cités voisines.<br /><small
+                    >Précision: les cartes marron construites dans les cités
+                    voisines durant le même tour sont comptabilisées.</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/59c5090b1d788330.png" /></td>
+                <td>
+                  À la fin de la partie, la carte rapporte 1 point de victoire
+                  par carte verte présente dans la cité du joueur.
+                </td>
+              </tr>
+
+              <tr>
+                <td><img alt="" src="./img/ef5d5a4938de48f.png" /></td>
+                <td>
+                  rapporte 3 points de victoire à la fin de la partie, pour
+                  chaque série de 3 cartes Âge [<span class="color-blue"
+                    >bleue</span
+                  >, <span class="color-red">rouge</span>,
+                  <span class="color-green">verte</span>].
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/3ed8a8a720c12812.png" /></td>
+                <td>
+                  rapporte 7 points de victoire à la fin de la partie, pour
+                  chaque série de 7 cartes Âge [<span class="color-brown"
+                    >marron</span
+                  >, <span class="color-grey">gris</span>,
+                  <span class="color-blue">bleu</span>,
+                  <span class="color-yellow">jaune</span>,
+                  <span class="color-red">rouge</span>,
+                  <span class="color-green">vert</span>,
+                  <span class="color-purple">violet</span>].
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/59ae09d00b5fe8df.png" /></td>
+                <td>
+                  1 point de victoire pour chaque carte
+                  <span class="color-brown">marron</span>,
+                  <span class="color-grey">grise</span> et
+                  <span class="color-purple">violette</span> de sa cité.<br /><small
+                    >Précision : cette carte est elle-même comptabilisée dans ce
+                    calcul.</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/103ef18d09282a80.png" /></td>
+                <td>
+                  1 point de victoire pour chaque
+                  <span class="color-red">carte rouge</span> présente dans les
+                  deux cités voisines.
+                </td>
+              </tr>
+              <tr class="wonder-pack">
+                <td><img alt="" src="./img/81fc33b53acbbca2.png" /></td>
+                <td>
+                  À la fin de la partie, le joueur retourne face visible la
+                  carte utilisée pour construire cette étape.<br />Ensuite, il
+                  marque 1 point de victoire pour chaque carte de cette couleur
+                  présente dans les deux cités voisines.
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/8a2c27545cdab92c.png" /></td>
+                <td>
+                  À partir du moment où cette carte est mise en jeu, rapporte 2
+                  pièces pour chaque
+                  <span class="color-yellow">carte jaune</span> que le joueur
+                  construit. Les pièces sont prises à la banque, au moment où
+                  les bâtiments sont construits.<br /><small
+                    >Précision: Xénophon est sans effet pour les bâtiments
+                    commerciaux construits avant sa mise en jeu.</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/98587f9df18db4fb.png" /></td>
+                <td>
+                  permet au joueur de payer les Bâtiments de la couleur
+                  correspondante une ressource de moins que leur coût.<br /><small
+                    >Précision: la ressource retirée au coût est laissée au
+                    choix du joueur. Ce peut être une matière première (<span
+                      class="color-brown"
+                      >marron</span
+                    >) ou un produit manufacturé (<span class="color-grey"
+                      >gris</span
+                    >).</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/6bb6cc6b2b1989b2.png" /></td>
+                <td>
+                  permet au joueur de « copier » une Guilde de son choix (<span
+                    class="color-purple"
+                    >carte violette</span
+                  >), construite par l’une de ses deux cités voisines.
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/66001dd0cc00656f.png" /></td>
+                <td>
+                  rapporte 1 pièce par carte marron présente dans la cité du
+                  joueur au moment où elle est mise en jeu. À la fin de la
+                  partie, la carte rapporte 1 point de victoire par carte marron
+                  présente dans la cité du joueur.
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/52315aba134e1aa7.png" /></td>
+                <td>
+                  Le joueur peut construire gratuitement une carte par Âge.
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/d12a12c331f5b8c9.png" /></td>
+                <td>
+                  le joueur peut prendre l’ensemble des cartes défaussées depuis
+                  le début de la partie (celles défaussées pour de l’argent et
+                  celles défaussées en fin d’âge), en choisir une et construire
+                  gratuitement le bâtiment représenté.<br /><small
+                    >Précision : cette action spéciale se fait à la fin du tour
+                    où l’étape est construite. Si des joueurs défaussent des
+                    cartes ce tour-ci, le joueur peut également choisir parmi
+                    celles-ci.</small
+                  >
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td colspan="2" style="text-align: center;">
+                  Si plusieurs joueurs vont chercher des cartes dans la défausse
+                  durant le même tour, l’ordre de résolution est le
+                  suivant&nbsp;:<br />Halicarnasse &gt; La Grande Muraille &gt;
+                  Manneken Pis &gt; Salomon &gt; Guilde des courtisanes
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/e56c04f63e25c131.png" /></td>
+                <td>
+                  le joueur peut construire toutes ses Guildes gratuitement,
+                  sans payer leur coût en ressources.
+                </td>
+              </tr>
+              <tr class="cities">
+                <td><img alt="" src="./img/f93eaeb5c815d2c2.png" /></td>
+                <td>
+                  Le joueur peut construire gratuitement une carte noire par Âge
+                </td>
+              </tr>
+              <tr class="leaders">
+                <td><img alt="" src="./img/e6a20e896dcbc3ac.png" /></td>
+                <td>
+                  rapporte 2 pièces chaque fois que le joueur construit un
+                  bâtiment gratuitement, par chaînage. Les pièces sont prises à
+                  la banque, au moment où les bâtiments sont construits.<br /><small
+                    >Précision: sans effet pour les constructions par chaînage
+                    réalisées avant sa mise en jeu.</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/5fd97b199023a3d5.png" /></td>
+                <td>
+                  Vous pouvez jouer la dernière carte d'un âge au lieu de la
+                  défausser. Cette carte peut être posée en payant son coût,
+                  défaussée pour gagner 3 pièces ou bien utilisée dans la
+                  construction de la troisième étape de la Merveille.
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section id="leaders" class="section-secondary">
+            <h2>Leaders</h2>
+
+            <table>
+              <tr>
+                <td><img alt="" src="./img/1448b9eee6349bf8.png" /></td>
+                <td>
+                  recrutez gratuitement tous vos Leaders (coût : 0 pièce).
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/4c36bca7bfcaaa0d.png" /></td>
+                <td>
+                  1 point de victoire par carte blanche (Leaders) présente dans
+                  les deux cités voisines.<br /><small
+                    >Précision: seuls comptent les leaders recrutés; ceux
+                    utilisés pour construire des étapes de Merveilles ne sont
+                    pas comptabilisés.</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/56e5fcb4d1252008.png" /></td>
+                <td>
+                  le joueur doit immédiatement placer le marqueur «Courtisane»
+                  sur l’un des Leaders présents dans l’une ou l’autre des cités
+                  voisines de la sienne. Le joueur considère alors qu’il dispose
+                  lui-même de ce Leader et donc de l’effet associé.<br /><small
+                    >Précision: cette Guilde est sans conséquence pour le joueur
+                    dont le Leader reçoit le marqueur «Courtisane».</small
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img alt="" src="./img/f8416a6d6cd0ca43.png" /></td>
+                <td>
+                  Au moment où cette étape de Merveille est construite, le
+                  joueur doit choisir l’un de ses Leaders recrutés précédemment
+                  et le placer face cachée à l’emplacement réservé de son
+                  plateau. Le joueur ne peut plus bénéficier de son effet.<br />À
+                  la fin de la partie, il marque un nombre de points de victoire
+                  équivalent au double du coût du Leader.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
