@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.3] - 2022-01-11
 
 Games Documentation & help.
 
