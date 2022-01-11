@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>7 Wonders | Merveilles</title>
+    <meta name="keywords" content="7 Wonders, merveilles, documentation, description">
+    <meta name="description" content="Description des merveilles de 7 Wonders" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/picnic.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+      button.accordion {
+        text-transform: uppercase;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 5px;
+      }
+      tr {
+        background-color: #e2e2e2;
+      }
+      td {
+        padding: 0.5rem;
+      }
+      td h2 {
+        margin: 0;
+      }
+
+      .one > .toggle {
+        width: 100%;
+      }
+      .two > .toggle {
+        width: calc(50% - 0.2em);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#" class="brand">
+        <img class="logo" src="./img/logo-7-wonders_sm.png" alt="7 Wonders" />
+      </a>
+
+      <input id="bmenub" type="checkbox" class="show" />
+      <label for="bmenub" class="burger pseudo button">menu</label>
+
+      <div class="menu">
+        <a class="pseudo button" href="./quick-rules.html">Règles rapides</a>
+        <a class="button" disabled href="./wonders.html">Merveilles</a>
+        <a class="pseudo button" href="./symbols.html">Symboles</a>
+        <a class="pseudo button" href="./faq.html">FAQ</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="wonder-pack">
+        <button class="accordion">Abu Simbel</button>
+        <div class="panel">
+          <p>
+            <small
+              >Précision: Cette merveille nécessite l’extension Leaders.</small
+            >
+          </p>
+          <div class="tabs two">
+            <input
+              id="tababusimbel-A"
+              type="radio"
+              name="tababusimbel"
+              checked
+            />
+            <label class="pseudo button toggle" for="tababusimbel-A">A</label>
+            <input id="tababusimbel-B" type="radio" name="tababusimbel" />
+            <label class="pseudo button toggle" for="tababusimbel-B">B</label>
+            <div class="row">
+              <div>
+                <p>
+                  <strong>3.</strong> Au moment où cette étape de Merveille est
+                  construite, le joueur doit choisir l’un de ses Leaders
+                  recrutés précédemment et le placer face cachée à l’emplacement
+                  réservé de son plateau. Le joueur ne peut plus bénéficier de
+                  son effet. À la fin de la partie, il marque un nombre de
+                  points de victoire équivalent au double du coût du Leader.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>1.</strong> Au moment où cette étape de Merveille est
+                  construite, le joueur doit choisir l’un de ses Leaders
+                  recrutés précédemment et le placer face cachée à l’emplacement
+                  réservé de son plateau. Le joueur ne peut plus bénéficier de
+                  son effet. À la fin de la partie, il marque un nombre de
+                  points de victoire équivalent au double du coût du Leader.<br />
+                  <strong>2.</strong> Idem Étape 1.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <button class="accordion">Alexandria</button>
+        <div class="panel">
+          <div class="tabs two">
+            <input
+              id="tabalexandria-A"
+              type="radio"
+              name="tabalexandria"
+              checked
+            />
+            <label class="pseudo button toggle" for="tabalexandria-A">A</label>
+            <input id="tabalexandria-B" type="radio" name="tabalexandria" />
+            <label class="pseudo button toggle" for="tabalexandria-B">B</label>
+            <div class="row">
+              <div>
+                <p>
+                  <strong>2.</strong> le joueur bénéficie, chaque tour, d’une
+                  ressource au choix parmi les 4 matières premières [Pierre,
+                  Argile, Bois, Minerai].<br />
+                  <small
+                    >Précision : cette ressource ne peut pas être vendue par le
+                    biais du commerce.</small
+                  >
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>1.</strong> permet au joueur de bénéficier, chaque
+                  tour, d’une ressource au choix parmi les 4 matières premières
+                  [Pierre, Argile, Bois, Minerai].<br />
+                  <strong>2.</strong> permet au joueur de bénéficier, chaque
+                  tour, d’un produit manufacturé au choix parmi les 3 produits
+                  manufacturés [Verre, Textile, Papyrus].
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cities">
+        <button class="accordion">Byzance</button>
+        <div class="panel">
+          <div class="tabs two">
+            <input id="tabbyzance-A" type="radio" name="tabbyzance" checked />
+            <label class="pseudo button toggle" for="tabbyzance-A">A</label>
+            <input id="tabbyzance-B" type="radio" name="tabbyzance" />
+            <label class="pseudo button toggle" for="tabbyzance-B">B</label>
+            <div class="row">
+              <div>
+                <p>
+                  <strong>2.</strong> rapporte un jeton de
+                  <em>Diplomatie</em> et 2 points de victoire.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>1.</strong> rapporte un jeton <em>Diplomatie</em> et 3
+                  points de victoire.<br />
+                  <strong>2.</strong> rapporte un jeton <em>Diplomatie</em> et 4
+                  points de victoire.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <small
+              ><em>Diplomatie</em>&nbsp;: À la fin de l’âge courant, le joueur
+              défausse ce jeton et ne participe pas à la résolution du conflit.
+              La cité située à sa gauche s’oppose donc à celle située à sa
+              droite.<br /><strong
+                >Attention: l’effet des jetons Diplomatie diffère dans le mode
+                de jeu en équipes.</strong
+              ></small
+            >
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <button class="accordion">Éphesos</button>
+        <div class="panel">
+          <div class="tabs two">
+            <input id="tabephesos-A" type="radio" name="tabephesos" checked />
+            <label class="pseudo button toggle" for="tabephesos-A">A</label>
+            <input id="tabephesos-B" type="radio" name="tabephesos" />
+            <label class="pseudo button toggle" for="tabephesos-B">B</label>
+            <div class="row">
+              <div>
+                <p>
+                  <strong>2.</strong> le joueur prend 9 pièces dans la réserve
+                  et les ajoute à son trésor.<br /><small
+                    >Précision :les 9 pièces sont prises à la banque une et une
+                    seule fois, immédiatement après la construction de
+                    l’étape.</small
+                  >
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>1.</strong> 4 pièces et 2 points de victoire.<br />
+                  <strong>2.</strong> 4 pièces et 3 points de victoire.<br />
+                  <strong>3.</strong> 4 pièces et 5 points de victoire.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <button class="accordion">Manneken Pis</button>
+        <div class="panel">
+          <p class="color-red">
+            Règle spéciale&nbsp;: Le Manneken Pis ne produit aucune ressource
+            mais son joueur débute la partie avec 4 pièces supplémentaires.
+          </p>
+          <div class="tabs two">
+            <input
+              id="tabmannekenpis-A"
+              type="radio"
+              name="tabmannekenpis"
+              checked
+            />
+            <label class="pseudo button toggle" for="tabmannekenpis-A">A</label>
+            <input id="tabmannekenpis-B" type="radio" name="tabmannekenpis" />
+            <label class="pseudo button toggle" for="tabmannekenpis-B">B</label>
+            <div class="row">
+              <div>
+                <p>
+                  <strong>1.</strong> Le joueur applique l’effet de la première
+                  étape du plateau Merveille situé à sa gauche.<br />
+                  <strong>1.</strong> Le joueur applique l’effet de la deuxième
+                  étape du plateau Merveille situé à sa droite.<br />
+                  <strong>1.</strong> Le joueur applique l’effet de la dernière
+                  étape du plateau Merveille situé à sa gauche.<br />
+                  <small
+                    >Précisions:<br />
+                    - les coûts de construction des étapes du Manneken Pis sont
+                    identiques à ceux des étapes copiées.<br />
+                    - il n’est pas nécessaire que les étapes copiées par le
+                    Manneken Pis aient été construites par leur propriétaire.<br />
+                    - si la Merveille Grande Muraille est voisine du Manneken
+                    Pis, le propriétaire du Manneken Pis peut choisir l’étape
+                    qu’il veut copier.</small
+                  >
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>1.</strong> Le joueur prend 7 pièces à la banque, il
+                  bénéficie d’un Bouclier supplémentaire lors de la résolution
+                  des conflits et de 7 points de victoire.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cities">
+        <button class="accordion">Petra</button>
+        <div class="panel">
+          <table>
+            <tr>
+              <td><h2>B</h2></td>
+              <td>
+                <strong>1.</strong> rapporte 3 points de victoire et fait perdre
+                2 pièces à tous les autres joueurs.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <button class="accordion">Rhódos</button>
+        <div class="panel">
+          <table>
+            <tr>
+              <td><h2>A</h2></td>
+              <td><strong>2.</strong> 2 Boucliers.</td>
+            </tr>
+            <tr>
+              <td><h2>B</h2></td>
+              <td>
+                <strong>1.</strong> 1 Bouclier, 3 pièces et 3 points de
+                victoire.<br />
+                <strong>2.</strong> 1 Bouclier, 4 pièces et 4 points de
+                victoire.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="leaders">
+        <button class="accordion">Roma</button>
+        <div class="panel">
+          <table>
+            <tr>
+              <td><h2>A</h2></td>
+              <td>
+                Rome (A) ne produit aucune ressource, mais son joueur recrute
+                gratuitement tous ses Leaders (coût : 0 pièce).<br />
+                <strong>1.</strong> 4 points de victoire.<br />
+                <strong>2.</strong> 6 points de victoire.
+              </td>
+            </tr>
+            <tr>
+              <td><h2>B</h2></td>
+              <td>
+                Rome (B) ne produit aucune ressource, mais son joueur bénéficie
+                d’une réduction de 2 pièces sur le Recrutement de tous ses
+                Leaders (certains Leaders sont donc gratuits).<br />Les cités
+                voisines bénéficient d’une réduction d’une pièce sur le
+                Recrutement de leurs Leaders.<br />
+                <strong>1.</strong> 5 pièces. De plus, le joueur pioche
+                immédiatement 4 cartes Leaders parmi celles restant dans la
+                boîte et les ajoute à sa main de cartes Leaders.<br />
+                <strong>2.</strong> 3 points de victoire et le joueur peut
+                immédiatement mettre en jeu un Leader supplémentaire (en le
+                payant 2 pièces de moins).<br />
+                <strong>3.</strong> 3 points de victoire et le joueur peut
+                immédiatement mettre en jeu un Leader supplémentaire (en le
+                payant 2 pièces de moins).<br />
+                <small
+                  >Remarque : Rome B donne donc la possibilité au joueur de
+                  mettre en jeu jusqu’à 5 Leaders au lieu de 3.</small
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="wonder-pack">
+        <button class="accordion">Stonehenge</button>
+        <div class="panel">
+          <table>
+            <tr>
+              <td><h2>A</h2></td>
+              <td>
+                <strong>3.</strong> À la fin de la partie, le joueur marque 2
+                points de victoire pour chaque symbole ressource Pierre présent
+                sur ses <span class="color-brown">cartes marron</span>.
+              </td>
+            </tr>
+            <tr>
+              <td><h2>B</h2></td>
+              <td>
+                <strong>1.</strong> Cette étape rapporte 1 pièce pour chaque
+                symbole ressource Pierre présent sur ses cartes marron au moment
+                où elle est construite.<br />À la fin de la partie, cette étape
+                rapporte 1 point de victoire pour chaque symbole ressource
+                Pierre présent sur ses
+                <span class="color-brown">cartes marron</span>.<br />
+                <strong>2.</strong> À la fin de la partie, le joueur retourne
+                face visible la carte utilisée pour construire cette étape.<br />Ensuite,
+                il marque 1 point de victoire pour chaque carte de cette couleur
+                présente dans les deux cités voisines.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="wonder-pack">
+        <button class="accordion">The Great Wall</button>
+        <div class="panel">
+          <p class="color-red">
+            Règle spéciale&nbsp;: Les étapes de la Grande Muraille peuvent être
+            construites dans n’importe quel ordre, au choix du joueur.
+          </p>
+          <table>
+            <tr>
+              <td><h2>A</h2></td>
+              <td>
+                <strong>4.</strong> Le joueur peut choisir, à la fin du tour
+                courant, une carte Âge dans la défausse et la construire
+                gratuitement.
+              </td>
+            </tr>
+            <tr>
+              <td><h2>B</h2></td>
+              <td>
+                <strong>1.</strong> Le joueur prend 8 pièces à la banque. Ses
+                deux voisins prennent chacun 2 pièces à la banque.<br />
+                <strong>2.</strong> À la fin de la partie, le masque copie le
+                symbole scientifique d’une carte verte présente dans l’une des
+                deux cités voisines.<br />
+                <small
+                  >Précision: Il est permis de copier le symbole d’une carte
+                  même si on possède un exemplaire de cette carte dans sa
+                  cité</small
+                ><br />
+                <strong>3.</strong> À la fin de l’Âge courant, le joueur ne
+                participe pas à la résolution du conflit. La cité située à sa
+                gauche s’oppose donc à celle située à sa droite.<br />
+                De plus, chaque joueur, hormis le propriétaire de la Merveille,
+                doit payer à la banque 2 pièces.<br />
+                <span class="color-red"
+                  >Si vous ne jouez pas avec l’extension Cities, un joueur qui
+                  ne possède qu’une seule pièce rend seulement celle-ci, un
+                  joueur qui ne possède aucune pièce ne subit pas l’effet de
+                  cette perte.</span
+                ><br />
+                <small
+                  >Précision: Dans le cas où il ne reste que 2 joueurs présents
+                  lors d’une résolution de conflit, ils ne s’affrontent qu’une
+                  seule fois et ne prennent chacun qu’un seul jeton</small
+                ><br />
+                <strong>4.</strong> Cette étape permet au joueur de bénéficier,
+                chaque tour, d’une ressource, au choix du joueur, parmi celles
+                que sa cité ne produit pas par l’intermédiaire de ses cartes
+                <span class="color-brown">marron</span>,
+                <span class="color-grey">grises</span> et de la ressource
+                initiale de son plateau.
+                <small
+                  >Précision: Les ressources produites par les cartes jaunes,
+                  blanches et noires n’entrent pas en compte.</small
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

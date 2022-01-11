@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>7 Wonders | Règles rapides</title>
+    <meta name="keywords" content="7 Wonders, rappel, règles, rapides, documentation">
+    <meta name="description" content="Règles rapides de 7 Wonders selon les extensions" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/picnic.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+        .filters > * {
+            margin: 0 2rem;
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#" class="brand">
+        <img class="logo" src="./img/logo-7-wonders_sm.png" alt="7 Wonders" />
+      </a>
+
+      <input id="bmenub" type="checkbox" class="show" />
+      <label for="bmenub" class="burger pseudo button">menu</label>
+
+      <div class="menu">
+        <a class="button" disabled href="./quick-rules.html">Règles rapides</a>
+        <a class="pseudo button" href="./wonders.html">Merveilles</a>
+        <a class="pseudo button" href="./symbols.html">Symboles</a>
+        <a class="pseudo button" href="./faq.html">FAQ</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="filters" style="text-align: center;">
+        <span>
+          <label>Nombre de joueurs : </label>
+          <input
+            id="number-of-players"
+            name="number-of-players"
+            type="number"
+            min="2"
+            max="8"
+            value="7"
+            style="width: 70px;"
+          />
+        </span>
+        <span>
+          <label for="expansion-leaders">
+            <input
+              id="expansion-leaders"
+              name="expansion-leaders"
+              type="checkbox"
+              checked
+            />
+            <span class="checkable">Leaders</span>
+          </label>
+        </span>
+        <span>
+          <label for="expansion-cities">
+            <input
+              id="expansion-cities"
+              name="expansion-cities"
+              type="checkbox"
+              checked
+            />
+            <span class="checkable">Cities</span>
+          </label>
+        </span>
+        <span>
+          <label for="expansion-armada">
+            <input
+              id="expansion-armada"
+              name="expansion-armada"
+              type="checkbox"
+              checked
+            />
+            <span class="checkable">Armada</span>
+          </label>
+        </span>
+      </section>
+
+      <section class="flex five" style="margin-top: 50px;">
+        <aside class="full fifth-1000">
+          <div class="links flex two three-500 five-800 one-1000">
+            <div><a class="pseudo button" href="#installation">Mise en place</a></div>
+            <div><a class="pseudo button" href="#deroulement">Déroulement d’un Âge</a></div>
+            <div><a class="pseudo button" href="#actions">Actions</a></div>
+            <div><a class="pseudo button" href="#tour">Résolution du tour</a></div>
+            <div class="cities armada"><a class="pseudo button" href="#equipe">Règles du jeu par équipe</a></div>
+          </div>
+          <a href="#main" tabindex="-1" class="top pseudo button">▲</a>
+        </aside>
+
+        <section class="full four-fifth-1000">
+        <section id="installation">
+          <h2>Mise en place</h2>
+
+          <article class="card">
+            <header>
+                <h3>Cartes <em>Âge</em></h3>
+            </header>
+            <ol>
+            <li class="less-than-7-players">
+                Pour les 3 paquets, remettez dans la boîte les cartes non
+                utilisées en fonction du nombre de joueurs : <span class="six-or-less"></span>7+, 6+, etc.).
+            </li>
+            <li class="cities">Ajoutez à chacun des trois paquets de cartes Âge&nbsp;:<br /><strong><span class="cities-cards">[nombre de joueurs]</span> cartes Cities</strong> (de l’Âge correspondant).</li>
+            <li class="armada">Ajoutez à chacun des trois paquets de cartes Âge&nbsp;:<br /><strong><span class="armada-cards">[nombre de joueurs]</span> cartes Armada</strong> (de l’Âge correspondant).</li>
+            <li class="armada">Triez les cartes Île par niveau (1, 2 et 3). Mélangez chaque paquet ainsi formé et placez-les, face cachée, au centre de la table.</li>
+            <li class="no-leaders">
+                Retirez les <span class="color-purple">Guildes</span> de
+                l'extension Leaders.
+            </li>
+            <li>
+                Écartez les <span class="color-purple">Guildes</span> de l'Âge III et n’en
+                conservez aléatoirement et secrètement que
+                <strong class="guilds">[nombre de joueurs + 2]</strong>.
+            </li>
+            </ol>
+            </article>
+
+            <article class="card">
+              <header>
+                  <h3>Merveilles</h3>
+              </header>
+              <p>
+                    Mélangez les 7 cartes Merveille, face cachée, et distribuez-en une
+                    à chaque joueur.<br />La carte et son orientation déterminent le
+                    plateau Merveille attribué au joueur, ainsi que la face à utiliser
+                    pour la partie.
+                  </p>
+              </article>
+
+              <article class="card">
+                <header>
+                    <h3>Pièces de monnaie</h3>
+                </header>
+                <p>Chaque joueur reçoit <strong><span class="no-leaders">3</span><span class="leaders hidden">6</span> pièces</strong>.</p>
+           </article>
+        </section>
+
+        <section id="deroulement">
+          <h2>Déroulement d’un Âge</h2>
+          <ol>
+            <li class="leaders"><h3>Phase de Recrutement des <em>Leaders</em></h3>
+            <p>Le joueur paie le coût en pièces du Leader (les pièces sont remises à la banque) et pose la 
+                    carte Leader à côté de son plateau Merveille, face visible.</p>
+                <article class="card back-dark">
+                        <header>
+                            <h3>Soyez fAirPlAy !</h3>
+                        </header>
+                        <p>Pour aider vos adversaires à lire votre jeu, nous vous recommandons de placer <em>Hannibal</em> et <em>César</em> au même endroit que vos <span class="color-red">cartes rouges</span> afin que tous vos symboles Bouclier soient disposés au même endroit.<br />
+De la même façon, rangez <em>Euclide</em>, <em>Ptolémée</em> et <em>Pythagore</em> avec les <span class="color-green">cartes vertes</span> du symbole correspondant.</p>
+                </article></li>
+            <li><h3>Déroulement de l’Âge</h3></li>
+            <li><h3>Résolution des Conflits<span class="armada"> Terrestres</span></h3></li>
+            <li class="armada">
+              <h3>Résolution des Conflits Maritimes</h3>
+              <p>Chaque joueur calcule sa <strong>force navale</strong> en <strong>additionnant tous les Boucliers Maritimes</strong> qu’il possède dans sa Cité, sur son Chantier Naval et sur ses Îles, puis il <strong>compare son total avec celui de TOUS les autres joueurs</strong>.</p>
+              <p><strong>Les joueurs commencent TOUJOURS par attribuer un jeton Défaite Maritime au joueur ayant la force navale la plus faible</strong>, avant d’attribuer les jetons Victoire Maritime aux joueurs ayant les forces navales les plus fortes (cf. tableau).</p>
+              <ul>
+                <li>Le joueur ayant <strong>la force navale la plus faible</strong> reçoit 1 jeton Défaite Maritime de valeur <strong>-1</strong>, <strong>-2</strong> ou <strong>-3</strong> selon l’Âge en cours.</li>
+                <li>Le joueur ayant <strong>la force navale la plus forte</strong> gagne 1 jeton Victoire Maritime de valeur <strong>3</strong>, <strong>5</strong> ou <strong>7</strong> selon l’Âge en cours</li>
+                <li>Le joueur ayant <strong>la deuxième force navale la plus forte</strong> gagne 1 jeton Victoire Maritime de valeur <strong>1</strong>, <strong>3</strong> ou <strong>5</strong> selon l’Âge en cours.</li>
+                <li>Le joueur ayant <strong>la troisième force navale la plus forte</strong> gagne 1 jeton Victoire Maritime <strong>de valeur 3 uniquement à l’Âge III</strong>.</li>
+              </ul>
+              <p><small>Précision&nbsp;: Au cours d’un même Âge, un joueur qui a reçu un jeton Défaite Maritime ne peut pas gagner de jeton Victoire Maritime</small></p>
+            </li>
+            <li class="armada">
+              <h3>Décompte des Guildes</h3>
+              <p>À la fin de la partie, chaque carte <span class="color-purple">Guilde</span> est limitée à 10 Points de Victoire maximum.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="actions">
+          <h2>Actions</h2>
+
+          <p>Trois actions sont possibles avec la carte retenue (bâtiment<span class="leaders"> ou <em>Leader</em></span>)&nbsp;:</p>
+          <ul>
+            <li>
+              <h3 class="pb-0">Construire le bâtiment<span class="leaders">
+                / Recruter le Leader</span
+              ></h3><small>en payant le coût de la carte</small>
+              <p class="armada mt-0">+ Lorsqu’un joueur construit une carte <span class="color-red">Rouge</span>, <span class="color-yellow">Jaune</span>, <span class="color-blue">Bleue</span> ou <span class="color-green">Verte</span>, il peut réaliser une Construction Navale et améliorer la flotte de la même couleur que la carte construite. Pour ce faire, il doit payer, en plus du coût de la carte, le <strong>coût de la Construction Navale</strong> de la couleur correspondante sur son Chantier Naval. Dans ce cas, il <strong>avance son Navire de CETTE même couleur d’une case vers le haut</strong>.<br />
+              <span class="color-red">Attention : Les cartes construites gratuitement en provenance de la DÉFAUSSE (Halikarnassós, Salomon…) ne permettent PAS de réaliser de Construction Navale.</span></p>
+            </li>
+            <li><h3 class="pb-0">Construire une étape de Merveille<br /></h3><small>en payant le coût de l'étape de Merveille</small>
+            <p class="armada mt-0">+ Lorsqu’un joueur construit une étape de sa Merveille, il peut payer, en plus du coût de cette étape, le coût de la Construction Navale de la couleur associée à l’icône Merveille de son Chantier Naval. Dans ce cas, il avance son Navire de CETTE couleur d’une case vers le haut.</p></li>
+            <li><h3 class="pb-0">Défausser la carte pour obtenir 3 pièces<span class="armada"> / Avancer gratuitement son <span class="color-yellow">Navire Jaune</span> d’une case (sans payer le coût de la Construction Navale).</span></h3></li>
+          </ul>
+        </section>
+
+        <section id="tour">
+          <h2>Résolution du tour</h2>
+
+          <p class="color-red">La résolution du tour se fait toujours dans cet ordre&nbsp;:</p>
+          <ol>
+            <li><strong>Payez</strong> tous les coûts de construction<br />(carte, Merveille<span class="armada"> et, éventuellement, Construction Navale</span>).</li>
+            <li class="armada"><strong>Avancez</strong> le Navire correspondant à votre éventuelle Construction Navale.</li>
+            <li><strong>Appliquez tous les effets</strong><span class="cities armada">, à l’exception des pertes de Pièces</span>.</li>
+            <li class="armada">Résolvez l’<strong>Exploration des Îles</strong>.</li>
+            <li>Résolvez la <strong>construction</strong> de cartes en provenance de la défausse<span class="armada"> (pas de Construction Navale)</span>.</li>
+            <li class="armada cities">Résolvez les <strong>pertes de Pièces</strong> (Taxes<span class="armada"> et Pirates</span>).</li>
+          </ol>
+        </section>
+
+        <section id="equipe" class="cities armada">
+          <h2>Règles du jeu par équipe</h2>
+
+          <p>Lors de vos parties à 4, 6 et 8 joueurs, vous pouvez désormais jouer à 7 Wonders avec la variante par équipe de 2. Les coéquipiers doivent s’asseoir côte à côte.</p>
+          
+          <article class="card">
+            <header>
+              <h3>Déroulement d’un Âge</h3>
+            </header>
+            <p>Durant la partie, les coéquipiers peuvent communiquer librement et se montrer leur main de cartes<span class="leaders"> (cartes Leaders comprises)</span>.<br />
+                Il est obligatoire d’utiliser ses ressources avant d’en acheter chez l’un de ses voisins.<br />
+                Il est interdit aux coéquipiers de&nbsp;:
+            </p>
+            <ul>
+              <li>se prêter de l’argent,</li>
+              <li>s’échanger des cartes,</li>
+              <li>ne pas payer le commerce entre eux,</li>
+              <li>s’acheter des ressources alors qu’ils peuvent construire un bâtiment par chaînage.</li>
+            </ul>
+            <p class="color-red">Quand un joueur met en jeu une carte qui provoque une perte d’argent, son coéquipier doit également s’acquitter de cette perte.</p>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Résolution des conflits en équipes</h3>
+            </header>
+            <p>Dans le jeu en équipes, les coéquipiers ne se font pas la guerre. Chaque joueur affronte sa cité adverse voisine.</p>
+            <p class="color-red">Important&nbsp;: lors de la résolution de conflits, le double de jetons est octroyé</p>
+            <p class="armada">Les cartes <span class="color-red">Ponton</span>, <span class="color-red">Estacade</span> et <span class="color-red">Embarcadère</span> déclenchent un Conflit Terrestre supplémentaire, mais ne rapportent que 1 jeton Défaite ou 1 jeton Victoire aux joueurs concernés.</p>
+            <p class="armada">Les Conflits Maritimes sont résolus individuellement suivant les règles usuelles. Les égalités sont résolues normalement, même si les joueurs concernés font partie de la même équipe.</p>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Diplomatie en équipes</h3>
+            </header>
+            <p>Un joueur qui met en jeu une carte avec le symbole <em>Diplomatie</em> prend un jeton <em>Diplomatie</em> à la banque et le place sur son plateau.</p>
+            <p>Lors du prochain conflit, il participe à la résolution mais son adversaire et lui ne prennent qu’un seul jeton Victoire ou Défaite au lieu de deux. L’utilisation d’un jeton Diplomatie est obligatoire&nbsp;; il est ensuite défaussé.</p>
+            <p class="mb-0"><small>Précisions :</small></p>
+            <ul class="mt-0"><small>
+              <li>l’utilisation d’un jeton Diplomatie par un joueur n’affecte pas son coéquipier</li>
+              <li>il est possible de gagner le conflit même si on a joué un jeton Diplomatie.</li>
+              <li>si les 2 membres d’une équipe ont chacun joué un jeton Diplomatie, ils prennent chacun un seul exemplaire du jeton Conflit&nbsp;; leurs adversaires respectifs également.</li>
+            </small></ul>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Taxes et Pirates</h3>
+            </header>
+            <p>Les Taxes et les pertes de Pièces déclenchées par les cartes s’appliquent à tous les joueurs, sans tenir compte des équipes.</p>
+          </article>
+
+          <article class="card">
+            <header>
+              <h3>Fin de partie</h3>
+            </header>
+            <p>Chaque joueur comptabilise ses points de victoire, puis les deux coéquipiers ajoutent leur score pour obtenir le score total de leur équipe. L’équipe avec le plus haut total est vainqueur.</p>
+          </article>
+        </section>
+      </section>
+    </section>
+    </main>
+
+  <script>
+    /**
+     * Number of players
+     **/
+    const nbrOfPlayers = document.getElementById("number-of-players");
+    nbrOfPlayers.addEventListener("change", updateNbrOfPlayers);
+    const nbrOfPlayersElts = document.querySelectorAll(".number-of-players");
+    const guildsElt = document.querySelector(".guilds");
+    const citiesCardsElt = document.querySelector(".cities-cards");
+    const armadaCardsElt = document.querySelector(".armada-cards");
+
+    function updateNbrOfPlayers() {
+        let nbrOfPlayersValue = parseFloat(nbrOfPlayers.value);
+      nbrOfPlayersElts.forEach(el => {
+        el.innerHTML = nbrOfPlayersValue;
+      });
+      let guilds = nbrOfPlayersValue + 2;
+      guildsElt.innerHTML = guilds > 9 ? 9 : guilds;
+      citiesCardsElt.innerHTML = nbrOfPlayersValue > 7 ? 7 : nbrOfPlayersValue;
+      armadaCardsElt.innerHTML = nbrOfPlayersValue > 7 ? 7 : nbrOfPlayersValue;
+    }
+
+    /**
+     * Leaders
+     **/
+    const leaders = document.getElementById("expansion-leaders");
+    leaders.addEventListener("change", setLeaders);
+    const leadersElts = document.querySelectorAll(".leaders");
+    const noLeadersElts = document.querySelectorAll(".no-leaders");
+    setLeaders();
+
+    function setLeaders() {
+      if (leaders.checked) {
+        leadersElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+        noLeadersElts.forEach(el => {
+          el.classList.add("hidden");
+        });
+      } else {
+        leadersElts.forEach(el => {
+          el.classList.add("hidden");
+        });
+        noLeadersElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+      }
+    }
+
+    /**
+     * Cities
+     **/
+    const cities = document.getElementById("expansion-cities");
+    cities.addEventListener("change", setCities);
+    const citiesElts = document.querySelectorAll(".cities");
+    const noCitiesElts = document.querySelectorAll(".no-cities");
+    setLeaders();
+
+    function setCities() {
+      if (cities.checked) {
+        citiesElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+        noCitiesElts.forEach(el => {
+          if (!el.classList.contains("armada") || !armada.checked) {
+            el.classList.add("hidden");
+          }
+        });
+      } else {
+        citiesElts.forEach(el => {
+          if (!el.classList.contains("armada") || !armada.checked) {
+            el.classList.add("hidden");
+          }
+        });
+        noCitiesElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+      }
+    }
+
+    /**
+    * Armada
+    **/
+    const armada = document.getElementById("expansion-armada");
+    armada.addEventListener("change", setArmada);
+    const armadaElts = document.querySelectorAll(".armada");
+    const noArmadaElts = document.querySelectorAll(".no-armada");
+    setLeaders();
+
+    function setArmada() {
+      if (armada.checked) {
+        armadaElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+        noArmadaElts.forEach(el => {
+          if (!el.classList.contains("cities") || !cities.checked) {
+            el.classList.add("hidden");
+          }
+        });
+      } else {
+        armadaElts.forEach(el => {
+          if (!el.classList.contains("cities") || !cities.checked) {
+            el.classList.add("hidden");
+          }
+        });
+        noArmadaElts.forEach(el => {
+          el.classList.remove("hidden");
+        });
+      }
+    }
+  </script>
+  </body>
+</html>

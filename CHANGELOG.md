@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+Games Documentation & help.
+
+### Added
+
+- Games Documentation & help
+
 ## [1.0.2] - 2021-06-20
 
 Implement Vuex store.

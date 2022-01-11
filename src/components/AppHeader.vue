@@ -30,6 +30,24 @@
           </v-list-item>
         </v-list>
       </v-menu>
+
+      <v-menu offset-y transition="expand-transition">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn plain v-bind="attrs" v-on="on"> Règles & Aides </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="item in [
+              { title: '7 Wonders', url: 'doc/7-wonders', slug: '7-wonders' },
+              { title: 'Tapestry', url: 'doc/tapestry', slug: 'tapestry' },
+            ]"
+            :key="item.slug"
+            :href="appUrl + item.url"
+          >
+            <v-list-item-title v-text="item.title" />
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </div>
     <v-spacer></v-spacer>
     <v-btn icon link :href="author.url"> }:§ </v-btn>

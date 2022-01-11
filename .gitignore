@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 /dist
-/public/img
 
 # local env files
 .env.local
@@ -23,4 +22,5 @@ pnpm-debug.log*
 *.sw?
 
 # Assets
-public/img
+/public/doc/7-wonders/img
+/public/img
