@@ -21,7 +21,7 @@
         <v-list>
           <v-list-item
             v-for="item in [
-              { title: 'Scythe', page: 'ScytheScores', slug: 'scythe' },
+              { title: 'Scythe', page: 'ScoresScythe', slug: 'scythe' },
             ]"
             :key="item.slug"
             :to="{ name: item.page }"

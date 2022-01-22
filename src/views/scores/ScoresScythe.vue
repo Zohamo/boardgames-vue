@@ -1,5 +1,5 @@
 <template>
-  <v-container class="scythe-scores">
+  <v-container class="scores-scythe">
     <h1 class="text-h2 text-center">Scythe scores</h1>
 
     <v-radio-group v-model="typeResults" row>
@@ -19,7 +19,7 @@ import ScytheResultsTable from "@/components/ScytheResultsTable.vue";
 import { ScythePlay } from "@/types";
 
 export default Vue.extend({
-  name: "scythe-scores",
+  name: "scores-scythe",
 
   components: {
     ScytheResultsTable,
@@ -146,7 +146,7 @@ export default Vue.extend({
 </script>
 
 <style>
-.scythe-scores .v-input--radio-group__input {
+.scores-scythe .v-input--radio-group__input {
   justify-content: center;
 }
 </style>

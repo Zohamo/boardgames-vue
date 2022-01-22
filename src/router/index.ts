@@ -1,6 +1,6 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
-import ScytheScores from "@/views/scores/ScytheScores.vue";
+import ScoresScythe from "@/views/scores/ScoresScythe.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -28,8 +28,8 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/games/scythe/scores",
-    name: "ScytheScores",
-    component: ScytheScores,
+    name: "ScoresScythe",
+    component: ScoresScythe,
     props: {
       type: String,
       required: true,
