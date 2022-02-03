@@ -6,6 +6,10 @@
 
 - Config : Moment.js
 
+### Fixed
+
+- Config : API in https
+
 ## [1.0.3] - 2022-01-11
 
 Games Documentation & help.
