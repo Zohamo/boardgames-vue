@@ -22,6 +22,7 @@
           <v-list-item
             v-for="item in [
               { title: 'Scythe', page: 'ScoresScythe', slug: 'scythe' },
+              { title: 'Tapestry', page: 'ScoresTapestry', slug: 'tapestry' },
             ]"
             :key="item.slug"
             :to="{ name: item.page }"
@@ -33,7 +34,7 @@
 
       <v-menu offset-y transition="expand-transition">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn plain v-bind="attrs" v-on="on"> Règles & Aides </v-btn>
+          <v-btn plain v-bind="attrs" v-on="on"> Règles &amp; Aides </v-btn>
         </template>
         <v-list>
           <v-list-item

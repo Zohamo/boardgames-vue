@@ -24,6 +24,17 @@ export interface Picture {
   alt?: string;
 }
 
+export interface Play {
+  id: number;
+  date: string;
+  players: any[];
+}
+
+export interface Player {
+  id: number;
+  name: string;
+}
+
 export interface Range {
   min: number;
   max?: number;
@@ -81,4 +92,101 @@ export interface ScythePlayer {
   stars?: number;
   popularity?: number;
   buildings?: number;
+}
+
+/**
+ * Tapestry
+ */
+
+export enum TapestryAutomaLevel {
+  Autometta,
+  Automa,
+  Automaszyna,
+  Ultimaszyna,
+}
+
+export enum TapestryCivilizationSlug {
+  Alchemists = "ALCHEMISTS",
+  Architects = "ARCHITECTS",
+  Chosen = "CHOSEN",
+  Craftsmen = "CRAFTSMEN",
+  Entertainers = "ENTERTAINERS",
+  Futurists = "FUTURISTS",
+  Heralds = "HERALDS",
+  Historians = "HISTORIANS",
+  Inventors = "INVENTORS",
+  Isolationists = "ISOLATIONISTS",
+  Leaders = "LEADERS",
+  Merrymakers = "MERRYMAKERS",
+  Militants = "MILITANTS",
+  Mystics = "MYSTICS",
+  Nomads = "NOMADS",
+  Traders = "TRADERS",
+  // Plans & Ploys
+  Advisors = "ADVISORS",
+  Aliens = "ALIENS",
+  Infiltrators = "INFILTRATORS",
+  Islanders = "ISLANDERS",
+  Recyclers = "RECYCLERS",
+  Riverfolk = "RIVERFOLK",
+  Spies = "SPIES",
+  Tinkerers = "TINKERERS",
+  TreasureHunters = "TREASURE HUNTERS",
+  Utilitarians = "UTILITARIANS",
+  // Automa
+  Conquerors = "CONQUERORS",
+  Engineers = "ENGINEERS",
+  Explorers = "EXPLORERS",
+  Scientists = "SCIENTISTS",
+  // Automa : Plans & Ploys
+  Hawkers = "HAWKERS",
+  Iconoclasts = "ICONOCLASTS",
+  Levelers = "LEVELERS",
+  Pioneers = "PIONEERS",
+}
+
+export interface TapestryCapital {
+  id: number;
+  name: string;
+}
+
+export interface TapestryCivilization {
+  id?: number;
+  slug: string | TapestryCivilizationSlug;
+  name: string;
+  notWithAutoma: boolean;
+  automa?: boolean;
+}
+
+export interface TapestryPlay extends Play {
+  players: TapestryPlayer[];
+  scenario?: TapestryScenario;
+}
+
+export interface TapestryPlayer extends Player {
+  automa?: boolean;
+  automaLevel?: TapestryAutomaLevel;
+  civilization: TapestryCivilization;
+  winner?: boolean;
+  score: number;
+  capitalId?: number;
+  monumentsCount?: number;
+  technologiesCount?: number;
+  territoriesCount?: number;
+  tracks?: {
+    exploration?: number;
+    military?: number;
+    science?: number;
+    technology?: number;
+  };
+  bonusTracks?: {
+    endTrack?: number;
+    outposts?: number;
+    centralIsland?: number;
+  };
+}
+
+export interface TapestryScenario {
+  id: number;
+  name: string;
 }

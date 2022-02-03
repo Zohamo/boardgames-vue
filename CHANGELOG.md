@@ -1,10 +1,17 @@
 # Changelog
 
+## TODO
+
+- ScythePlay type should extend Play
+
 ## [Unreleased]
+
+Add Tapestry's scores page.
 
 ### Added
 
 - Config : Moment.js
+- Tapestry's scores Page
 
 ### Fixed
 

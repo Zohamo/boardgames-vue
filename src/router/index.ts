@@ -1,6 +1,7 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
 import ScoresScythe from "@/views/scores/ScoresScythe.vue";
+import ScoresTapestry from "@/views/scores/ScoresTapestry.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -30,6 +31,15 @@ const routes: Array<RouteConfig> = [
     path: "/games/scythe/scores",
     name: "ScoresScythe",
     component: ScoresScythe,
+    props: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    path: "/games/tapestry/scores",
+    name: "ScoresTapestry",
+    component: ScoresTapestry,
     props: {
       type: String,
       required: true,

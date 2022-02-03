@@ -1,0 +1,530 @@
+[
+  {
+    "id": 1,
+    "date": "2021-01-04",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "INVENTORS",
+        "winner": true,
+        "score": 194,
+        "capitalId": 3
+      },
+      {
+        "automa": true,
+        "automaLevel": 1,
+        "civilizationSlug": "EXPLORERS",
+        "score": 152
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "2021-01-05",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ALCHEMISTS",
+        "score": 135,
+        "capitalId": 6
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "SCIENTISTS",
+        "winner": true,
+        "score": 160
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2021-01-08",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "LEADERS",
+        "score": 167,
+        "capitalId": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "winner": true,
+        "score": 172
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "date": "2021-01-09",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "MERRYMAKERS",
+        "winner": true,
+        "score": 217,
+        "capitalId": 5
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 166
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "2021-01-09",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "FUTURISTS",
+        "winner": true,
+        "score": 351,
+        "capitalId": 1
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "SCIENTISTS",
+        "score": 181
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "2021-01-12",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "CRAFTSMEN",
+        "winner": true,
+        "score": 206,
+        "capitalId": 4
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "CONQUERORS",
+        "score": 177
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "date": "2021-01-21",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "NOMADS",
+        "score": 149,
+        "capitalId": 6
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ICONOCLASTS",
+        "winner": true,
+        "score": 207
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "date": "2021-01-21",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ISOLATIONISTS",
+        "score": 132,
+        "capitalId": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "LEVELERS",
+        "winner": true,
+        "score": 191
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "date": "2021-01-22",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "CHOSEN",
+        "score": 130,
+        "capitalId": 3
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "PIONEERS",
+        "winner": true,
+        "score": 167
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "date": "2021-01-23",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "MYSTICS",
+        "winner": true,
+        "score": 221,
+        "capitalId": 5
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "HAWKERS",
+        "score": 177
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "date": "2021-02-23",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "MILITANTS",
+        "winner": true,
+        "score": 178
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 169
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "date": "2021-02-23",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "TREASURE HUNTERS",
+        "winner": true,
+        "score": 245
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ENGINEERS",
+        "score": 156
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "date": "2021-02-24",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ADVISORS",
+        "winner": true,
+        "score": 217
+      },
+      {
+        "id": 2,
+        "civilizationSlug": "INFILTRATORS",
+        "score": 90
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "date": "2021-02-24",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "TRADERS",
+        "score": 125
+      },
+      {
+        "id": 2,
+        "civilizationSlug": "ENTERTAINERS",
+        "winner": true,
+        "score": 209
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "date": "2021-04-07",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "RECYCLERS",
+        "score": 281
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 199
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "date": "2021-04-10",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "LEADERS",
+        "winner": true,
+        "score": 230
+      },
+      {
+        "id": 3,
+        "civilizationSlug": "ENTERTAINERS",
+        "score": 148
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "date": "2021-05-18",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ALIENS",
+        "winner": true,
+        "score": 176
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "HAWKERS",
+        "score": 174
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "date": "2021-05-19",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ISLANDERS",
+        "score": 182
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "SCIENTISTS",
+        "winner": true,
+        "score": 203
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "date": "2021-05-31",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "TINKERERS",
+        "winner": true,
+        "score": 274
+      },
+      {
+        "id": 4,
+        "civilizationSlug": "ALIENS",
+        "score": 218
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "date": "2021-07-04",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "NOMADS",
+        "winner": true,
+        "score": 201
+      },
+      {
+        "id": 5,
+        "civilizationSlug": "ADVISORS",
+        "score": 181
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "date": "2021-08-22",
+    "scenarioId": 1,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ARCHITECTS",
+        "winner": true,
+        "score": 196
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ENGINEERS",
+        "score": 195
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "date": "2021-08-23",
+    "scenarioId": 2,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "LEADERS",
+        "winner": true,
+        "score": 267,
+        "territoriesCount": 12
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "LEVELERS",
+        "score": 172,
+        "territoriesCount": 5
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "date": "2021-08-27",
+    "scenarioId": 3,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ISLANDERS",
+        "winner": true,
+        "score": 187
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 157
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "date": "2022-01-21",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "RIVERFOLK",
+        "score": 171,
+        "capitalId": 5
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "CONQUERORS",
+        "winner": true,
+        "score": 197
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "date": "2022-01-22",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "UTILITARIANS",
+        "score": 131,
+        "capitalId": 2,
+        "monumentsCount": 5,
+        "technologiesCount": 5,
+        "territoriesCount": 7,
+        "tracks": {
+          "exploration": 3,
+          "military": 9,
+          "science": 9,
+          "technology": 7
+        },
+        "bonusTracks": {
+          "outposts": 10,
+          "centralIsland": 5
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ICONOCLASTS",
+        "winner": true,
+        "score": 183,
+        "monumentsCount": 8,
+        "territoriesCount": 1,
+        "tracks": {
+          "exploration": 7,
+          "military": 11,
+          "science": 2,
+          "technology": 11
+        },
+        "bonusTracks": {
+          "centralIsland": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "date": "2022-01-22",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ENTERTAINERS",
+        "winner": true,
+        "score": 242,
+        "capitalId": 6,
+        "monumentsCount": 8,
+        "technologiesCount": 5,
+        "territoriesCount": 4,
+        "tracks": {
+          "exploration": 5,
+          "military": 5,
+          "science": 12,
+          "technology": 11
+        },
+        "bonusTracks": {
+          "centralIsland": 5
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "PIONEERS",
+        "score": 192,
+        "monumentsCount": 8,
+        "territoriesCount": 6,
+        "tracks": {
+          "exploration": 1,
+          "military": 12,
+          "science": 1,
+          "technology": 6
+        },
+        "bonusTracks": {
+          "endTrack": 10,
+          "centralIsland": 10
+        }
+      }
+    ]
+  }
+]
