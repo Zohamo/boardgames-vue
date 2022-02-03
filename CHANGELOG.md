@@ -3,8 +3,9 @@
 ## TODO
 
 - ScythePlay type should extend Play
+- Scroll top top when navigate
 
-## [Unreleased]
+## [1.0.4] - 2022-02-03
 
 Add Tapestry's scores page.
 
