@@ -3,13 +3,16 @@
 ## TODO
 
 - ScythePlay 'human/automa' should be in 'players'
-- Scroll top top when navigate
 
 ## [Unreleased]
 
 ### Added
 
 - Magic The Gathering : abilities rules
+
+### Fixed
+
+- Navigation : Scroll to top when navigate
 
 ## [1.0.4] - 2022-02-03
 
