@@ -41,18 +41,22 @@
             v-for="item in [
               {
                 title: '7 Wonders',
-                url: 'games/7-wonders/rules',
-                slug: '7-wonders-rules',
+                page: 'RulesSevenWonders',
+                slug: 'seven-wonders-rules',
               },
               {
                 title: 'Magic l\'Assemblée',
-                url: 'games/magic/rules/abilities',
-                slug: 'magic-abilities',
+                page: 'RulesMagicAbilities',
+                slug: 'magic-rules-abilities',
               },
-              { title: 'Tapestry', url: 'doc/tapestry', slug: 'tapestry' },
+              {
+                title: 'Tapestry',
+                page: 'RulesTapestry',
+                slug: 'tapestry-rules',
+              },
             ]"
             :key="item.slug"
-            :href="appUrl + item.url"
+            :to="{ name: item.page }"
           >
             <v-list-item-title v-text="item.title" />
           </v-list-item>

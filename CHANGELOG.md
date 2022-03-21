@@ -10,6 +10,7 @@
 
 - 7 Wonders : included in app
 - Magic The Gathering : abilities rules
+- Tapestry : included in app
 
 ### Fixed
 

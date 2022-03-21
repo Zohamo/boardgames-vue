@@ -1,7 +1,8 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
-import RulesSevenWonders from "@/views/rules/RulesSevenWonders.vue";
 import RulesMagicAbilities from "@/views/rules/RulesMagicAbilities.vue";
+import RulesSevenWonders from "@/views/rules/RulesSevenWonders.vue";
+import RulesTapestry from "@/views/rules/RulesTapestry.vue";
 import ScoresScythe from "@/views/scores/ScoresScythe.vue";
 import ScoresTapestry from "@/views/scores/ScoresTapestry.vue";
 import Vue from "vue";
@@ -43,6 +44,11 @@ const routes: Array<RouteConfig> = [
     path: "/games/scythe/scores",
     name: "ScoresScythe",
     component: ScoresScythe,
+  },
+  {
+    path: "/games/tapestry/rules",
+    name: "RulesTapestry",
+    component: RulesTapestry,
   },
   {
     path: "/games/tapestry/scores",
