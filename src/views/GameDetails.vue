@@ -150,7 +150,7 @@ export default Vue.extend({
   methods: {
     init(): void {
       this.game = this.games.find(
-        (game) => game.slug === this.$route.params.slug
+        (game: Game) => game.slug === this.$route.params.slug
       );
       this.loading = false;
       this.pictures = [

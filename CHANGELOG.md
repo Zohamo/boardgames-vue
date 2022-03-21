@@ -8,6 +8,7 @@
 
 ### Added
 
+- 7 Wonders : included in app
 - Magic The Gathering : abilities rules
 
 ### Fixed

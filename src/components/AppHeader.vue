@@ -39,7 +39,11 @@
         <v-list>
           <v-list-item
             v-for="item in [
-              { title: '7 Wonders', url: 'doc/7-wonders', slug: '7-wonders' },
+              {
+                title: '7 Wonders',
+                url: 'games/7-wonders/rules',
+                slug: '7-wonders-rules',
+              },
               {
                 title: 'Magic l\'Assemblée',
                 url: 'games/magic/rules/abilities',
