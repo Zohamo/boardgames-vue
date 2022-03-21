@@ -40,6 +40,11 @@
           <v-list-item
             v-for="item in [
               { title: '7 Wonders', url: 'doc/7-wonders', slug: '7-wonders' },
+              {
+                title: 'Magic l\'Assemblée',
+                url: 'games/magic/rules/abilities',
+                slug: 'magic-abilities',
+              },
               { title: 'Tapestry', url: 'doc/tapestry', slug: 'tapestry' },
             ]"
             :key="item.slug"

@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import { version, authors, dependencies } from "../../package.json";
 import players from "@/assets/json/players.json";
+import magicAbilities from "@/assets/json/magic-abilities.json";
 import scytheFactions from "@/assets/json/scythe-factions.json";
 import scythePlays from "@/assets/json/scythe-plays.json";
 import tapestryCivilizations from "@/assets/json/tapestry-civilizations.json";
@@ -32,6 +33,16 @@ export default new Vuex.Store({
     games: [] as Game[],
 
     players: players as Player[],
+
+    magicAbilities: magicAbilities.sort(function (a, b) {
+      if (a.nameFr < b.nameFr) {
+        return -1;
+      }
+      if (a.nameFr > b.nameFr) {
+        return 1;
+      }
+      return 0;
+    }) as MagicAbility[],
 
     scythePlays: scythePlays as ScythePlay[],
     scytheFactions: scytheFactions as ScytheFaction[],

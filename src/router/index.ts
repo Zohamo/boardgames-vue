@@ -1,5 +1,6 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
+import RulesMagicAbilities from "@/views/rules/RulesMagicAbilities.vue";
 import ScoresScythe from "@/views/scores/ScoresScythe.vue";
 import ScoresTapestry from "@/views/scores/ScoresTapestry.vue";
 import Vue from "vue";
@@ -22,6 +23,15 @@ const routes: Array<RouteConfig> = [
     path: "/games/:slug",
     name: "GameDetails",
     component: GameDetails,
+    props: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    path: "/games/magic/rules/abilities",
+    name: "RulesMagicAbilities",
+    component: RulesMagicAbilities,
     props: {
       type: String,
       required: true,

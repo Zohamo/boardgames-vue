@@ -41,6 +41,18 @@ export interface Range {
 }
 
 /**
+ * Magic the Gathering
+ */
+
+export interface MagicAbility {
+  nameFr: string;
+  nameEn: string;
+  ref: string;
+  description: string;
+  details: { ref: string; textFr: string }[];
+}
+
+/**
  * Scythe
  */
 

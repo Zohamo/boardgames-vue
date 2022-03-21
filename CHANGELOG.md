@@ -5,6 +5,12 @@
 - ScythePlay type should extend Play
 - Scroll top top when navigate
 
+## [Unreleased]
+
+### Added
+
+- Magic The Gathering : abilities rules
+
 ## [1.0.4] - 2022-02-03
 
 Add Tapestry's scores page.
