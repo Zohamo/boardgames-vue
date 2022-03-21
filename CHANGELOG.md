@@ -2,7 +2,7 @@
 
 ## TODO
 
-- ScythePlay type should extend Play
+- ScythePlay 'human/automa' should be in 'players'
 - Scroll top top when navigate
 
 ## [Unreleased]

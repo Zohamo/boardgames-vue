@@ -79,9 +79,7 @@ export interface ScytheFaction {
   color: string;
 }
 
-export interface ScythePlay {
-  id: number;
-  date: string;
+export interface ScythePlay extends Play {
   human: ScythePlayer;
   automa: ScythePlayer;
   modules?: {
