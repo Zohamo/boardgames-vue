@@ -1,6 +1,10 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
-import ScytheScores from "@/views/scores/ScytheScores.vue";
+import RulesMagicAbilities from "@/views/rules/RulesMagicAbilities.vue";
+import RulesSevenWonders from "@/views/rules/RulesSevenWonders.vue";
+import RulesTapestry from "@/views/rules/RulesTapestry.vue";
+import ScoresScythe from "@/views/scores/ScoresScythe.vue";
+import ScoresTapestry from "@/views/scores/ScoresTapestry.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -27,17 +31,36 @@ const routes: Array<RouteConfig> = [
     },
   },
   {
+    path: "/games/7-wonders/rules",
+    name: "RulesSevenWonders",
+    component: RulesSevenWonders,
+  },
+  {
+    path: "/games/magic/rules/abilities",
+    name: "RulesMagicAbilities",
+    component: RulesMagicAbilities,
+  },
+  {
     path: "/games/scythe/scores",
-    name: "ScytheScores",
-    component: ScytheScores,
-    props: {
-      type: String,
-      required: true,
-    },
+    name: "ScoresScythe",
+    component: ScoresScythe,
+  },
+  {
+    path: "/games/tapestry/rules",
+    name: "RulesTapestry",
+    component: RulesTapestry,
+  },
+  {
+    path: "/games/tapestry/scores",
+    name: "ScoresTapestry",
+    component: ScoresTapestry,
   },
 ];
 
 export default new VueRouter({
   mode: "history",
   routes,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
 });

@@ -24,6 +24,9 @@ export default Vue.extend({
 </script>
 
 <style>
+iframe {
+  border: none;
+}
 .v-main__wrap {
   display: flex;
   flex-direction: column;

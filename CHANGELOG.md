@@ -1,5 +1,37 @@
 # Changelog
 
+## TODO
+
+- ScythePlay 'human/automa' should be in 'players'
+
+## [1.0.5] - 2022-03-21
+
+Add MTG's abilities rules.
+Include 7 Wonders & Tapestry rules in app.
+
+### Added
+
+- 7 Wonders : included in app
+- Magic The Gathering : abilities rules
+- Tapestry : included in app
+
+### Fixed
+
+- Navigation : Scroll to top when navigate
+
+## [1.0.4] - 2022-02-03
+
+Add Tapestry's scores page.
+
+### Added
+
+- Config : Moment.js
+- Tapestry's scores Page
+
+### Fixed
+
+- Config : API in https
+
 ## [1.0.3] - 2022-01-11
 
 Games Documentation & help.

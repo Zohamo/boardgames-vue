@@ -2,13 +2,9 @@
   <v-footer dark padless elevation="4">
     <v-card class="pa-2 text--white flex text-center" flat tile>
       <v-card-text>
-        {{ new Date().getFullYear() }} — <a :href="appUrl">Boardgames</a> v{{
-          appVersion
-        }}
-        by <a :href="author.url" target="_blank">{{ author.name }}</a>
-      </v-card-text>
-      <v-card-text>
-        made with <a :href="vueUrl" target="_blank">Vue.js</a> v{{ vueVersion }}
+        2021-{{ new Date().getFullYear() }} —
+        <a :href="appUrl">Boardgames</a> v{{ appVersion }} by
+        <a :href="author.url" target="_blank">{{ author.name }}</a>
       </v-card-text>
     </v-card>
   </v-footer>

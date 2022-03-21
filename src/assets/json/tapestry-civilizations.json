@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "ALCHEMISTS",
+    "name": "Alchimistes"
+  },
+  {
+    "slug": "ARCHITECTS",
+    "name": "Architectes"
+  },
+  {
+    "slug": "CHOSEN",
+    "name": "Les élus"
+  },
+  {
+    "slug": "CRAFTSMEN",
+    "name": "Artisans"
+  },
+  {
+    "slug": "ENTERTAINERS",
+    "name": "Artistes"
+  },
+  {
+    "slug": "FUTURISTS",
+    "name": "Futuristes",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "HERALDS",
+    "name": "Hérauts",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "HISTORIANS",
+    "name": "Historiens"
+  },
+  {
+    "slug": "INVENTORS",
+    "name": "Inventeurs",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "ISOLATIONISTS",
+    "name": "Isolationnistes"
+  },
+  {
+    "slug": "LEADERS",
+    "name": "Dirigeants"
+  },
+  {
+    "slug": "MERRYMAKERS",
+    "name": "Fêtards"
+  },
+  {
+    "slug": "MILITANTS",
+    "name": "Militants"
+  },
+  {
+    "slug": "MYSTICS",
+    "name": "Mystiques"
+  },
+  {
+    "slug": "NOMADS",
+    "name": "Nomades"
+  },
+  {
+    "slug": "TRADERS",
+    "name": "Négociants",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "ADVISORS",
+    "name": "Conseillers",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "ALIENS",
+    "name": "Extraterrestres"
+  },
+  {
+    "slug": "INFILTRATORS",
+    "name": "Infiltrés"
+  },
+  {
+    "slug": "ISLANDERS",
+    "name": "Insulaires"
+  },
+  {
+    "slug": "RECYCLERS",
+    "name": "Recycleurs"
+  },
+  {
+    "slug": "RIVERFOLK",
+    "name": "Peuple de la rivière"
+  },
+  {
+    "slug": "SPIES",
+    "name": "Espions",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "TINKERERS",
+    "name": "Bricoleurs"
+  },
+  {
+    "slug": "TREASURE HUNTERS",
+    "name": "Chasseurs de trésors"
+  },
+  {
+    "slug": "UTILITARIANS",
+    "name": "Utilitaristes"
+  },
+  {
+    "slug": "CONQUERORS",
+    "name": "Conquérants",
+    "automa": true
+  },
+  {
+    "slug": "ENGINEERS",
+    "name": "Ingénieurs",
+    "automa": true
+  },
+  {
+    "slug": "EXPLORERS",
+    "name": "Explorateurs",
+    "automa": true
+  },
+  {
+    "slug": "SCIENTISTS",
+    "name": "Scientifiques",
+    "automa": true
+  },
+  {
+    "slug": "HAWKERS",
+    "name": "Colporteurs",
+    "automa": true
+  },
+  {
+    "slug": "ICONOCLASTS",
+    "name": "Iconoclastes",
+    "automa": true
+  },
+  {
+    "slug": "LEVELERS",
+    "name": "Niveleurs",
+    "automa": true
+  },
+  {
+    "slug": "PIONEERS",
+    "name": "Pionniers",
+    "automa": true
+  }
+]

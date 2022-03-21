@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Montagne"
+  },
+  {
+    "id": 2,
+    "name": "Marécages"
+  },
+  {
+    "id": 3,
+    "name": "Jungle"
+  },
+  {
+    "id": 4,
+    "name": "Désert"
+  },
+  {
+    "id": 5,
+    "name": "Prairie"
+  },
+  {
+    "id": 6,
+    "name": "Forêt"
+  }
+]

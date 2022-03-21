@@ -21,7 +21,8 @@
         <v-list>
           <v-list-item
             v-for="item in [
-              { title: 'Scythe', page: 'ScytheScores', slug: 'scythe' },
+              { title: 'Scythe', page: 'ScoresScythe', slug: 'scythe' },
+              { title: 'Tapestry', page: 'ScoresTapestry', slug: 'tapestry' },
             ]"
             :key="item.slug"
             :to="{ name: item.page }"
@@ -33,16 +34,29 @@
 
       <v-menu offset-y transition="expand-transition">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn plain v-bind="attrs" v-on="on"> Règles & Aides </v-btn>
+          <v-btn plain v-bind="attrs" v-on="on"> Règles &amp; Aides </v-btn>
         </template>
         <v-list>
           <v-list-item
             v-for="item in [
-              { title: '7 Wonders', url: 'doc/7-wonders', slug: '7-wonders' },
-              { title: 'Tapestry', url: 'doc/tapestry', slug: 'tapestry' },
+              {
+                title: '7 Wonders',
+                page: 'RulesSevenWonders',
+                slug: 'seven-wonders-rules',
+              },
+              {
+                title: 'Magic l\'Assemblée',
+                page: 'RulesMagicAbilities',
+                slug: 'magic-rules-abilities',
+              },
+              {
+                title: 'Tapestry',
+                page: 'RulesTapestry',
+                slug: 'tapestry-rules',
+              },
             ]"
             :key="item.slug"
-            :href="appUrl + item.url"
+            :to="{ name: item.page }"
           >
             <v-list-item-title v-text="item.title" />
           </v-list-item>
