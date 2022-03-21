@@ -4,7 +4,10 @@
 
 - ScythePlay 'human/automa' should be in 'players'
 
-## [Unreleased]
+## [1.0.5] - 2022-03-21
+
+Add MTG's abilities rules.
+Include 7 Wonders & Tapestry rules in app.
 
 ### Added
 
