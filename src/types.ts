@@ -44,7 +44,7 @@ export interface Range {
  * Magic the Gathering
  */
 
-export interface MagicAbility {
+export interface MtgAbility {
   nameFr: string;
   nameEn: string;
   ref: string;

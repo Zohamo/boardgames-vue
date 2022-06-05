@@ -24,4 +24,4 @@ pnpm-debug.log*
 # Assets
 /public/doc/7-wonders/img
 /public/img/*
-!/public/img/magic
+!/public/img/mtg/*

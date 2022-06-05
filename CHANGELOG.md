@@ -4,6 +4,12 @@
 
 - ScythePlay 'human/automa' should be in 'players'
 
+## [Unreleased]
+
+### Changed
+
+- MTG : renamed all 'Magic' by 'MTG'
+
 ## [1.0.5] - 2022-03-21
 
 Add MTG's abilities rules.

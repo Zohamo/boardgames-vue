@@ -46,8 +46,8 @@
               },
               {
                 title: 'Magic l\'Assemblée',
-                page: 'RulesMagicAbilities',
-                slug: 'magic-rules-abilities',
+                page: 'MtgAbilities',
+                slug: 'mtg-abilities',
               },
               {
                 title: 'Tapestry',

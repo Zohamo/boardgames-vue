@@ -2,7 +2,7 @@
   <v-container>
     <div class="d-flex justify-center align-center">
       <img
-        :src="`${appUrl}img/magic/MTG-logo.svg`"
+        :src="`${appUrl}img/mtg/MTG-logo.svg`"
         alt="Magic The Gathering"
         style="max-width: 300px"
         class="mx-2"
@@ -58,22 +58,22 @@
 <script lang="ts">
 import Vue from "vue";
 import { mapState } from "vuex";
-import { MagicAbility } from "@/types";
+import { MtgAbility } from "@/types";
 
 export default Vue.extend({
-  name: "rules-magic-abilities",
+  name: "mtg-abilities",
 
   data: () => ({
-    abilities: [] as MagicAbility[],
+    abilities: [] as MtgAbility[],
     search: "",
   }),
 
   computed: {
-    ...mapState(["appUrl", "magicAbilities"]),
+    ...mapState(["appUrl", "mtgAbilities"]),
   },
 
   async created() {
-    this.magicAbilities.map((ability: MagicAbility) => {
+    this.mtgAbilities.map((ability: MtgAbility) => {
       ability.description = this.insertImages(ability.description);
       if (ability.details && ability.details.length) {
         ability.details.map((detail) => {
@@ -83,15 +83,15 @@ export default Vue.extend({
       }
       return ability;
     });
-    this.abilities = this.magicAbilities;
+    this.abilities = this.mtgAbilities;
   },
 
   watch: {
     search(val: string): void {
       this.abilities = !val
-        ? this.magicAbilities
-        : this.magicAbilities.filter(
-            (ability: MagicAbility) =>
+        ? this.mtgAbilities
+        : this.mtgAbilities.filter(
+            (ability: MtgAbility) =>
               this.normalize(ability.nameFr).indexOf(this.normalize(val)) !==
                 -1 ||
               this.normalize(ability.nameEn).indexOf(this.normalize(val)) !== -1
@@ -115,7 +115,7 @@ export default Vue.extend({
         const img = item[0].slice(1, -1);
         text = text.replaceAll(
           item[0],
-          `<img src="${this.appUrl}img/magic/${img}.png" alt="${img}" />`
+          `<img src="${this.appUrl}img/mtg/${img}.png" alt="${img}" />`
         );
       });
       return text;
