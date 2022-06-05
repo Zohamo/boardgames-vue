@@ -1,6 +1,7 @@
 import GameDetails from "@/views/GameDetails.vue";
 import GamesList from "@/views/GamesList.vue";
 import MtgAbilities from "@/views/mtg/MtgAbilities.vue";
+import MtgSets from "@/views/mtg/MtgSets.vue";
 import RulesSevenWonders from "@/views/rules/RulesSevenWonders.vue";
 import RulesTapestry from "@/views/rules/RulesTapestry.vue";
 import ScoresScythe from "@/views/scores/ScoresScythe.vue";
@@ -39,6 +40,11 @@ const routes: Array<RouteConfig> = [
     path: "/games/mtg/rules/abilities",
     name: "MtgAbilities",
     component: MtgAbilities,
+  },
+  {
+    path: "/games/mtg/sets",
+    name: "MtgSets",
+    component: MtgSets,
   },
   {
     path: "/games/scythe/scores",

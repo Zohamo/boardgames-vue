@@ -6,6 +6,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- MTG : sets list
+
 ### Changed
 
 - MTG : renamed all 'Magic' by 'MTG'

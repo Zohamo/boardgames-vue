@@ -52,6 +52,16 @@ export interface MtgAbility {
   details: { ref: string; textFr: string }[];
 }
 
+export interface MtgSet {
+  code: string;
+  name: string;
+  type: string;
+  booster: (string | string[])[];
+  releaseDate: string;
+  block: string;
+  onlineOnly: boolean;
+}
+
 /**
  * Scythe
  */

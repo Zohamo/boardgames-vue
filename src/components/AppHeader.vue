@@ -45,14 +45,35 @@
                 slug: 'seven-wonders-rules',
               },
               {
-                title: 'Magic l\'Assemblée',
+                title: 'Tapestry',
+                page: 'RulesTapestry',
+                slug: 'tapestry-rules',
+              },
+            ]"
+            :key="item.slug"
+            :to="{ name: item.page }"
+          >
+            <v-list-item-title v-text="item.title" />
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
+      <v-menu offset-y transition="expand-transition">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn plain v-bind="attrs" v-on="on"> MTG </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="item in [
+              {
+                title: 'Capacités',
                 page: 'MtgAbilities',
                 slug: 'mtg-abilities',
               },
               {
-                title: 'Tapestry',
-                page: 'RulesTapestry',
-                slug: 'tapestry-rules',
+                title: 'Éditions',
+                page: 'MtgSets',
+                slug: 'mtg-sets',
               },
             ]"
             :key="item.slug"

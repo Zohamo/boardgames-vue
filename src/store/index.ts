@@ -10,6 +10,8 @@ import tapestryPlays from "@/assets/json/tapestry-plays.json";
 import tapestryScenarios from "@/assets/json/tapestry-scenarios.json";
 import {
   Game,
+  MtgAbility,
+  MtgSet,
   Player,
   ScytheFaction,
   ScythePlay,
@@ -43,6 +45,7 @@ export default new Vuex.Store({
       }
       return 0;
     }) as MtgAbility[],
+    mtgSets: [] as MtgSet[],
 
     scythePlays: scythePlays as ScythePlay[],
     scytheFactions: scytheFactions as ScytheFaction[],
@@ -81,6 +84,9 @@ export default new Vuex.Store({
     SET_GAMES(state, games): void {
       state.games = games;
     },
+    SET_MTG_SETS(state, mtgSets): void {
+      state.mtgSets = mtgSets;
+    },
   },
 
   actions: {
@@ -100,6 +106,34 @@ export default new Vuex.Store({
         })
         .catch((error) => {
           console.log("getGames", error);
+        });
+
+      commit("SET_PROMISE", promise);
+
+      return promise;
+    },
+
+    async getMtgSets({ state, commit }): Promise<MtgSet[]> {
+      if (state.mtgSets.length) {
+        return state.mtgSets;
+      }
+
+      if (state.promise) {
+        return state.promise;
+      }
+
+      const promise = fetch(
+        `https://api.magicthegathering.io/v1/sets?type=core|expansion|commander|draft_innovation|archenemy|arsenal|box|funny`
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          commit(
+            "SET_MTG_SETS",
+            res.sets.filter((set) => !set.onlineOnly)
+          );
+        })
+        .catch((error) => {
+          console.log("getMtgSets", error);
         });
 
       commit("SET_PROMISE", promise);

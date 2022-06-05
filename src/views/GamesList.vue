@@ -360,7 +360,7 @@ export default Vue.extend({
 
     applyFilters(): void {
       this.filteredGames = this.games.filter(
-        (game) =>
+        (game: Game) =>
           this.filterGameByPlayers(game) &&
           this.filterGameByDuration(game) &&
           this.filterGameByTheme(game)
