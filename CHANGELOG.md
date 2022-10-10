@@ -10,6 +10,10 @@
 
 - MTG : retrieve all sets from API
 
+### Fixed
+
+- API : no call when navigate
+
 ## [1.0.6] - 2022-06-05
 
 Add MTG's sets list.

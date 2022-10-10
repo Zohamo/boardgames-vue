@@ -95,10 +95,6 @@ export default new Vuex.Store({
         return state.games;
       }
 
-      if (state.promise) {
-        return state.promise;
-      }
-
       const promise = fetch(`${process.env.VUE_APP_API_URL}/boardgames`)
         .then((res) => res.json())
         .then((res) => {
@@ -116,10 +112,6 @@ export default new Vuex.Store({
     async getMtgSets({ state, commit }): Promise<MtgSet[]> {
       if (state.mtgSets.length) {
         return state.mtgSets;
-      }
-
-      if (state.promise) {
-        return state.promise;
       }
 
       const promise = fetch(
