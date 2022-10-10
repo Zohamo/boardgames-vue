@@ -123,7 +123,7 @@ export default new Vuex.Store({
       }
 
       const promise = fetch(
-        `https://api.magicthegathering.io/v1/sets?type=core|expansion|commander|draft_innovation|archenemy|arsenal|box|funny`
+        "https://api.magicthegathering.io/v1/sets?type=archenemy|arsenal|box|commander|core|draft_innovation|expansion|funny|masters"
       )
         .then((res) => res.json())
         .then((res) => {

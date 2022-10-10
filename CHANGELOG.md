@@ -4,6 +4,12 @@
 
 - ScythePlay 'human/automa' should be in 'players'
 
+## [Unreleased]
+
+### Changed
+
+- MTG : retrieve all sets from API
+
 ## [1.0.6] - 2022-06-05
 
 Add MTG's sets list.
