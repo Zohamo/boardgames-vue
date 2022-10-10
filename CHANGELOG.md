@@ -4,7 +4,7 @@
 
 - ScythePlay 'human/automa' should be in 'players'
 
-## [Unreleased]
+## [1.0.7] - 2022-10-10
 
 ### Changed
 
