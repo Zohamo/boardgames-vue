@@ -7,13 +7,13 @@ import store from "@/store";
 
 Vue.config.productionTip = false;
 
-Vue.filter("date", function (value) {
+Vue.filter("date", function (value: string) {
   if (value) {
     return moment(String(value)).format("DD/MM/YYYY");
   }
 });
 
-Vue.filter("roman", function (num) {
+Vue.filter("roman", function (num: number) {
   if (isNaN(num)) {
     return num;
   }
@@ -53,7 +53,10 @@ Vue.filter("roman", function (num) {
   let roman = "";
   let i = 3;
   while (i--) {
-    roman = (key[+digits.pop() + i * 10] || "") + roman;
+    const lastDigit = digits.pop();
+    if (lastDigit) {
+      roman = (key[+lastDigit + i * 10] || "") + roman;
+    }
   }
   return Array(+digits.join("") + 1).join("M") + roman;
 });

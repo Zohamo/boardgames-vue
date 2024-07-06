@@ -407,7 +407,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 23,
     "date": "2020-12-29",
     "human": {
       "name": "Mathias",
@@ -430,7 +430,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 24,
     "date": "2021-04-14",
     "human": {
       "name": "Mathias",
@@ -446,7 +446,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 25,
     "date": "2021-04-14",
     "human": {
       "name": "Mathias",
@@ -462,7 +462,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 26,
     "date": "2021-04-15",
     "human": {
       "name": "Mathias",
@@ -485,7 +485,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 27,
     "date": "2021-04-29",
     "human": {
       "name": "Mathias",
@@ -509,7 +509,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 28,
     "date": "2021-05-05",
     "human": {
       "name": "Mathias",
@@ -533,7 +533,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 29,
     "date": "2021-05-05",
     "human": {
       "name": "Mathias",
@@ -553,6 +553,79 @@
       "airship": {
         "aggressive": "3",
         "passive": "14"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "date": "2021-05-06",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "stars": 5,
+      "winner": true,
+      "playerMat": "4",
+      "score": 90
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "SAX",
+      "stars": 6,
+      "score": 54
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "8",
+        "passive": "10"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "date": "2021-05-06",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "stars": 4,
+      "playerMat": "5",
+      "score": 70
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "ALB",
+      "stars": 6,
+      "winner": true,
+      "score": 70
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "6",
+        "passive": "11"
+      },
+      "resolution": "8"
+    }
+  },
+  {
+    "id": 32,
+    "date": "2021-05-11",
+    "human": {
+      "name": "Mathias",
+      "faction": "POL",
+      "stars": 3,
+      "playerMat": "2",
+      "score": 73
+    },
+    "automa": {
+      "automaLevel": 1,
+      "faction": "ALB",
+      "stars": 6,
+      "winner": true,
+      "score": 75
+    },
+    "modules": {
+      "airship": {
+        "aggressive": "1",
+        "passive": "13"
       }
     }
   }

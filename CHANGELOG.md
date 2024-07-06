@@ -4,6 +4,17 @@
 
 - ScythePlay 'human/automa' should be in 'players'
 
+## [Unreleased]
+
+### Fixed
+
+- config : CRLF to LF
+- type issues
+
+### Removed
+
+- games : filter by duration range
+
 ## [1.0.7] - 2022-10-10
 
 ### Changed

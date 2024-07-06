@@ -95,7 +95,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "date": "2021-01-12",
     "players": [
       {
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "date": "2021-01-21",
     "players": [
       {
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "date": "2021-01-21",
     "players": [
       {
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "date": "2021-01-22",
     "players": [
       {
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "date": "2021-01-23",
     "players": [
       {
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "date": "2021-02-23",
     "players": [
       {
@@ -208,7 +208,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "date": "2021-02-23",
     "players": [
       {
@@ -226,7 +226,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "date": "2021-02-24",
     "players": [
       {
@@ -243,7 +243,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "date": "2021-02-24",
     "players": [
       {
@@ -260,12 +260,13 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "date": "2021-04-07",
     "players": [
       {
         "id": 1,
         "civilizationSlug": "RECYCLERS",
+        "winner": true,
         "score": 281
       },
       {
@@ -277,7 +278,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "date": "2021-04-10",
     "players": [
       {
@@ -294,7 +295,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "date": "2021-05-18",
     "players": [
       {
@@ -312,7 +313,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "date": "2021-05-19",
     "players": [
       {
@@ -330,7 +331,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "date": "2021-05-31",
     "players": [
       {
@@ -347,7 +348,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "date": "2021-07-04",
     "players": [
       {
@@ -364,7 +365,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "date": "2021-08-22",
     "scenarioId": 1,
     "players": [
@@ -383,7 +384,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "date": "2021-08-23",
     "scenarioId": 2,
     "players": [
@@ -404,7 +405,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "date": "2021-08-27",
     "scenarioId": 3,
     "players": [
@@ -423,7 +424,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "date": "2022-01-21",
     "players": [
       {
@@ -442,7 +443,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "date": "2022-01-22",
     "players": [
       {
@@ -485,7 +486,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "date": "2022-01-22",
     "players": [
       {
@@ -523,6 +524,47 @@
         "bonusTracks": {
           "endTrack": 10,
           "centralIsland": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "date": "2023-03-03",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "HISTORIANS",
+        "winner": true,
+        "score": 301,
+        "capitalId": 4,
+        "monumentsCount": 8,
+        "territoriesCount": 8,
+        "tracks": {
+          "exploration": 9,
+          "military": 12,
+          "science": 12,
+          "technology": 9
+        },
+        "bonusTracks": {
+          "centralIsland": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 167,
+        "monumentsCount": 6,
+        "territoriesCount": 3,
+        "tracks": {
+          "exploration": 12,
+          "military": 5,
+          "science": 6,
+          "technology": 5
+        },
+        "bonusTracks": {
+          "endTrack": 5
         }
       }
     ]

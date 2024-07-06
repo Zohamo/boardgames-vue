@@ -31,8 +31,8 @@ export interface Play {
 }
 
 export interface Player {
-  id: number;
-  name: string;
+  id?: number;
+  name?: string;
 }
 
 export interface Range {
@@ -118,11 +118,9 @@ export interface ScythePlayer {
  * Tapestry
  */
 
-export enum TapestryAutomaLevel {
-  Autometta,
-  Automa,
-  Automaszyna,
-  Ultimaszyna,
+export interface TapestryAutoma {
+  id: number;
+  name: string;
 }
 
 export enum TapestryCivilizationSlug {
@@ -174,21 +172,23 @@ export interface TapestryCivilization {
   id?: number;
   slug: string | TapestryCivilizationSlug;
   name: string;
-  notWithAutoma: boolean;
+  notWithAutoma?: boolean;
   automa?: boolean;
 }
 
 export interface TapestryPlay extends Play {
   players: TapestryPlayer[];
+  scenarioId?: number;
   scenario?: TapestryScenario;
 }
 
 export interface TapestryPlayer extends Player {
   automa?: boolean;
-  automaLevel?: TapestryAutomaLevel;
-  civilization: TapestryCivilization;
+  automaLevel?: number;
+  civilizationSlug?: string;
+  civilization?: TapestryCivilization;
   winner?: boolean;
-  score: number;
+  score?: number;
   capitalId?: number;
   monumentsCount?: number;
   technologiesCount?: number;

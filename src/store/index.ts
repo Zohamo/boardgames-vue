@@ -17,6 +17,7 @@ import {
   ScythePlay,
   TapestryCivilization,
   TapestryPlay,
+  TapestryPlayer,
   TapestryScenario,
 } from "@/types";
 
@@ -50,12 +51,17 @@ export default new Vuex.Store({
     scythePlays: scythePlays as ScythePlay[],
     scytheFactions: scytheFactions as ScytheFaction[],
 
-    tapestryPlays: tapestryPlays.map((play) => {
-      play.players.map((playerFromPlay) => {
+    tapestryCivilizations: tapestryCivilizations as TapestryCivilization[],
+    tapestryScenarios: tapestryScenarios as TapestryScenario[],
+    tapestryPlays: tapestryPlays.map((play: TapestryPlay) => {
+      play.players.map((playerFromPlay: TapestryPlayer) => {
         if (playerFromPlay.civilizationSlug) {
-          playerFromPlay.civilization = tapestryCivilizations.find(
+          const civilization = tapestryCivilizations.find(
             (civ) => civ.slug === playerFromPlay.civilizationSlug
           );
+          if (civilization) {
+            playerFromPlay.civilization = civilization;
+          }
           delete playerFromPlay.civilizationSlug;
         }
         return Object.assign(
@@ -73,8 +79,6 @@ export default new Vuex.Store({
       }
       return play;
     }) as TapestryPlay[],
-    tapestryCivilizations: tapestryCivilizations as TapestryCivilization[],
-    tapestryScenarios: tapestryScenarios as TapestryScenario[],
   },
 
   mutations: {
@@ -90,7 +94,7 @@ export default new Vuex.Store({
   },
 
   actions: {
-    async getGames({ state, commit }): Promise<Game[]> {
+    async getGames({ state, commit }): Promise<void | Game[]> {
       if (state.games.length) {
         return state.games;
       }
@@ -109,7 +113,7 @@ export default new Vuex.Store({
       return promise;
     },
 
-    async getMtgSets({ state, commit }): Promise<MtgSet[]> {
+    async getMtgSets({ state, commit }): Promise<void | MtgSet[]> {
       if (state.mtgSets.length) {
         return state.mtgSets;
       }
@@ -121,7 +125,7 @@ export default new Vuex.Store({
         .then((res) => {
           commit(
             "SET_MTG_SETS",
-            res.sets.filter((set) => !set.onlineOnly)
+            res.sets.filter((set: MtgSet) => !set.onlineOnly)
           );
         })
         .catch((error) => {

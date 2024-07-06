@@ -124,37 +124,12 @@
                   :value="true"
                 />
               </v-btn-toggle>
-              <v-btn-toggle v-model="filtersActive.durationRange">
-                <v-btn
-                  small
-                  depressed
-                  outlined
-                  class="px-0 ml-1"
-                  style="min-width: inherit"
-                  color="primary"
-                  :value="true"
-                >
-                  <v-icon v-text="'mdi-arrow-left-right'" />
-                </v-btn>
-              </v-btn-toggle>
             </v-list-item>
 
             <v-list-item class="mt-2">
               <v-list-item-content style="overflow: visible">
                 <v-slider
-                  v-show="!filtersActive.durationRange"
                   v-model="filtersValue.duration"
-                  :min="durationRange.min"
-                  :max="durationRange.max"
-                  hide-details
-                  dense
-                  thumb-label="always"
-                  thumb-size="16"
-                  step="10"
-                />
-                <v-range-slider
-                  v-show="filtersActive.durationRange"
-                  v-model="filtersValue.durationRange"
                   :min="durationRange.min"
                   :max="durationRange.max"
                   hide-details
@@ -252,14 +227,12 @@ export default Vue.extend({
       players: false,
       playersRange: false,
       duration: false,
-      durationRange: false,
       theme: false,
     },
     filtersValue: {
       players: 4,
       playersRange: [2, 6],
       duration: 30,
-      durationRange: [30, 60],
       theme: "",
     },
 
@@ -374,24 +347,22 @@ export default Vue.extend({
       const [min, max] = this.filtersActive.playersRange
         ? this.filtersValue.playersRange
         : Array(2).fill(this.filtersValue.players);
-      return game.players.min <= min && game.players.max >= max;
+      return game.players.max
+        ? game.players.min >= min && game.players.max <= max
+        : game.players.min === min;
     },
 
     filterGameByDuration(game: Game): boolean {
-      if (!this.filtersActive.duration) {
-        return true;
-      }
-      const [min, max] = this.filtersActive.durationRange
-        ? this.filtersValue.durationRange
-        : Array(2).fill(this.filtersValue.duration);
-      return game.duration.min <= min && game.duration.max <= max;
+      return (
+        !this.filtersActive.duration ||
+        (game.duration.max ?? game.duration.min) <= this.filtersValue.duration
+      );
     },
 
     filterGameByTheme(game: Game): boolean {
-      if (!this.filtersActive.theme) {
-        return true;
-      }
-      return game.theme === this.filtersValue.theme;
+      return (
+        !this.filtersActive.theme || game.theme === this.filtersValue.theme
+      );
     },
   },
 });

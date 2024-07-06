@@ -82,7 +82,7 @@ export default Vue.extend({
       return this.plays.filter(
         (play) =>
           play.players.find((player) => player.id === this.mainPlayerId)
-            ?.civilization.slug === civSlug
+            ?.civilization?.slug === civSlug
       );
     },
   },
