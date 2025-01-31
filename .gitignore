@@ -22,6 +22,7 @@ pnpm-debug.log*
 *.sw?
 
 # Assets
+/public/**/*.pdf
 /public/doc/7-wonders/img
 /public/img/*
 !/public/img/mtg/*
