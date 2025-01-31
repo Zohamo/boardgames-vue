@@ -5,7 +5,12 @@
         <v-card v-if="game" class="px-8 py-4">
           <v-row class="align-center">
             <v-col class="flex-grow-0 mx-auto">
-              <img :src="imgUrl" alt="box" class="my-auto" />
+              <img
+                v-if="imageExists(imgUrl)"
+                :src="imgUrl"
+                alt="box"
+                class="my-auto"
+              />
             </v-col>
             <v-col class="ml-8 d-flex flex-column">
               <h2 class="d-flex flex-column display-1 my-auto">
@@ -121,16 +126,16 @@
 import Vue from "vue";
 import { mapState } from "vuex";
 import { Game, Picture } from "@/types";
+import { imageMixin } from "../mixins/imageMixin";
 
 export default Vue.extend({
   name: "GameDetail",
-
+  mixins: [imageMixin],
   data: () => ({
     loading: true,
     game: {} as Game,
     pictures: [] as Picture[],
   }),
-
   computed: {
     ...mapState(["appUrl", "games"]),
 
@@ -138,7 +143,6 @@ export default Vue.extend({
       return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
-
   async beforeMount() {
     if (this.games.length) {
       this.init();
@@ -146,7 +150,6 @@ export default Vue.extend({
       this.$store.dispatch("getGames").then(() => this.init());
     }
   },
-
   methods: {
     init(): void {
       this.game = this.games.find(

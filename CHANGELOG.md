@@ -9,6 +9,7 @@
 ### Fixed
 
 - games : display HTML special characters in title
+- games : hide icon if image doesn't exist
 
 ## [1.0.8] - 2025-01-31
 

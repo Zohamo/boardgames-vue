@@ -4,7 +4,8 @@
     style="text-decoration: none"
   >
     <v-card class="game" elevation="0">
-      <img :src="imgUrl" alt="box" class="my-auto" />
+      <img v-if="imageExists(imgUrl)" :src="imgUrl" alt="box" class="my-auto" />
+      <div v-else style="height: 250px; width: 100px"></div>
 
       <v-card-title class="flex-column text-center text-no-wrap">
         <small v-show="game.preTitle" v-html="game.preTitle"></small>
@@ -76,17 +77,17 @@ import Vue from "vue";
 import { PropType } from "vue";
 import { mapState } from "vuex";
 import { Game } from "@/types";
+import { imageMixin } from "../mixins/imageMixin";
 
 export default Vue.extend({
   name: "GameCard",
-
+  mixins: [imageMixin],
   props: {
     game: {
       type: Object as PropType<Game>,
       required: true,
     },
   },
-
   computed: {
     ...mapState(["appUrl"]),
 
