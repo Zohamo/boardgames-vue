@@ -6,6 +6,8 @@
 
 ## [Unreleased]
 
+## [1.0.8] - 2025-01-31
+
 ### Fixed
 
 - config : CRLF to LF
