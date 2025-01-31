@@ -7,9 +7,9 @@
       <img :src="imgUrl" alt="box" class="my-auto" />
 
       <v-card-title class="flex-column text-center text-no-wrap">
-        <small v-show="game.preTitle">{{ game.preTitle }}</small>
-        {{ game.title }}
-        <small v-show="game.postTitle">{{ game.postTitle }}</small>
+        <small v-show="game.preTitle" v-html="game.preTitle"></small>
+        <span v-html="game.title"></span>
+        <small v-show="game.postTitle" v-html="game.postTitle"></small>
       </v-card-title>
 
       <v-list dense class="text-no-wrap">

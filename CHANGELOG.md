@@ -6,6 +6,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- games : display HTML special characters in title
+
 ## [1.0.8] - 2025-01-31
 
 ### Fixed

@@ -9,9 +9,9 @@
             </v-col>
             <v-col class="ml-8 d-flex flex-column">
               <h2 class="d-flex flex-column display-1 my-auto">
-                <small v-if="game.preTitle">{{ game.preTitle }}</small>
-                {{ game.title }}
-                <small v-if="game.postTitle">{{ game.postTitle }}</small>
+                <small v-show="game.preTitle" v-html="game.preTitle"></small>
+                <span v-html="game.title"></span>
+                <small v-show="game.postTitle" v-html="game.postTitle"></small>
               </h2>
               <p class="mt-4">{{ game.year }}</p>
             </v-col>
