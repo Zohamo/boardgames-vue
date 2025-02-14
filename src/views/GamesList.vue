@@ -166,6 +166,11 @@
               />
             </v-list-item>
           </v-list>
+          <p class="text-caption text-center">
+            {{ filteredGames.length }} jeu<span v-if="filteredGames.length > 1"
+              >x</span
+            >
+          </p>
         </v-navigation-drawer>
       </v-col>
 

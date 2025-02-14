@@ -6,6 +6,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- games : display the number of (filtered) games
+
 ### Fixed
 
 - games : display HTML special characters in title
