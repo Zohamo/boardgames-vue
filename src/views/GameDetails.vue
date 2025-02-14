@@ -6,10 +6,11 @@
           <v-row class="align-center">
             <v-col class="flex-grow-0 mx-auto">
               <img
-                v-if="imageExists(imgUrl)"
+                v-if="!imgError"
                 :src="imgUrl"
                 alt="box"
                 class="my-auto"
+                @error="imgError = true"
               />
             </v-col>
             <v-col class="ml-8 d-flex flex-column">
@@ -126,15 +127,14 @@
 import Vue from "vue";
 import { mapState } from "vuex";
 import { Game, Picture } from "@/types";
-import { imageMixin } from "../mixins/imageMixin";
 
 export default Vue.extend({
   name: "GameDetail",
-  mixins: [imageMixin],
   data: () => ({
     loading: true,
     game: {} as Game,
     pictures: [] as Picture[],
+    imgError: false,
   }),
   computed: {
     ...mapState(["appUrl", "games"]),
