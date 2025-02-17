@@ -6,6 +6,8 @@
 
 ## [Unreleased]
 
+## [1.0.9] - 2025-02-17
+
 ### Added
 
 - games : display the number of (filtered) games
