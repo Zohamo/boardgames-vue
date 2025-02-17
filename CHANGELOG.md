@@ -9,6 +9,7 @@
 ### Added
 
 - games : display the number of (filtered) games
+- gameDetails : display the mechanisms of the game
 
 ### Fixed
 

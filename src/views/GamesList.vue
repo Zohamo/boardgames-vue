@@ -276,7 +276,8 @@ export default Vue.extend({
   }),
 
   async beforeMount() {
-    if (this.games.length) {
+    console.log("this.games.length", this.games.length);
+    if (this.games.length > 1) {
       this.init();
     } else {
       this.$store.dispatch("getGames").then(() => this.init());

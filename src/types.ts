@@ -15,7 +15,12 @@ export interface Game {
   type?: string;
   theme: string;
   categories?: string[];
-  mechanisms?: string[];
+  mechanisms?: Mechanism[];
+}
+
+export interface Mechanism {
+  id: number;
+  name: string;
 }
 
 export interface Picture {

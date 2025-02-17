@@ -95,7 +95,7 @@ export default new Vuex.Store({
 
   actions: {
     async getGames({ state, commit }): Promise<void | Game[]> {
-      if (state.games.length) {
+      if (state.games.length > 1) {
         return state.games;
       }
 
@@ -106,6 +106,35 @@ export default new Vuex.Store({
         })
         .catch((error) => {
           console.log("getGames", error);
+        });
+
+      commit("SET_PROMISE", promise);
+
+      return promise;
+    },
+
+    async getGame({ state, commit }, { slug }): Promise<void | Game> {
+      if (
+        state.games.length &&
+        state.games.find((game) => game.slug == slug)?.mechanisms?.length
+      ) {
+        return state.games.find((game) => game.slug == slug);
+      }
+
+      const promise = fetch(`${process.env.VUE_APP_API_URL}/boardgames/${slug}`)
+        .then((res) => res.json())
+        .then((res) => {
+          if (state.games.length) {
+            commit(
+              "SET_GAMES",
+              state.games.map((game) => (game.slug == slug ? res : game))
+            );
+          } else {
+            commit("SET_GAMES", [res]);
+          }
+        })
+        .catch((error) => {
+          console.log("getGame", error);
         });
 
       commit("SET_PROMISE", promise);

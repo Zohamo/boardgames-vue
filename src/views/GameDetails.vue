@@ -91,7 +91,14 @@
               </v-list-item-icon>
               <v-list-item-content>
                 <v-list-item-subtitle>Mécanismes</v-list-item-subtitle>
-                <v-list-item-title>{{ game.mechanisms }}</v-list-item-title>
+                <v-list-item-title class="text-wrap">
+                  <v-chip
+                    v-for="mechanism in game.mechanisms"
+                    :key="mechanism.id"
+                    class="mr-1 my-1"
+                    >{{ mechanism.name }}</v-chip
+                  >
+                </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -138,17 +145,14 @@ export default Vue.extend({
   }),
   computed: {
     ...mapState(["appUrl", "games"]),
-
     imgUrl(): string {
       return this.game?.slug ? `${this.appUrl}img/${this.game.slug}.jpg` : "";
     },
   },
   async beforeMount() {
-    if (this.games.length) {
-      this.init();
-    } else {
-      this.$store.dispatch("getGames").then(() => this.init());
-    }
+    this.$store
+      .dispatch("getGame", { slug: this.$route.params.slug })
+      .then(() => this.init());
   },
   methods: {
     init(): void {
