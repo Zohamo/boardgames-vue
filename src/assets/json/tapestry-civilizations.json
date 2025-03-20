@@ -70,44 +70,107 @@
   {
     "slug": "ADVISORS",
     "name": "Conseillers",
+    "expansionSlug": "PP",
     "notWithAutoma": true
   },
   {
     "slug": "ALIENS",
-    "name": "Extraterrestres"
+    "name": "Extraterrestres",
+    "expansionSlug": "PP"
   },
   {
     "slug": "INFILTRATORS",
-    "name": "Infiltrés"
+    "name": "Infiltrés",
+    "expansionSlug": "PP"
   },
   {
     "slug": "ISLANDERS",
-    "name": "Insulaires"
+    "name": "Insulaires",
+    "expansionSlug": "PP"
   },
   {
     "slug": "RECYCLERS",
-    "name": "Recycleurs"
+    "name": "Recycleurs",
+    "expansionSlug": "PP"
   },
   {
     "slug": "RIVERFOLK",
-    "name": "Peuple de la rivière"
+    "name": "Peuple de la rivière",
+    "expansionSlug": "PP"
   },
   {
     "slug": "SPIES",
     "name": "Espions",
+    "expansionSlug": "PP",
     "notWithAutoma": true
   },
   {
     "slug": "TINKERERS",
-    "name": "Bricoleurs"
+    "name": "Bricoleurs",
+    "expansionSlug": "PP"
   },
   {
-    "slug": "TREASURE HUNTERS",
-    "name": "Chasseurs de trésors"
+    "slug": "TREASURE_HUNTERS",
+    "name": "Chasseurs de trésors",
+    "expansionSlug": "PP"
   },
   {
     "slug": "UTILITARIANS",
-    "name": "Utilitaristes"
+    "name": "Utilitaristes",
+    "expansionSlug": "PP"
+  },
+  {
+    "slug": "ARTIFICERS",
+    "name": "Technomanciens",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "CELESTIALS",
+    "name": "Êtres célestes",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "ELDER_ONES",
+    "name": "Les aînés",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "FAEFOLK",
+    "name": "Fées",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "GENIES",
+    "name": "Génies",
+    "expansionSlug": "FF",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "ILLUMINATI",
+    "name": "Illuminati",
+    "expansionSlug": "FF",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "MERFOLK",
+    "name": "Sirènes",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "PSIONICS",
+    "name": "Psioniques",
+    "expansionSlug": "FF"
+  },
+  {
+    "slug": "WEEFOLK",
+    "name": "Petit peuple",
+    "expansionSlug": "FF",
+    "notWithAutoma": true
+  },
+  {
+    "slug": "WEREFOLK",
+    "name": "Loups-Garous",
+    "expansionSlug": "FF"
   },
   {
     "slug": "CONQUERORS",
@@ -132,21 +195,43 @@
   {
     "slug": "HAWKERS",
     "name": "Colporteurs",
+    "expansionSlug": "PP",
     "automa": true
   },
   {
     "slug": "ICONOCLASTS",
     "name": "Iconoclastes",
+    "expansionSlug": "PP",
     "automa": true
   },
   {
     "slug": "LEVELERS",
     "name": "Niveleurs",
+    "expansionSlug": "PP",
     "automa": true
   },
   {
     "slug": "PIONEERS",
     "name": "Pionniers",
+    "expansionSlug": "PP",
+    "automa": true
+  },
+  {
+    "slug": "CHARMERS",
+    "name": "Enchanteurs",
+    "expansionSlug": "FF",
+    "automa": true
+  },
+  {
+    "slug": "ERRATICS",
+    "name": "Erratiques",
+    "expansionSlug": "FF",
+    "automa": true
+  },
+  {
+    "slug": "TIME_TRAVELERS",
+    "name": "Voyageurs temporels",
+    "expansionSlug": "FF",
     "automa": true
   }
 ]

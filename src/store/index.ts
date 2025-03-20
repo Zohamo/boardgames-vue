@@ -5,7 +5,9 @@ import players from "@/assets/json/players.json";
 import mtgAbilities from "@/assets/json/mtg-abilities.json";
 import scytheFactions from "@/assets/json/scythe-factions.json";
 import scythePlays from "@/assets/json/scythe-plays.json";
+import tapestryCampaigns from "@/assets/json/tapestry-campaigns.json";
 import tapestryCivilizations from "@/assets/json/tapestry-civilizations.json";
+import tapestryExpansions from "@/assets/json/tapestry-expansions.json";
 import tapestryPlays from "@/assets/json/tapestry-plays.json";
 import tapestryScenarios from "@/assets/json/tapestry-scenarios.json";
 import {
@@ -15,7 +17,9 @@ import {
   Player,
   ScytheFaction,
   ScythePlay,
+  TapestryCampaign,
   TapestryCivilization,
+  TapestryExpansion,
   TapestryPlay,
   TapestryPlayer,
   TapestryScenario,
@@ -51,8 +55,43 @@ export default new Vuex.Store({
     scythePlays: scythePlays as ScythePlay[],
     scytheFactions: scytheFactions as ScytheFaction[],
 
-    tapestryCivilizations: tapestryCivilizations as TapestryCivilization[],
-    tapestryScenarios: tapestryScenarios as TapestryScenario[],
+    tapestryExpansions: tapestryExpansions as TapestryExpansion[],
+    tapestryCampaigns: tapestryCampaigns as TapestryCampaign[],
+    tapestryCivilizations: tapestryCivilizations.map(
+      (civ: TapestryCivilization) => {
+        if (civ.expansionSlug) {
+          const expansion = tapestryExpansions.find(
+            (exp) => exp.slug == civ.expansionSlug
+          );
+          if (expansion) {
+            civ.expansion = expansion;
+          }
+          delete civ.expansionSlug;
+        }
+        return civ;
+      }
+    ) as TapestryCivilization[],
+    tapestryScenarios: tapestryScenarios.map((scenario: TapestryScenario) => {
+      if (scenario.campaignSlug) {
+        const campaign = tapestryCampaigns.find(
+          (camp) => camp.slug == scenario.campaignSlug
+        );
+        if (campaign) {
+          scenario.campaign = campaign;
+        }
+        delete scenario.campaignSlug;
+      }
+      if (scenario.expansionSlug) {
+        const expansion = tapestryExpansions.find(
+          (exp) => exp.slug == scenario.expansionSlug
+        );
+        if (expansion) {
+          scenario.expansion = expansion;
+        }
+        delete scenario.expansionSlug;
+      }
+      return scenario;
+    }) as TapestryScenario[],
     tapestryPlays: tapestryPlays.map((play: TapestryPlay) => {
       play.players.map((playerFromPlay: TapestryPlayer) => {
         if (playerFromPlay.civilizationSlug) {

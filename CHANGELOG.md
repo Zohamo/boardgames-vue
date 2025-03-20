@@ -6,6 +6,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Tapestry : expansion Fantasies & Futures
+
 ## [1.0.9] - 2025-02-17
 
 ### Added

@@ -1,10 +1,14 @@
 <template>
   <v-card flat color="transparent">
     <v-card-text>
-      <time>{{ play.date | date }}</time>
-      <span v-if="play.scenario">
-        - Scénario {{ play.scenario.id | roman }} : {{ play.scenario.name }}
-      </span>
+      <time>{{ play.date | date }} </time>
+      <template v-if="play.scenario">
+        <span v-if="play.scenario.campaign"
+          >{{ play.scenario.campaign.name }}&nbsp;:
+          {{ play.scenario.number | roman }}.
+        </span>
+        <span v-html="play.scenario.name" />
+      </template>
       <v-list-item v-for="player in play.players" :key="player.id">
         <v-list-item-content>
           <v-list-item-title class="d-flex">
@@ -25,12 +29,13 @@
                   : 'red'
               "
               :text-color="player.winner ? 'white' : ''"
-              >{{ player.score }}</v-chip
-            >
+              v-text="player.score"
+            />
           </v-list-item-title>
-          <v-list-item-subtitle v-if="player.id !== mainPlayerId">{{
-            player.civilization.name
-          }}</v-list-item-subtitle>
+          <v-list-item-subtitle
+            v-if="player.id !== mainPlayerId"
+            v-html="player.civilization?.name"
+          />
         </v-list-item-content>
       </v-list-item>
     </v-card-text>
@@ -40,7 +45,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { PropType } from "vue";
-import { TapestryPlay, TapestryPlayer } from "@/types";
+import { TapestryPlay } from "@/types";
 
 export default Vue.extend({
   name: "TapestryScoresPlay",
@@ -57,7 +62,7 @@ export default Vue.extend({
   },
 
   methods: {
-    automaLevelLitteral(value: number): string {
+    automaLevelLitteral(value: number | undefined): string {
       switch (value) {
         case 2:
           return "le Moyen";
@@ -69,6 +74,7 @@ export default Vue.extend({
           return "le Définitivement Incroyable";
         case 6:
           return "le Briseur de Rêves";
+        case 1:
         default:
           return "le Sous Performant";
       }

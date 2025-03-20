@@ -32,7 +32,7 @@ export interface Picture {
 export interface Play {
   id: number;
   date: string;
-  players: any[];
+  players: Player[];
 }
 
 export interface Player {
@@ -123,9 +123,9 @@ export interface ScythePlayer {
  * Tapestry
  */
 
-export interface TapestryAutoma {
-  id: number;
-  name: string;
+export enum TapestryCampaignSlug {
+  Atlantid = "ATLANTID",
+  Kaiju = "KAIJU",
 }
 
 export enum TapestryCivilizationSlug {
@@ -154,35 +154,76 @@ export enum TapestryCivilizationSlug {
   Riverfolk = "RIVERFOLK",
   Spies = "SPIES",
   Tinkerers = "TINKERERS",
-  TreasureHunters = "TREASURE HUNTERS",
+  TreasureHunters = "TREASURE_HUNTERS",
   Utilitarians = "UTILITARIANS",
+  // Fantasies & Futures (FF)
+  Artificers = "ARTIFICERS",
+  Celestials = "CELESTIALS",
+  ElderOnes = "ELDER_ONES",
+  Faefolk = "FAEFOLK",
+  Genies = "GENIES",
+  Illuminati = "ILLUMINATI",
+  Merfok = "MERFOLK",
+  Psionics = "PSIONICS",
+  Weefolk = "WEEFOLK",
+  Werefolk = "WEREFOLK",
   // Automa
   Conquerors = "CONQUERORS",
   Engineers = "ENGINEERS",
   Explorers = "EXPLORERS",
   Scientists = "SCIENTISTS",
-  // Automa : Plans & Ploys
+  // Automa : Plans & Ploys (PP)
   Hawkers = "HAWKERS",
   Iconoclasts = "ICONOCLASTS",
   Levelers = "LEVELERS",
   Pioneers = "PIONEERS",
+  // Automa : Fantasies & Futures (FF)
+  Charmers = "CHARMERS",
+  Erratics = "ERRATICS",
+  TimeTravelers = "TIME_TRAVELERS",
 }
 
-export interface TapestryCapital {
+export enum TapestryExpansionSlug {
+  PP = "PP",
+  AA = "AA",
+  FF = "FF",
+}
+
+class TapestryExpansible {
+  expansionSlug?: string | TapestryExpansionSlug;
+  expansion?: TapestryExpansion;
+}
+
+export interface TapestryAutoma {
   id: number;
   name: string;
 }
 
-export interface TapestryCivilization {
-  id?: number;
+export interface TapestryCampaign extends TapestryExpansible {
+  slug: string | TapestryCampaignSlug;
+  name: string;
+}
+
+export interface TapestryCapital extends TapestryExpansible {
+  id: number;
+  name: string;
+}
+
+export interface TapestryCivilization extends TapestryExpansible {
   slug: string | TapestryCivilizationSlug;
   name: string;
   notWithAutoma?: boolean;
   automa?: boolean;
 }
 
+export interface TapestryExpansion {
+  slug: string | TapestryExpansionSlug;
+  name: string;
+}
+
 export interface TapestryPlay extends Play {
   players: TapestryPlayer[];
+  campaignSlug?: string | TapestryCampaignSlug;
   scenarioId?: number;
   scenario?: TapestryScenario;
 }
@@ -211,7 +252,10 @@ export interface TapestryPlayer extends Player {
   };
 }
 
-export interface TapestryScenario {
+export interface TapestryScenario extends TapestryExpansible {
   id: number;
+  campaignSlug?: string | TapestryCampaignSlug;
+  campaign?: TapestryCampaign;
+  number: number;
   name: string;
 }

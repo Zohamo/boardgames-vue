@@ -22,5 +22,35 @@
   {
     "id": 6,
     "name": "Forêt"
+  },
+  {
+    "id": 13,
+    "name": "Bourbier",
+    "expansionSlug": "FF"
+  },
+  {
+    "id": 14,
+    "name": "Ville en bouteille",
+    "expansionSlug": "FF"
+  },
+  {
+    "id": 15,
+    "name": "Voile",
+    "expansionSlug": "FF"
+  },
+  {
+    "id": 16,
+    "name": "Savane",
+    "expansionSlug": "FF"
+  },
+  {
+    "id": 17,
+    "name": "Cercle polaire",
+    "expansionSlug": "FF"
+  },
+  {
+    "id": 18,
+    "name": "Enfers",
+    "expansionSlug": "FF"
   }
 ]

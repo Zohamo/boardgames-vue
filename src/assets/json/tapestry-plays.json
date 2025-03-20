@@ -213,7 +213,7 @@
     "players": [
       {
         "id": 1,
-        "civilizationSlug": "TREASURE HUNTERS",
+        "civilizationSlug": "TREASURE_HUNTERS",
         "winner": true,
         "score": 245
       },
@@ -565,6 +565,221 @@
         },
         "bonusTracks": {
           "endTrack": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "date": "2024-07-12",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ARTIFICERS",
+        "winner": true,
+        "score": 222,
+        "capitalId": 14,
+        "monumentsCount": 5,
+        "territoriesCount": 7,
+        "technologiesCount": 8,
+        "tracks": {
+          "exploration": 5,
+          "military": 7,
+          "science": 0,
+          "technology": 8
+        },
+        "bonusTracks": {
+          "centralIsland": 10,
+          "outposts": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ENGINEERS",
+        "score": 174,
+        "monumentsCount": 7,
+        "territoriesCount": 4,
+        "tracks": {
+          "exploration": 1,
+          "military": 7,
+          "science": 0,
+          "technology": 12
+        },
+        "bonusTracks": {
+          "endTrack": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "date": "2024-07-12",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "PSIONICS",
+        "winner": true,
+        "score": 160,
+        "capitalId": 17,
+        "monumentsCount": 6,
+        "territoriesCount": 6,
+        "technologiesCount": 6,
+        "tracks": {
+          "exploration": 8,
+          "military": 8,
+          "science": 3,
+          "technology": 7
+        },
+        "bonusTracks": {
+          "centralIsland": 10,
+          "outposts": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "CONQUERORS",
+        "score": 151,
+        "monumentsCount": 6,
+        "territoriesCount": 5,
+        "tracks": {
+          "exploration": 6,
+          "military": 10,
+          "science": 2,
+          "technology": 3
+        },
+        "bonusTracks": {}
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "date": "2024-07-12",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ILLUMINATI",
+        "winner": true,
+        "score": 233,
+        "capitalId": 15,
+        "monumentsCount": 5,
+        "territoriesCount": 3,
+        "technologiesCount": 5,
+        "tracks": {
+          "exploration": 8,
+          "military": 5,
+          "science": 7,
+          "technology": 11
+        },
+        "bonusTracks": {
+          "centralIsland": 10,
+          "outposts": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "ICONOCLASTS",
+        "score": 146,
+        "monumentsCount": 8,
+        "territoriesCount": 6,
+        "tracks": {
+          "exploration": 5,
+          "military": 12,
+          "science": 12,
+          "technology": 9
+        },
+        "bonusTracks": {
+          "endTrack": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "date": "2024-07-13",
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "FAEFOLK",
+        "winner": true,
+        "score": 261,
+        "capitalId": 16,
+        "monumentsCount": 5,
+        "territoriesCount": 3,
+        "technologiesCount": 7,
+        "tracks": {
+          "exploration": 5,
+          "military": 12,
+          "science": 0,
+          "technology": 11
+        },
+        "bonusTracks": {
+          "endTrack": 5
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "TIME_TRAVELERS",
+        "score": 187,
+        "monumentsCount": 8,
+        "territoriesCount": 8,
+        "tracks": {
+          "exploration": 0,
+          "military": 6,
+          "science": 9,
+          "technology": 4
+        },
+        "bonusTracks": {
+          "centralIsland": 10,
+          "outposts": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "date": "2024-07-14",
+    "scenarioId": 6,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "ELDER_ONES",
+        "winner": true,
+        "score": 284,
+        "capitalId": 6,
+        "monumentsCount": 7,
+        "territoriesCount": 8,
+        "technologiesCount": 5,
+        "tracks": {
+          "exploration": 12,
+          "military": 12,
+          "science": 12,
+          "technology": 12
+        },
+        "bonusTracks": {
+          "endTrack": 5,
+          "outposts": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "civilizationSlug": "",
+        "score": 228,
+        "monumentsCount": 9,
+        "territoriesCount": 4,
+        "tracks": {
+          "exploration": 5,
+          "military": 12,
+          "science": 12,
+          "technology": 3
+        },
+        "bonusTracks": {
+          "endTrack": 10,
+          "centralIsland": 10
         }
       }
     ]

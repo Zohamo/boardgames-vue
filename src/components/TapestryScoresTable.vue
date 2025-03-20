@@ -5,6 +5,9 @@
         <tr v-for="civ in sortedCivilizations" :key="civ.slug">
           <th class="text-h6 pa-4">
             {{ civ.name }}
+            <v-list-item-subtitle v-if="civ.expansion" class="font-italic"
+              >({{ civ.expansion.name }})</v-list-item-subtitle
+            >
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <v-icon
@@ -16,7 +19,7 @@
                   >mdi-cog-off</v-icon
                 >
               </template>
-              <span>à retirer contre l'Automa</span>
+              <span>déconseillé contre l'Automa</span>
             </v-tooltip>
           </th>
           <td>
