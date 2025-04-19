@@ -13,6 +13,10 @@
 - Tapestry : scores by civilization
 - Tapestry : scores by scenario
 
+### Changed
+
+- navbar : move MTG links to rules and help menu
+
 ## [1.0.9] - 2025-02-17
 
 ### Added

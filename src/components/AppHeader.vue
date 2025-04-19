@@ -49,29 +49,13 @@
                 page: 'RulesTapestry',
                 slug: 'tapestry-rules',
               },
-            ]"
-            :key="item.slug"
-            :to="{ name: item.page }"
-          >
-            <v-list-item-title v-text="item.title" />
-          </v-list-item>
-        </v-list>
-      </v-menu>
-
-      <v-menu offset-y transition="expand-transition">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn plain v-bind="attrs" v-on="on"> MTG </v-btn>
-        </template>
-        <v-list>
-          <v-list-item
-            v-for="item in [
               {
-                title: 'Capacités',
+                title: 'MTG Capacités',
                 page: 'MtgAbilities',
                 slug: 'mtg-abilities',
               },
               {
-                title: 'Éditions',
+                title: 'MTG Éditions',
                 page: 'MtgSets',
                 slug: 'mtg-sets',
               },
