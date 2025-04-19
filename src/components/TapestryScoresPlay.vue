@@ -11,31 +11,51 @@
       </template>
       <v-list-item v-for="player in play.players" :key="player.id">
         <v-list-item-content>
-          <v-list-item-title class="d-flex">
-            <template v-if="!player.automa">
-              {{ player.name || "Inconnu" }}
-            </template>
-            <template v-else>
-              {{ player.automaLevel }}-Automa
-              {{ automaLevelLitteral(player.automaLevel) }}
-            </template>
-            <v-chip
-              class="ml-auto"
-              :color="
-                !player.winner
-                  ? ''
-                  : player.id === mainPlayerId
-                  ? 'green'
-                  : 'red'
-              "
-              :text-color="player.winner ? 'white' : ''"
-              v-text="player.score"
-            />
+          <v-list-item-title class="d-flex align-center">
+            <div class="mr-2" style="width: 55px">
+              <v-chip
+                :color="
+                  !player.winner
+                    ? ''
+                    : player.id === mainPlayerId
+                    ? 'green'
+                    : 'red'
+                "
+                :text-color="player.winner ? 'white' : ''"
+                v-text="player.score"
+              />
+            </div>
+            <div>
+              <div class="d-flex align-center">
+                <template v-if="!player.automa">
+                  <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                    >mdi-account{{ player.winner ? "-star" : "" }}</v-icon
+                  >
+                  <div>
+                    {{ player.name || "Inconnu" }}
+                    <v-list-item-subtitle
+                      v-if="player.id !== mainPlayerId"
+                      v-html="player.civilization?.name"
+                    />
+                  </div>
+                </template>
+                <template v-else>
+                  <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                    >mdi-robot-{{ player.winner ? "happy" : "dead" }}</v-icon
+                  >
+                  <div>
+                    Automa {{ automaLevelLitteral(player.automaLevel) }} ({{
+                      player.automaLevel
+                    }})
+                    <v-list-item-subtitle
+                      v-if="player.id !== mainPlayerId"
+                      v-html="player.civilization?.name"
+                    />
+                  </div>
+                </template>
+              </div>
+            </div>
           </v-list-item-title>
-          <v-list-item-subtitle
-            v-if="player.id !== mainPlayerId"
-            v-html="player.civilization?.name"
-          />
         </v-list-item-content>
       </v-list-item>
     </v-card-text>
@@ -49,7 +69,6 @@ import { TapestryPlay } from "@/types";
 
 export default Vue.extend({
   name: "TapestryScoresPlay",
-
   props: {
     play: {
       type: Object as PropType<TapestryPlay>,
@@ -60,7 +79,6 @@ export default Vue.extend({
       default: 1,
     },
   },
-
   methods: {
     automaLevelLitteral(value: number | undefined): string {
       switch (value) {

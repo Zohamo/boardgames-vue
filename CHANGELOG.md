@@ -8,7 +8,10 @@
 
 ### Added
 
+- games : time in Play type
 - Tapestry : expansion Fantasies & Futures
+- Tapestry : scores by civilization
+- Tapestry : scores by scenario
 
 ## [1.0.9] - 2025-02-17
 

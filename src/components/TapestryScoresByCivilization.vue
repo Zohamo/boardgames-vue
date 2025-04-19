@@ -16,7 +16,7 @@
                   class="ml-2"
                   v-bind="attrs"
                   v-on="on"
-                  >mdi-cog-off</v-icon
+                  >mdi-robot-off</v-icon
                 >
               </template>
               <span>déconseillé contre l'Automa</span>
@@ -45,12 +45,10 @@ import TapestryScoresPlay from "@/components/TapestryScoresPlay.vue";
 import { TapestryCivilization, TapestryPlay } from "@/types";
 
 export default Vue.extend({
-  name: "TapestryScoresTable",
-
+  name: "TapestryScoresByCivilization",
   components: {
     TapestryScoresPlay,
   },
-
   props: {
     civilizations: {
       type: Array as PropType<TapestryCivilization[]>,
@@ -67,7 +65,6 @@ export default Vue.extend({
       default: 1,
     },
   },
-
   computed: {
     sortedCivilizations(): TapestryCivilization[] {
       return this.civilizations
@@ -75,7 +72,6 @@ export default Vue.extend({
         .sort(this.sortByName);
     },
   },
-
   methods: {
     sortByName(a: TapestryCivilization, b: TapestryCivilization): number {
       return a.name.localeCompare(b.name);

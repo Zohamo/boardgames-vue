@@ -572,6 +572,7 @@
   {
     "id": 28,
     "date": "2024-07-12",
+    "time": 70,
     "players": [
       {
         "id": 1,
@@ -615,6 +616,7 @@
   {
     "id": 29,
     "date": "2024-07-12",
+    "time": 70,
     "players": [
       {
         "id": 1,
@@ -656,6 +658,7 @@
   {
     "id": 30,
     "date": "2024-07-12",
+    "time": 70,
     "players": [
       {
         "id": 1,
@@ -699,6 +702,7 @@
   {
     "id": 31,
     "date": "2024-07-13",
+    "time": 70,
     "players": [
       {
         "id": 1,
@@ -742,6 +746,7 @@
   {
     "id": 32,
     "date": "2024-07-14",
+    "time": 120,
     "scenarioId": 6,
     "players": [
       {
@@ -776,6 +781,96 @@
           "military": 12,
           "science": 12,
           "technology": 3
+        },
+        "bonusTracks": {
+          "endTrack": 10,
+          "centralIsland": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "date": "2025-03-20",
+    "time": 75,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "WEREFOLK",
+        "winner": true,
+        "score": 238,
+        "capitalId": 14,
+        "monumentsCount": 5,
+        "territoriesCount": 5,
+        "technologiesCount": 9,
+        "tracks": {
+          "exploration": 8,
+          "military": 7,
+          "science": 5,
+          "technology": 9
+        },
+        "bonusTracks": {
+          "outposts": 10,
+          "centralIsland": 10
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "civilizationSlug": "EXPLORERS",
+        "score": 162,
+        "monumentsCount": 7,
+        "territoriesCount": 1,
+        "tracks": {
+          "exploration": 8,
+          "military": 4,
+          "science": 1,
+          "technology": 12
+        },
+        "bonusTracks": {
+          "endTrack": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "date": "2025-03-24",
+    "time": 100,
+    "scenarioId": 4,
+    "players": [
+      {
+        "id": 1,
+        "civilizationSlug": "MERFOLK",
+        "winner": true,
+        "score": 341,
+        "capitalId": 13,
+        "monumentsCount": 9,
+        "territoriesCount": 7,
+        "technologiesCount": 10,
+        "tracks": {
+          "exploration": 10,
+          "military": 11,
+          "science": 10,
+          "technology": 11
+        },
+        "bonusTracks": {
+          "outposts": 10,
+          "centralIsland": 5
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "civilizationSlug": "ICONOCLASTS",
+        "score": 203,
+        "monumentsCount": 5,
+        "territoriesCount": 2,
+        "tracks": {
+          "exploration": 11,
+          "military": 11,
+          "science": 5,
+          "technology": 5
         },
         "bonusTracks": {
           "endTrack": 10,

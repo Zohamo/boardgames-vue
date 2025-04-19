@@ -6,6 +6,7 @@ import mtgAbilities from "@/assets/json/mtg-abilities.json";
 import scytheFactions from "@/assets/json/scythe-factions.json";
 import scythePlays from "@/assets/json/scythe-plays.json";
 import tapestryCampaigns from "@/assets/json/tapestry-campaigns.json";
+import tapestryCapitals from "@/assets/json/tapestry-capitals.json";
 import tapestryCivilizations from "@/assets/json/tapestry-civilizations.json";
 import tapestryExpansions from "@/assets/json/tapestry-expansions.json";
 import tapestryPlays from "@/assets/json/tapestry-plays.json";
@@ -18,6 +19,7 @@ import {
   ScytheFaction,
   ScythePlay,
   TapestryCampaign,
+  TapestryCapital,
   TapestryCivilization,
   TapestryExpansion,
   TapestryPlay,
@@ -56,7 +58,30 @@ export default new Vuex.Store({
     scytheFactions: scytheFactions as ScytheFaction[],
 
     tapestryExpansions: tapestryExpansions as TapestryExpansion[],
-    tapestryCampaigns: tapestryCampaigns as TapestryCampaign[],
+    tapestryCampaigns: tapestryCampaigns.map((campaign: TapestryCampaign) => {
+      if (campaign.expansionSlug) {
+        const expansion = tapestryExpansions.find(
+          (exp) => exp.slug == campaign.expansionSlug
+        );
+        if (expansion) {
+          campaign.expansion = expansion;
+        }
+        delete campaign.expansionSlug;
+      }
+      return campaign;
+    }) as TapestryCampaign[],
+    tapestryCapitals: tapestryCapitals.map((capital: TapestryCapital) => {
+      if (capital.expansionSlug) {
+        const expansion = tapestryExpansions.find(
+          (exp) => exp.slug == capital.expansionSlug
+        );
+        if (expansion) {
+          capital.expansion = expansion;
+        }
+        delete capital.expansionSlug;
+      }
+      return capital;
+    }) as TapestryCapital[],
     tapestryCivilizations: tapestryCivilizations.map(
       (civ: TapestryCivilization) => {
         if (civ.expansionSlug) {
@@ -102,6 +127,15 @@ export default new Vuex.Store({
             playerFromPlay.civilization = civilization;
           }
           delete playerFromPlay.civilizationSlug;
+        }
+        if (playerFromPlay.capitalId) {
+          const capital = tapestryCapitals.find(
+            (capital) => capital.id === playerFromPlay.capitalId
+          );
+          if (capital) {
+            playerFromPlay.capital = capital;
+          }
+          delete playerFromPlay.capitalId;
         }
         return Object.assign(
           playerFromPlay,

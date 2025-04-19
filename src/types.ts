@@ -32,6 +32,7 @@ export interface Picture {
 export interface Play {
   id: number;
   date: string;
+  time?: number;
   players: Player[];
 }
 
@@ -236,6 +237,7 @@ export interface TapestryPlayer extends Player {
   winner?: boolean;
   score?: number;
   capitalId?: number;
+  capital?: TapestryCapital;
   monumentsCount?: number;
   technologiesCount?: number;
   territoriesCount?: number;
