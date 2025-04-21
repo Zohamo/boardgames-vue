@@ -44,9 +44,7 @@
                     >mdi-robot-{{ player.winner ? "happy" : "dead" }}</v-icon
                   >
                   <div>
-                    Automa {{ automaLevelLitteral(player.automaLevel) }} ({{
-                      player.automaLevel
-                    }})
+                    {{ automaName(player.automaLevel) }}
                     <v-list-item-subtitle
                       v-if="player.id !== mainPlayerId"
                       v-html="player.civilization?.name"
@@ -65,10 +63,12 @@
 <script lang="ts">
 import Vue from "vue";
 import { PropType } from "vue";
+import { tapestryMixins } from "@/mixins/tapestryMixins";
 import { TapestryPlay } from "@/types";
 
 export default Vue.extend({
   name: "TapestryScoresPlay",
+  mixins: [tapestryMixins],
   props: {
     play: {
       type: Object as PropType<TapestryPlay>,
@@ -77,25 +77,6 @@ export default Vue.extend({
     mainPlayerId: {
       type: Number,
       default: 1,
-    },
-  },
-  methods: {
-    automaLevelLitteral(value: number | undefined): string {
-      switch (value) {
-        case 2:
-          return "le Moyen";
-        case 3:
-          return "le Légèrement Intimidant";
-        case 4:
-          return "le Quelque Peu Impressionnant";
-        case 5:
-          return "le Définitivement Incroyable";
-        case 6:
-          return "le Briseur de Rêves";
-        case 1:
-        default:
-          return "le Sous Performant";
-      }
     },
   },
 });

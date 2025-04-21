@@ -77,12 +77,12 @@
 <script lang="ts">
 import Vue from "vue";
 import { PropType } from "vue";
-import { welcomeToTheMoonMixin } from "@/mixins/welcomeToTheMoonMixins";
+import { welcomeToTheMoonMixins } from "@/mixins/welcomeToTheMoonMixins";
 import { WelcomeToTheMoonAdventure, WelcomeToTheMoonPlay } from "@/types";
 
 export default Vue.extend({
   name: "WelcomeToTheMoonScoresByAdventure",
-  mixins: [welcomeToTheMoonMixin],
+  mixins: [welcomeToTheMoonMixins],
   props: {
     adventures: {
       type: Array as PropType<WelcomeToTheMoonAdventure[]>,

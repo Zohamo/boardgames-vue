@@ -166,7 +166,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { PropType } from "vue";
-import { welcomeToTheMoonMixin } from "@/mixins/welcomeToTheMoonMixins";
+import { welcomeToTheMoonMixins } from "@/mixins/welcomeToTheMoonMixins";
 import {
   WelcomeToTheMoonCampaign,
   WelcomeToTheMoonPlay,
@@ -175,7 +175,7 @@ import {
 
 export default Vue.extend({
   name: "WelcomeToTheMoonScoresByCampaign",
-  mixins: [welcomeToTheMoonMixin],
+  mixins: [welcomeToTheMoonMixins],
   props: {
     campaigns: {
       type: Array as PropType<WelcomeToTheMoonCampaign[]>,

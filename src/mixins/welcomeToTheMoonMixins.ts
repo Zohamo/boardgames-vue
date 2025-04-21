@@ -1,4 +1,4 @@
-export const welcomeToTheMoonMixin = {
+export const welcomeToTheMoonMixins = {
   methods: {
     automaName(automaLevel: number | undefined): string {
       let name = automaLevel + "-";
