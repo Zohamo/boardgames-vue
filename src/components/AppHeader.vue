@@ -23,6 +23,11 @@
             v-for="item in [
               { title: 'Scythe', page: 'ScoresScythe', slug: 'scythe' },
               { title: 'Tapestry', page: 'ScoresTapestry', slug: 'tapestry' },
+              {
+                title: 'Welcome to the moon',
+                page: 'ScoresWelcomeToTheMoon',
+                slug: 'welcome-to-the-moon',
+              },
             ]"
             :key="item.slug"
             :to="{ name: item.page }"

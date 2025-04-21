@@ -12,6 +12,7 @@
 - Tapestry : expansion Fantasies & Futures
 - Tapestry : scores by civilization
 - Tapestry : scores by scenario
+- WelcomeToTheMoon : scores by date, adventure & campaign
 
 ### Changed
 

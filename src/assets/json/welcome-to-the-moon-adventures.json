@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Le décollage"
+  },
+  {
+    "id": 2,
+    "name": "Le voyage"
+  },
+  {
+    "id": 3,
+    "name": "La colonie"
+  },
+  {
+    "id": 4,
+    "name": "La mine"
+  },
+  {
+    "id": 5,
+    "name": "Le dôme"
+  },
+  {
+    "id": 6,
+    "name": "Le virus"
+  },
+  {
+    "id": 7,
+    "name": "La fuite"
+  },
+  {
+    "id": 8,
+    "name": "L'affrontement"
+  }
+]

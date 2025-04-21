@@ -6,6 +6,7 @@ import RulesSevenWonders from "@/views/rules/RulesSevenWonders.vue";
 import RulesTapestry from "@/views/rules/RulesTapestry.vue";
 import ScoresScythe from "@/views/scores/ScoresScythe.vue";
 import ScoresTapestry from "@/views/scores/ScoresTapestry.vue";
+import ScoresWelcomeToTheMoon from "@/views/scores/ScoresWelcomeToTheMoon.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -60,6 +61,11 @@ const routes: Array<RouteConfig> = [
     path: "/games/tapestry/scores",
     name: "ScoresTapestry",
     component: ScoresTapestry,
+  },
+  {
+    path: "/games/welcome-to-the-moon/scores",
+    name: "ScoresWelcomeToTheMoon",
+    component: ScoresWelcomeToTheMoon,
   },
 ];
 

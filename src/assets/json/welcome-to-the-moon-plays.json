@@ -1,0 +1,306 @@
+[
+  {
+    "id": 27,
+    "date": "2024-06-27",
+    "time": 60,
+    "campaignId": 1,
+    "adventureId": 4,
+    "players": [
+      {
+        "id": 1,
+        "score": 103,
+        "winner": true,
+        "stars": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 2,
+        "score": 89,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "date": "2024-06-28",
+    "time": 60,
+    "adventureId": 4,
+    "players": [
+      {
+        "id": 1,
+        "score": 145,
+        "winner": true,
+        "stars": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "score": 97,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "date": "2024-06-29",
+    "time": 40,
+    "campaignId": 1,
+    "adventureId": 5,
+    "players": [
+      {
+        "id": 1,
+        "score": 75,
+        "stars": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "score": 100,
+        "winner": true,
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "date": "2024-06-29",
+    "time": 40,
+    "adventureId": 5,
+    "players": [
+      {
+        "id": 1,
+        "score": 106,
+        "stars": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "score": 106,
+        "winner": true,
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "date": "2024-07-02",
+    "time": 50,
+    "campaignId": 1,
+    "adventureId": 6,
+    "players": [
+      {
+        "id": 1,
+        "score": 118,
+        "winner": true,
+        "stars": 4
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "score": 108,
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "date": "2024-07-04",
+    "time": 50,
+    "adventureId": 6,
+    "players": [
+      {
+        "id": 1,
+        "score": 93,
+        "stars": 2
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 125,
+        "winner": true,
+        "stars": 4
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "date": "2024-07-05",
+    "time": 45,
+    "campaignId": 1,
+    "adventureId": 7,
+    "players": [
+      {
+        "id": 1,
+        "score": 92,
+        "stars": 3
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 110,
+        "winner": true,
+        "stars": 5
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "date": "2024-07-05",
+    "time": 35,
+    "adventureId": 7,
+    "players": [
+      {
+        "id": 1,
+        "score": 125,
+        "winner": true,
+        "stars": 5
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 107,
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "date": "2024-07-06",
+    "time": 45,
+    "campaignId": 1,
+    "adventureId": 8,
+    "players": [
+      {
+        "id": 1,
+        "score": 129,
+        "winner": true,
+        "stars": 6
+      },
+      {
+        "automa": true,
+        "automaLevel": 3,
+        "score": 113,
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "date": "2024-07-09",
+    "time": 35,
+    "campaignId": 1,
+    "campaignSave": 148,
+    "adventureId": 1,
+    "players": [
+      {
+        "id": 1,
+        "score": 100,
+        "stars": 0
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 150,
+        "winner": true,
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "date": "2024-07-09",
+    "time": 45,
+    "adventureId": 1,
+    "players": [
+      {
+        "id": 1,
+        "score": 150,
+        "winner": true,
+        "stars": 1
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 140,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "date": "2025-04-18",
+    "time": 40,
+    "campaignId": 1,
+    "campaignChapter": 68,
+    "campaignSave": 92,
+    "adventureId": 2,
+    "players": [
+      {
+        "id": 1,
+        "score": 143,
+        "winner": true,
+        "stars": 1
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "score": 91,
+        "stars": 0
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "date": "2025-04-19",
+    "time": 40,
+    "campaignId": 1,
+    "campaignChapter": 111,
+    "campaignSave": 15,
+    "adventureId": 3,
+    "players": [
+      {
+        "id": 1,
+        "score": 113,
+        "stars": 1,
+        "missions": {
+          "a": 12,
+          "b": 9,
+          "c": 8
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 5,
+        "winner": true,
+        "score": 151,
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "date": "2025-04-20",
+    "time": 37,
+    "campaignId": 1,
+    "campaignChapter": 112,
+    "campaignSave": 82,
+    "adventureId": 4,
+    "players": [
+      {
+        "id": 1,
+        "score": 68,
+        "stars": 1,
+        "missions": {
+          "a": 4
+        }
+      },
+      {
+        "automa": true,
+        "automaLevel": 4,
+        "winner": true,
+        "score": 115,
+        "stars": 2
+      }
+    ]
+  }
+]

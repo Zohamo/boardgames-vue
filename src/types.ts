@@ -261,3 +261,40 @@ export interface TapestryScenario extends TapestryExpansible {
   number: number;
   name: string;
 }
+
+/**
+ * Welcome to the moon
+ */
+
+export interface WelcomeToTheMoonAdventure {
+  id: number;
+  name: string;
+}
+
+export interface WelcomeToTheMoonCampaign {
+  id: number;
+  name: string;
+}
+
+export interface WelcomeToTheMoonPlay extends Play {
+  players: WelcomeToTheMoonPlayer[];
+  campaignId?: number;
+  campaign?: WelcomeToTheMoonCampaign;
+  campaignChapter?: number;
+  campaignSave?: number;
+  adventureId: number;
+  adventure?: WelcomeToTheMoonAdventure;
+}
+
+export interface WelcomeToTheMoonPlayer extends Player {
+  automa?: boolean;
+  automaLevel?: number;
+  winner?: boolean;
+  score?: number;
+  stars?: number;
+  missions?: {
+    a?: number;
+    b?: number;
+    c?: number;
+  };
+}

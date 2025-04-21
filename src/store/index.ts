@@ -11,6 +11,9 @@ import tapestryCivilizations from "@/assets/json/tapestry-civilizations.json";
 import tapestryExpansions from "@/assets/json/tapestry-expansions.json";
 import tapestryPlays from "@/assets/json/tapestry-plays.json";
 import tapestryScenarios from "@/assets/json/tapestry-scenarios.json";
+import welcomeToTheMoonAdventures from "@/assets/json/welcome-to-the-moon-adventures.json";
+import welcomeToTheMoonCampaigns from "@/assets/json/welcome-to-the-moon-campaigns.json";
+import welcomeToTheMoonPlays from "@/assets/json/welcome-to-the-moon-plays.json";
 import {
   Game,
   MtgAbility,
@@ -25,6 +28,9 @@ import {
   TapestryPlay,
   TapestryPlayer,
   TapestryScenario,
+  WelcomeToTheMoonAdventure,
+  WelcomeToTheMoonCampaign,
+  WelcomeToTheMoonPlay,
 } from "@/types";
 
 Vue.use(Vuex);
@@ -152,6 +158,32 @@ export default new Vuex.Store({
       }
       return play;
     }) as TapestryPlay[],
+
+    welcomeToTheMoonAdventures:
+      welcomeToTheMoonAdventures as WelcomeToTheMoonAdventure[],
+    welcomeToTheMoonCampaigns:
+      welcomeToTheMoonCampaigns as WelcomeToTheMoonCampaign[],
+    welcomeToTheMoonPlays: welcomeToTheMoonPlays.map(
+      (play: WelcomeToTheMoonPlay) => {
+        play.players.map((playerFromPlay: TapestryPlayer) =>
+          Object.assign(
+            playerFromPlay,
+            players.find(
+              (playerFromList) => playerFromPlay.id === playerFromList.id
+            ) || {}
+          )
+        );
+        if (play.campaignId) {
+          play.campaign = welcomeToTheMoonCampaigns.find(
+            (campaign) => play.campaignId === campaign.id
+          );
+        }
+        play.adventure = welcomeToTheMoonAdventures.find(
+          (adventure) => play.adventureId === adventure.id
+        );
+        return play;
+      }
+    ) as WelcomeToTheMoonPlay[],
   },
 
   mutations: {
