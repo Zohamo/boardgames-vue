@@ -34,7 +34,7 @@
                     <div class="d-flex align-center">
                       <template v-if="!player.automa">
                         <div class="d-flex align-center">
-                          <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                          <v-icon class="mr-2"
                             >mdi-account{{
                               player.winner ? "-star" : ""
                             }}</v-icon
@@ -49,11 +49,7 @@
                                 v-if="player.capital"
                                 class="text-no-wrap"
                               >
-                                <v-icon
-                                  small
-                                  v-bind="attrs"
-                                  v-on="on"
-                                  class="mr-2"
+                                <v-icon small class="mr-2"
                                   >mdi-city-variant</v-icon
                                 >
                                 {{ player.capital.id }}-{{
@@ -66,7 +62,7 @@
                       </template>
                       <template v-else>
                         <div class="d-flex align-center">
-                          <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                          <v-icon class="mr-2"
                             >mdi-robot-{{
                               player.winner ? "happy" : "dead"
                             }}</v-icon

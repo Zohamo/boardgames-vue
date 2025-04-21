@@ -8,15 +8,28 @@
         {{ campaign.expansion?.name }}
       </v-card-title>
       <div
-        v-for="scenario in sortedScenarios(campaign.slug)"
+        v-for="scenario in scenarios.filter(
+          (scenario) => scenario.campaign?.slug == campaign.slug
+        )"
         :key="scenario.id"
+        class="my-4"
       >
         <h3>
           Scénario {{ scenario.number | roman }}&nbsp;: {{ scenario.name }}
         </h3>
-        <div class="d-flex">
+        <p
+          v-if="
+            !plays.filter((play) => play.scenario?.id == scenario.id).length
+          "
+          class="text--secondary"
+        >
+          Aucune partie
+        </p>
+        <div v-else class="d-flex">
           <v-card
-            v-for="play in sortedPlays(scenario.id)"
+            v-for="play in plays.filter(
+              (play) => play.scenario?.id == scenario.id
+            )"
             :key="play.id"
             flat
             color="transparent"
@@ -25,30 +38,69 @@
               <time>{{ play.date | date }} </time>
               <v-list-item v-for="player in play.players" :key="player.id">
                 <v-list-item-content>
-                  <v-list-item-title class="d-flex">
-                    <template v-if="!player.automa">
-                      {{ player.name || "Inconnu" }}
-                    </template>
-                    <template v-else
-                      >{{ automaName(player.automaLevel) }}
-                    </template>
-                    <v-chip
-                      class="ml-auto"
-                      :color="
-                        !player.winner
-                          ? ''
-                          : player.id === mainPlayerId
-                          ? 'green'
-                          : 'red'
-                      "
-                      :text-color="player.winner ? 'white' : ''"
-                      v-text="player.score"
-                    />
+                  <v-list-item-title class="d-flex align-center">
+                    <div class="mr-2" style="width: 55px">
+                      <v-chip
+                        :color="
+                          !player.winner
+                            ? ''
+                            : player.id === mainPlayerId
+                            ? 'green'
+                            : 'red'
+                        "
+                        :text-color="player.winner ? 'white' : ''"
+                        v-text="player.score"
+                      />
+                    </div>
+                    <div>
+                      <div class="d-flex align-center">
+                        <template v-if="!player.automa">
+                          <div class="d-flex align-center">
+                            <v-icon class="mr-2"
+                              >mdi-account{{
+                                player.winner ? "-star" : ""
+                              }}</v-icon
+                            >
+                            <div>
+                              {{ player.name || "Inconnu" }}
+                              <div class="d-flex align-center">
+                                <v-list-item-subtitle
+                                  v-html="player.civilization?.name"
+                                />
+                                <v-list-item-subtitle
+                                  v-if="player.capital"
+                                  class="text-no-wrap"
+                                >
+                                  <v-icon small class="mr-2"
+                                    >mdi-city-variant</v-icon
+                                  >
+                                  {{ player.capital.id }}-{{
+                                    player.capital.name
+                                  }}
+                                </v-list-item-subtitle>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template v-else>
+                          <div class="d-flex align-center">
+                            <v-icon class="mr-2"
+                              >mdi-robot-{{
+                                player.winner ? "happy" : "dead"
+                              }}</v-icon
+                            >
+                            <div>
+                              {{ automaName(player.automaLevel) }}
+                              <v-list-item-subtitle
+                                v-if="player.id !== mainPlayerId"
+                                v-html="player.civilization?.name"
+                              />
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
                   </v-list-item-title>
-                  <v-list-item-subtitle
-                    v-if="player.id !== mainPlayerId"
-                    v-html="player.civilization?.name"
-                  />
                 </v-list-item-content>
               </v-list-item>
             </v-card-text>
@@ -97,19 +149,6 @@ export default Vue.extend({
     mainPlayerId: {
       type: Number,
       default: 1,
-    },
-  },
-  computed: {},
-  methods: {
-    sortedScenarios(campaignSlug: string): TapestryScenario[] {
-      return this.scenarios.filter(
-        (scenario: TapestryScenario) => scenario.campaign?.slug == campaignSlug
-      );
-    },
-    sortedPlays(scenarioId: number | undefined): TapestryPlay[] {
-      return this.plays.filter(
-        (play: TapestryPlay) => play.scenario?.id == scenarioId
-      );
     },
   },
 });

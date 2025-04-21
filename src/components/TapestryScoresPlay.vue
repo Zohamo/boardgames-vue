@@ -28,7 +28,7 @@
             <div>
               <div class="d-flex align-center">
                 <template v-if="!player.automa">
-                  <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                  <v-icon class="mr-2"
                     >mdi-account{{ player.winner ? "-star" : "" }}</v-icon
                   >
                   <div>
@@ -40,7 +40,7 @@
                   </div>
                 </template>
                 <template v-else>
-                  <v-icon v-bind="attrs" v-on="on" class="mr-2"
+                  <v-icon class="mr-2"
                     >mdi-robot-{{ player.winner ? "happy" : "dead" }}</v-icon
                   >
                   <div>
